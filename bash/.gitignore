@@ -1,0 +1,21 @@
+.DS_Store
+tags
+.sass-cache
+.lvimrc
+.tag
+*.db
+*.swp
+
+# clojure
+.lein-repl-history
+.nrepl-port
+**/target/
+/dbolson.github.io/
+
+# node
+npm-debug.log
+
+# ruby
+custom_plan.rb
+zeus.json
+.byebug_history
