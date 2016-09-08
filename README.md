@@ -1,0 +1,7 @@
+# Dotfiles
+
+## Installation
+
+```
+./bin/install
+```

@@ -10,7 +10,6 @@ tags
 .lein-repl-history
 .nrepl-port
 **/target/
-/dbolson.github.io/
 
 # node
 npm-debug.log
