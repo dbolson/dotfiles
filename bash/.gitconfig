@@ -2,7 +2,7 @@
   name = Danny Olson
   email = dbolson@gmail.com
 [core]
-  excludesfile = /Users/danny.olson/.gitignore
+  excludesfile = ~/.gitignore
 [alias]
   co = checkout
   ci = commit
