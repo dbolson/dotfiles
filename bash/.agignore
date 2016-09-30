@@ -1,7 +1,8 @@
 *.log
-tags
-tmp/
 .sass-cache/
-out/
 node_modules/
+out/
+tags
+target/
+tmp/
 vendor/assets
