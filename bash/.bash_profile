@@ -49,7 +49,7 @@ PROMPT_COMMAND='history -a'
 
 # https://github.com/Bash-it/bash-it
 # path to the bash it configuration
-export BASH_IT="/Users/danny/.bash_it"
+export BASH_IT="/Users/$(whoami)/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
