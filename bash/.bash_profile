@@ -58,15 +58,8 @@ export BASH_IT_THEME='minimal'
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
-function rebaseBranch() {
-  git checkout develop &&
-    git pull &&
-    git checkout - &&
-    git rebase develop
-}
-
 function cleanFeatureBranch() {
-  git checkout develop &&
+  git checkout master &&
     if [ "$1" ]
     then
       git branch -D $1
