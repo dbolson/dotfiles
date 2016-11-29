@@ -3,9 +3,6 @@ export PATH="$PATH:/usr/local/sbin" # RabbitMQ
 
 export EDITOR=vim
 
-export AWS_ACCESS_KEY_ID=TODO
-export AWS_SECRET_ACCESS_KEY=TODO
-
 # python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/workspace
@@ -15,7 +12,10 @@ export PROJECT_HOME=$HOME/workspace
 #export JAVA_HOME=$(/usr/bin/javac)
 export PATH=${JAVA_HOME}/bin:$PATH
 
-eval "$(rbenv init -)" # rbenv
+export AWS_PROFILE=e-development-DataEng
+export AWS_REGION=us-east-1
+
+#eval "$(rbenv init -)" # rbenv
 
 # aliases
 alias be='bundle exec'
