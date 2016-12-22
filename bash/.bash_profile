@@ -63,25 +63,25 @@ function cleanFeatureBranch() {
     fi
     git remote prune origin &&
       git pull --rebase
-  }
+}
 
-  function updateHomebrew() {
-    brew update
-    brew doctor
-    brew upgrade
-    brew cleanup
-  }
+function updateHomebrew() {
+  brew update
+  brew doctor
+  brew upgrade
+  brew cleanup
+}
 
-  function cdGem() {
-    cd `bundle show $1`
-  }
+function cdGem() {
+  cd `bundle show $1`
+}
 
-  function psqlProduction() {
-    heroku run bash -c 'psql $DATABASE_URL' --app whistle-server-production
-  }
+function psqlProduction() {
+  heroku run bash -c 'psql $DATABASE_URL' --app whistle-server-production
+}
 
-  function downloadYoutubeMP3() {
-    cd Desktop/
-    youtube-dl --extract-audio --audio-format mp3 $1
-    cd -
-  }
+function downloadYoutubeMP3() {
+  cd Desktop/
+  youtube-dl --extract-audio --audio-format mp3 $1
+  cd -
+}
