@@ -13,6 +13,7 @@ export PROJECT_HOME=$HOME/workspace
 export PATH=${JAVA_HOME}/bin:$PATH
 
 export AWS_REGION=us-east-1
+export AWS_DEFAULT_REGION=$AWS_REGION
 
 #eval "$(rbenv init -)" # rbenv
 
@@ -84,4 +85,24 @@ function downloadYoutubeMP3() {
   cd Desktop/
   youtube-dl --extract-audio --audio-format mp3 $1
   cd -
+}
+
+function generateAWSToken() {
+  case "${1:-staging}" in
+    development) :
+      createAWSToken "e-development"
+      ;;
+    staging) :
+      createAWSToken "est-staging"
+      ;;
+  esac
+}
+
+function createAWSToken() {
+  role=$1
+  cmd="./aws-token.sh --account ${role} --role DataEng"
+
+  cd ~/workspace/aws-sts-token-generator/
+  echo $cmd
+  $cmd
 }
