@@ -12,7 +12,6 @@ export PROJECT_HOME=$HOME/workspace
 #export JAVA_HOME=$(/usr/bin/javac)
 export PATH=${JAVA_HOME}/bin:$PATH
 
-export AWS_PROFILE=e-development-DataEng
 export AWS_REGION=us-east-1
 
 #eval "$(rbenv init -)" # rbenv
@@ -31,8 +30,6 @@ alias gpr='git pull --rebase'
 alias gpp='gpr && git push'
 
 alias sv="cd ~/workspace/server"
-
-alias python=python3
 
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
