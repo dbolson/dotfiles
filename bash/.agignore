@@ -6,3 +6,9 @@ tags
 target/
 tmp/
 vendor/assets
+
+# python
+
+venv/
+env/
+__pycache__/
