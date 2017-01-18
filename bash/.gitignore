@@ -3,6 +3,7 @@ tags
 .sass-cache
 .lvimrc
 .tag
+.tags
 *.db
 *.swp
 
