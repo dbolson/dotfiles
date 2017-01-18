@@ -14,6 +14,7 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 export AWS_REGION=us-east-1
 export AWS_DEFAULT_REGION=$AWS_REGION
+export AWS_PROFILE=est-staging-DataEng
 
 #eval "$(rbenv init -)" # rbenv
 
@@ -108,7 +109,7 @@ function createAWSToken() {
 }
 
 removeOldDockerImages() {
-  docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+  docker rm -v $(docker ps -aq 2>/dev/null) 2>/dev/null
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
   docker volume rm $(docker volume ls -f dangling=true -q) 2>/dev/null
 }
