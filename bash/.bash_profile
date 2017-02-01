@@ -79,10 +79,6 @@ function cdGem() {
   cd `bundle show $1`
 }
 
-function psqlProduction() {
-  heroku run bash -c 'psql $DATABASE_URL' --app whistle-server-production
-}
-
 function downloadYoutubeMP3() {
   cd Desktop/
   youtube-dl --extract-audio --audio-format mp3 $1
