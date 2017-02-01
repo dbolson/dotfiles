@@ -2,6 +2,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin" # RabbitMQ
 
 export EDITOR=vim
+export HISTCONTROL=ignoreboth:erasedups
 
 # python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
