@@ -9,12 +9,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/workspace
 #source /usr/local/bin/virtualenvwrapper.sh
 
-#export JAVA_HOME=$(/usr/libexec/java_home)
-#export JAVA_HOME=$(/usr/bin/javac)
 export PATH=${JAVA_HOME}/bin:$PATH
 
 export AWS_REGION=us-east-1
-export AWS_DEFAULT_REGION=$AWS_REGION
 export AWS_PROFILE=est-staging-DataEng
 
 #eval "$(rbenv init -)" # rbenv
@@ -86,13 +83,13 @@ function downloadYoutubeMP3() {
 }
 
 function generateAWSToken() {
-  case "${1:-staging}" in
-    development) :
-      createAWSToken "e-development"
-      ;;
-    staging) :
-      createAWSToken "est-staging"
-      ;;
+  case "${1}" in
+    development)
+      createAWSToken "e-development" ;;
+    staging)
+      createAWSToken "est-staging" ;;
+    production)
+      createAWSToken "earnest" ;;
   esac
 }
 
@@ -102,11 +99,28 @@ function createAWSToken() {
 
   cd ~/workspace/aws-sts-token-generator/
   echo $cmd
+  export AWS_PROFILE="$1-DataEng"
   $cmd
 }
 
-removeOldDockerImages() {
+function removeOldDockerImages() {
   docker rm -v $(docker ps -aq 2>/dev/null) 2>/dev/null
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
   docker volume rm $(docker volume ls -f dangling=true -q) 2>/dev/null
 }
+
+function fixAwsTokenGenerator {
+  cd ~/workspace/aws-sts-token-generator/
+  docker run -it --privileged --entrypoint=date earnest/aws-sts-token-generator "-s `date`"
+}
+
+function printAWSEnvVars {
+  env | grep AWS_
+}
+
+function formatJSON {
+  echo $1 | python -m json.tool
+}
+
+# added by Anaconda3 4.2.0 installer
+export PATH="/Users/dannyolson/workspace/anaconda3/bin:$PATH"
