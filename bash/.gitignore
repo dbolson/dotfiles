@@ -1,9 +1,8 @@
 .DS_Store
-tags
+.tags
+.tags-dep
 .sass-cache
 .lvimrc
-.tag
-.tags
 *.db
 *.swp
 
