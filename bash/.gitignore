@@ -18,3 +18,7 @@ npm-debug.log
 custom_plan.rb
 zeus.json
 .byebug_history
+
+# python
+.venv/
+.env
