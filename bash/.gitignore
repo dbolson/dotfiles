@@ -5,6 +5,7 @@
 .lvimrc
 *.db
 *.swp
+.idea/
 
 # clojure
 .lein-repl-history
@@ -20,5 +21,8 @@ zeus.json
 .byebug_history
 
 # python
+.cache/
+__pycache__/
 .venv/
 .env
+*.pyc
