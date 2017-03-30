@@ -121,6 +121,3 @@ function printAWSEnvVars {
 function formatJSON {
   echo $1 | python -m json.tool
 }
-
-# added by Anaconda3 4.2.0 installer
-export PATH="/Users/dannyolson/workspace/anaconda3/bin:$PATH"
