@@ -6,6 +6,7 @@
 *.db
 *.swp
 .idea/
+*.retry
 
 # clojure
 .lein-repl-history
