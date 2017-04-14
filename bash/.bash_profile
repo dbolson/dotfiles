@@ -121,3 +121,4 @@ function printAWSEnvVars {
 function formatJSON {
   echo $1 | python -m json.tool
 }
+source /usr/local/opt/autoenv/activate.sh
