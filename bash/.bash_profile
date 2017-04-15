@@ -1,18 +1,15 @@
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin" # RabbitMQ
+export PATH=${JAVA_HOME}/bin:$PATH
 
 export EDITOR=vim
 export HISTCONTROL=ignoreboth:erasedups
 
-# python virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/workspace
-#source /usr/local/bin/virtualenvwrapper.sh
-
-export PATH=${JAVA_HOME}/bin:$PATH
-
 export AWS_REGION=us-east-1
 export AWS_PROFILE=est-staging-DataEng
+
+# autoenv
+source $(brew --prefix autoenv)/activate.sh
 
 #eval "$(rbenv init -)" # rbenv
 
