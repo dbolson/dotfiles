@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+
+set -e
+
+echo 'installing dotfiles'
+
+command -v stow >/dev/null 2>&1 || { brew install stow; }
+
+cp bash/.stow-local-ignore ~/
+
+stow bash
+stow nvim
+
+# shellcheck source=/dev/null
+source "$HOME/.bash_profile"
+# shellcheck disable=SC1091
+source ./bin/install_vim
+echo 'finished'

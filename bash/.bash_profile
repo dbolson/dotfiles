@@ -16,6 +16,7 @@ source $(brew --prefix autoenv)/activate.sh
 #eval "$(rbenv init -)" # rbenv
 
 # aliases
+alias vim=nvim
 alias be='bundle exec'
 alias ll='ls -la'
 alias less='less -R'
