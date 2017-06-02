@@ -2,8 +2,6 @@
 
 set -e
 
-echo 'installing dotfiles'
-
 command -v stow >/dev/null 2>&1 || { brew install stow; }
 
 cp bash/.stow-local-ignore ~/

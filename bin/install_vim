@@ -2,8 +2,6 @@
 
 set -e
 
-echo 'installing vim'
-
 command -v nvim >/dev/null 2>&1 || {
   brew tap neovim/neovim
   brew install neovim
