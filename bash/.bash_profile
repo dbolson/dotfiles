@@ -4,6 +4,8 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 export EDITOR=vim
 export HISTCONTROL=ignoreboth:erasedups
+# respect .agignore
+export FZF_DEFAULT_COMMAND='ag -g ""'
 
 export AWS_REGION=us-east-1
 export AWS_PROFILE=est-staging-DataEng
