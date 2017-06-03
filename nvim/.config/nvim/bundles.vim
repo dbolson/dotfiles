@@ -18,7 +18,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-salve'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-scripts/ZoomWin'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-scripts/paredit.vim'
 

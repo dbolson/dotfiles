@@ -48,8 +48,6 @@ let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <C-P> :FZF<CR>
 nnoremap <leader>ag :Ag<space>
 
-map <leader><leader> :ZoomWin<CR>
-
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
 " CTags
