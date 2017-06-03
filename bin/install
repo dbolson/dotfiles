@@ -9,8 +9,7 @@ cp bash/.stow-local-ignore ~/
 stow bash
 stow nvim
 
-# shellcheck source=/dev/null
-source "$HOME/.bash_profile"
 # shellcheck disable=SC1091
 source ./bin/install_vim
-echo 'finished'
+# shellcheck source=/dev/null
+source "$HOME/.bash_profile"

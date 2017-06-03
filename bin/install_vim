@@ -15,4 +15,4 @@ command -v ctags >/dev/null 2>&1 || {
   brew install --HEAD universal-ctags
 }
 
-command -v nvim >/dev/null 2>&1 || { brew install fzf; }
+command -v fzf >/dev/null 2>&1 || { brew install fzf; }
