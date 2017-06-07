@@ -75,7 +75,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 nnoremap <leader>m :silent !open -a Marked.app '%:p'<CR>
 
 " Change smart quotes
-map <leader>" :%s/[“”]/"/g<CR><BAR>:%s/’/'/g<CR>
+map <leader>" :%s/[“”’]/"/g<CR><BAR>:%s/’/'/g<CR>
 
 " Remove trailing whitespace when manually saving a buffer
 fun! <SID>StripTrailingWhitespaces()
