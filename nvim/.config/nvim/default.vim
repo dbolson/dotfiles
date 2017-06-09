@@ -76,8 +76,6 @@ nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-nnoremap <leader>m :silent !open -a Marked.app '%:p'<CR>
-
 " Change smart quotes
 map <leader>" :%s/[“”’]/"/g<CR><BAR>:%s/’/'/g<CR>
 
