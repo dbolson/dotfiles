@@ -58,7 +58,7 @@ map <leader>rt :!ctags -R -f .tags . <CR>
 au BufRead,BufNewFile *.md set ft=markdown
 au BufRead,BufNewFile *.md setlocal spell
 au BufRead,BufNewFile *.md setlocal wrap
-let g:markdown_fenced_languages = ['html', 'vim', 'ruby', 'python', 'bash=sh', 'scala']
+let g:markdown_fenced_languages = ['bash=sh', 'html', 'javascript', 'python', 'ruby', 'scala', 'vim']
 map <leader>M :set syntax=markdown<CR>:set wrap<CR>:set spell<CR>
 
 " Easier split navigation
