@@ -4,7 +4,9 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'ervandew/supertab'
+Plug 'eagletmt/ghcmod-vim' " haskell
 Plug 'janko-m/vim-test'
+Plug 'eagletmt/neco-ghc' " haskell
 Plug 'neomake/neomake'
 Plug 'neovim/node-host', { 'do': 'npm install' } " mdown.vim
 Plug 'pangloss/vim-javascript'
