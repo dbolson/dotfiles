@@ -1,14 +1,14 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'Shougo/deoplete.nvim' " => neovim-ghcmod
 Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'ervandew/supertab'
-Plug 'eagletmt/ghcmod-vim' " haskell
 Plug 'janko-m/vim-test'
-Plug 'eagletmt/neco-ghc' " haskell
 Plug 'neomake/neomake'
 Plug 'neovim/node-host', { 'do': 'npm install' } " mdown.vim
+Plug 'neovimhaskell/neovim-ghcmod' " haskell
 Plug 'pangloss/vim-javascript'
 Plug 'rgarver/Kwbd.vim'
 Plug 'rking/ag.vim'
