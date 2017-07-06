@@ -15,6 +15,7 @@
 
 # node
 npm-debug.log
+.eslintrc.js
 
 # ruby
 custom_plan.rb
