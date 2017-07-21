@@ -7,7 +7,6 @@ command -v stow >/dev/null 2>&1 || { brew install stow; }
 cp bash/.stow-local-ignore ~/
 
 stow bash
-stow nvim
 
 # shellcheck disable=SC1091
 source ./bin/install_vim

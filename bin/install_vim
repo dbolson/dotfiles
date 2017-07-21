@@ -7,8 +7,11 @@ command -v nvim >/dev/null 2>&1 || {
   brew install neovim
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+  git clone https://github.com/dbolson/dotvim.git ~/.config/nvim
+  ~/.config/nvim./bin/install
+
   vim +PlugInstall +qall
-  vim +UpdateRemotePlugins +qall
 }
 
 command -v ctags >/dev/null 2>&1 || {
