@@ -1,8 +1,17 @@
+# aliases
+alias vim=nvim
+alias ll='ls -la'
+alias less='less -R'
+alias reload='source ~/.bash_profile'
+alias gst='git status'
+alias gpr='git pull --rebase'
+alias gpp='gpr && git push'
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin" # RabbitMQ
 export PATH=${JAVA_HOME}/bin:$PATH
 
-export EDITOR=vim
+export EDITOR=nvim
 export HISTCONTROL=ignoreboth:erasedups
 # respect .agignore
 export FZF_DEFAULT_COMMAND='ag -g ""'
@@ -14,22 +23,6 @@ export AWS_PROFILE=est-staging-DataEng
 source $(brew --prefix autoenv)/activate.sh
 
 #eval "$(rbenv init -)" # rbenv
-
-# aliases
-alias vim=nvim
-alias be='bundle exec'
-alias ll='ls -la'
-alias less='less -R'
-alias reload='source ~/.bash_profile'
-alias sstart='./bin/spring start'
-alias sstop='./bin/spring stop'
-alias srestart='sstop && sstart'
-
-alias gst='git status'
-alias gpr='git pull --rebase'
-alias gpp='gpr && git push'
-
-alias sv="cd ~/workspace/server"
 
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
