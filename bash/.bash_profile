@@ -121,4 +121,13 @@ function printAWSEnvVars {
 function formatJSON {
   echo $1 | python -m json.tool
 }
+
+function updateVim {
+  vim +PlugClean +qall
+  vim +PlugInstall +qall
+  vim +PlugUpdate +qall
+  vim +PlugUpgrade +qall
+  vim +UpdateRemotePlugins +qall
+}
+
 source /usr/local/opt/autoenv/activate.sh
