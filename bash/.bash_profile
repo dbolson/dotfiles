@@ -39,7 +39,8 @@ PROMPT_COMMAND='history -a'
 
 # https://github.com/Bash-it/bash-it
 # path to the bash it configuration
-export BASH_IT="/Users/$(whoami)/.bash_it"
+BASH_IT="/Users/$(whoami)/.bash_it"
+export BASH_IT
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -90,7 +91,7 @@ function createAWSToken() {
   role=$1
   cmd="./aws-token.sh --account ${role} --role DataEng"
 
-  cd ~/workspace/aws-sts-token-generator/
+  cd ~/workspace/aws-sts-token-generator/ || exit
   echo $cmd
   export AWS_PROFILE="$1-DataEng"
   $cmd
@@ -103,7 +104,7 @@ function removeOldDockerImages() {
 }
 
 function fixAwsTokenGenerator {
-  cd ~/workspace/aws-sts-token-generator/
+  cd ~/workspace/aws-sts-token-generator/ || exit
   docker run -it --privileged --entrypoint=date earnest/aws-sts-token-generator "-s `date`"
 }
 
@@ -112,7 +113,7 @@ function printAWSEnvVars {
 }
 
 function formatJSON {
-  echo $1 | python -m json.tool
+  echo "$1" | python -m json.tool
 }
 
 function updateVim {
