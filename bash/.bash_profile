@@ -70,10 +70,14 @@ function cdGem() {
   cd `bundle show $1`
 }
 
+function checkoutAndTrack() {
+  git checkout -t "origin/$1"
+}
+
 function downloadYoutubeMP3() {
-  cd Desktop/
+  cd Desktop/ || exit
   youtube-dl --extract-audio --audio-format mp3 $1
-  cd -
+  cd - || exit
 }
 
 function generateAWSToken() {
