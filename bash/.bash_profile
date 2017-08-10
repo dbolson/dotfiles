@@ -1,17 +1,9 @@
-# aliases
-alias vim=nvim
-alias ll='ls -la'
-alias less='less -R'
-alias reload='source ~/.bash_profile'
-alias gst='git status'
-alias gpr='git pull --rebase'
-alias gpp='gpr && git push'
-
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin" # RabbitMQ
-export PATH=${JAVA_HOME}/bin:$PATH
+export PATH="$HOME/.pyenv/bin:$PATH"
 
 export EDITOR=nvim
+export TERM=xterm-256color
 export HISTCONTROL=ignoreboth:erasedups
 # respect .agignore
 export FZF_DEFAULT_COMMAND='ag -g ""'
@@ -19,10 +11,20 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export AWS_REGION=us-east-1
 export AWS_PROFILE=est-staging-DataEng
 
-# autoenv
-source $(brew --prefix autoenv)/activate.sh
-
 #eval "$(rbenv init -)" # rbenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# aliases
+alias dc=docker-compose
+alias less='less -R'
+alias ll='ls -la'
+alias reload='source ~/.bash_profile'
+alias vim=nvim
+
+alias gst='git status'
+alias gpr='git pull --rebase'
+alias gpp='gpr && git push'
 
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
@@ -127,5 +129,3 @@ function updateVim {
   vim +PlugUpgrade +qall
   vim +UpdateRemotePlugins +qall
 }
-
-source /usr/local/opt/autoenv/activate.sh
