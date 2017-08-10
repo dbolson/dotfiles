@@ -49,7 +49,8 @@ export BASH_IT
 export BASH_IT_THEME='minimal'
 
 # Load Bash It
-source $BASH_IT/bash_it.sh
+# shellcheck source=/dev/null
+source "$BASH_IT/bash_it.sh"
 
 function cleanFeatureBranch() {
   git checkout master &&
@@ -68,17 +69,13 @@ function updateHomebrew() {
   brew cleanup
 }
 
-function cdGem() {
-  cd `bundle show $1`
-}
-
 function checkoutAndTrack() {
   git checkout -t "origin/$1"
 }
 
 function downloadYoutubeMP3() {
   cd Desktop/ || exit
-  youtube-dl --extract-audio --audio-format mp3 $1
+  youtube-dl --extract-audio --audio-format mp3 "$1"
   cd - || exit
 }
 
@@ -98,20 +95,20 @@ function createAWSToken() {
   cmd="./aws-token.sh --account ${role} --role DataEng"
 
   cd ~/workspace/aws-sts-token-generator/ || exit
-  echo $cmd
+  echo "$cmd"
   export AWS_PROFILE="$1-DataEng"
   $cmd
 }
 
 function removeOldDockerImages() {
-  docker rm -v $(docker ps -aq 2>/dev/null) 2>/dev/null
-  docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
-  docker volume rm $(docker volume ls -f dangling=true -q) 2>/dev/null
+  docker rm -v "$(docker ps -aq 2>/dev/null)" 2>/dev/null
+  docker rmi "$(docker images --filter dangling=true -q 2>/dev/null)" 2>/dev/null
+  docker volume rm "$(docker volume ls -f dangling=true -q)" 2>/dev/null
 }
 
 function fixAwsTokenGenerator {
   cd ~/workspace/aws-sts-token-generator/ || exit
-  docker run -it --privileged --entrypoint=date earnest/aws-sts-token-generator "-s `date`"
+  docker run -it --privileged --entrypoint=date earnest/aws-sts-token-generator "-s $(date)"
 }
 
 function printAWSEnvVars {
