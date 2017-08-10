@@ -15,17 +15,6 @@ export AWS_PROFILE=est-staging-DataEng
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# aliases
-alias dc=docker-compose
-alias less='less -R'
-alias ll='ls -la'
-alias reload='source ~/.bash_profile'
-alias vim=nvim
-
-alias gst='git status'
-alias gpr='git pull --rebase'
-alias gpp='gpr && git push'
-
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
@@ -38,6 +27,11 @@ HISTSIZE=10000
 HISTCONTROL=ignoreboth
 HISTIGNORE='ls:bg:fg:history'
 PROMPT_COMMAND='history -a'
+
+if [ -f ~/.bash_aliases ]; then
+  # shellcheck source=/dev/null
+  . ~/.bash_aliases
+fi
 
 # https://github.com/Bash-it/bash-it
 # path to the bash it configuration
