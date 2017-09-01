@@ -49,30 +49,3 @@ function cleanFeatureBranch() {
 function printAWSEnvVars {
   env | grep AWS_
 }
-
-# earnest
-function generateAWSToken() {
-  case "${1}" in
-    development)
-      createAWSToken "e-development" ;;
-    staging)
-      createAWSToken "est-staging" ;;
-    production)
-      createAWSToken "earnest" ;;
-  esac
-}
-
-function createAWSToken() {
-  role=$1
-  cmd="./aws-token.sh --account ${role} --role DataEng"
-
-  cd ~/workspace/aws-sts-token-generator/ || exit
-  echo "$cmd"
-  export AWS_PROFILE="$1-DataEng"
-  $cmd
-}
-
-function fixAwsTokenGenerator {
-  cd ~/workspace/aws-sts-token-generator/ || exit
-  docker run -it --privileged --entrypoint=date earnest/aws-sts-token-generator "-s $(date)"
-}

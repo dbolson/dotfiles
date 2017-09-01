@@ -9,7 +9,6 @@ export HISTCONTROL=ignoreboth:erasedups
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 export AWS_REGION=us-east-1
-export AWS_PROFILE=est-staging-DataEng
 
 #eval "$(rbenv init -)" # rbenv
 eval "$(pyenv init -)"
