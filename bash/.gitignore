@@ -22,6 +22,10 @@ custom_plan.rb
 zeus.json
 .byebug_history
 
+# scala
+*.class
+*.$class
+
 # python
 .cache/
 __pycache__/
