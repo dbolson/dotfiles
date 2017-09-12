@@ -3,7 +3,7 @@
   email = dbolson@gmail.com
 [core]
   excludesfile = ~/.gitignore
-	editor = vim
+	editor = nvim
 [alias]
   co = checkout
   ci = commit
