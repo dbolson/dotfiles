@@ -8,6 +8,7 @@ export HISTCONTROL=ignoreboth:erasedups
 # respect .agignore
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
+export DSASF_HOME="$HOME/workspace/dsa"
 export AWS_REGION=us-east-1
 
 #eval "$(rbenv init -)" # rbenv
