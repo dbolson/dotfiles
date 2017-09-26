@@ -25,6 +25,7 @@ zeus.json
 # scala
 *.class
 *.$class
+scalastyle-config.xml
 
 # python
 .cache/
