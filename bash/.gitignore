@@ -25,7 +25,11 @@ zeus.json
 # scala
 *.class
 *.$class
+.ctags_srcs/
 scalastyle-config.xml
+.ensime
+.ensime_cache/
+ensime.sbt
 
 # python
 .cache/

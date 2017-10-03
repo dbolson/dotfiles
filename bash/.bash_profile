@@ -1,6 +1,7 @@
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin" # RabbitMQ
 export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="/usr/local/opt/sbt@0.13/bin:$PATH" # old version of sbt through homebrew
 
 export EDITOR=nvim
 export TERM=xterm-256color
