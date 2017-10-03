@@ -39,6 +39,11 @@ if [ -f ~/.bash_functions ]; then
   . ~/.bash_functions
 fi
 
+if [ -f ~/.bash_work ]; then
+  # shellcheck source=/dev/null
+  . ~/.bash_work
+fi
+
 # https://github.com/Bash-it/bash-it
 # path to the bash it configuration
 BASH_IT="/Users/$(whoami)/.bash_it"
