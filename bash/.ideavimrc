@@ -1,0 +1,11 @@
+set vim-surround
+
+let mapleader=','
+
+nnoremap <C-H> :action VimWindowLeft<CR>
+nnoremap <C-J> :action VimWindowDown<CR>
+nnoremap <C-K> :action VimWindowUp<CR>
+nnoremap <C-L> :action VimWindowRight<CR>
+nnoremap <M-W> :action CloseContent<CR>
+nnoremap <leader>h :action VimWindowSplitVertical<CR>
+nnoremap <leader>v :action VimWindowSplitHorizontal<CR>
