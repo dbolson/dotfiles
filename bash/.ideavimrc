@@ -2,10 +2,16 @@ set vim-surround
 
 let mapleader=','
 
+set incsearch
+set ignorecase
+
+imap jj <Esc>
+
 nnoremap <C-H> :action VimWindowLeft<CR>
 nnoremap <C-J> :action VimWindowDown<CR>
 nnoremap <C-K> :action VimWindowUp<CR>
 nnoremap <C-L> :action VimWindowRight<CR>
 nnoremap <M-W> :action CloseContent<CR>
-nnoremap <leader>h :action VimWindowSplitVertical<CR>
-nnoremap <leader>v :action VimWindowSplitHorizontal<CR>
+nnoremap <leader>h :action VimWindowSplitHorizontal<CR>
+nnoremap <leader>v :action VimWindowSplitVertical<CR>
+nnoremap <leader>B :action CompileDirty<CR>
