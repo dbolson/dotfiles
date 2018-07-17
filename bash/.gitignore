@@ -38,3 +38,4 @@ __pycache__/
 .env
 *.pyc
 .python-version
+.mypy_cache/
