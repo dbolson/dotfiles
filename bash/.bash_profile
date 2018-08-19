@@ -12,7 +12,7 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export DSASF_HOME="$HOME/workspace/dsa"
 export AWS_REGION=us-east-1
 
-#eval "$(rbenv init -)" # rbenv
+eval "$(rbenv init -)" # rbenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
