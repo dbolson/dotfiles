@@ -50,6 +50,8 @@ nnoremap <leader>ag :Ag<space>
 
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
+imap jj <Esc>
+
 " CTags
 set tags=./.tags-dep,.tags-dep,./.tags,.tags
 map <leader>rt :!ctags -R -f .tags . <CR>
