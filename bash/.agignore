@@ -3,6 +3,7 @@
 node_modules/
 out/
 tags
+tags.temp
 target/
 tmp/
 vendor/assets
