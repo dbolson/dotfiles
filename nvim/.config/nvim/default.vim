@@ -46,6 +46,7 @@ map <leader>nt :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 
 map <C-P> :FZF<CR>
+map <C-T> :Tags<CR>
 nnoremap <leader>ag :Ag<space>
 
 nnoremap <silent> <leader>bd :Kwbd<CR>

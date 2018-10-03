@@ -1,7 +1,6 @@
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin" # RabbitMQ
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="/usr/local/opt/sbt@0.13/bin:$PATH" # old version of sbt through homebrew
+export PYTHONPATH=.:$PYTHONPATH
 
 export EDITOR=nvim
 export TERM=xterm-256color
@@ -11,10 +10,6 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 export DSASF_HOME="$HOME/workspace/dsa"
 export AWS_REGION=us-east-1
-
-eval "$(rbenv init -)" # rbenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
