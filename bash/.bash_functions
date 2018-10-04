@@ -36,7 +36,7 @@ function checkoutAndTrack() {
 }
 
 function cleanFeatureBranch() {
-  git checkout master &&
+  git checkout develop &&
     if [ "$1" ]
     then
       git branch -D $1
