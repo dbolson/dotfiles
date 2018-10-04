@@ -47,6 +47,7 @@ let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 
 map <C-P> :FZF<CR>
 map <C-T> :Tags<CR>
+map <C-B> :Buffers<CR>
 nnoremap <leader>ag :Ag<space>
 
 nnoremap <silent> <leader>bd :Kwbd<CR>
