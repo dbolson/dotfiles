@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-scripts/paredit.vim'
 Plug 'vimlab/split-term.vim'
+Plug 'zchee/deoplete-jedi'
 
 let g:deoplete#enable_at_startup = 1
 
