@@ -33,10 +33,11 @@ scalastyle-config.xml
 ensime.sbt
 
 # python
-.cache/
-__pycache__/
-.venv/
-.env
 *.pyc
-.python-version
+.cache/
+.env
 .mypy_cache/
+.pylintrc
+.python-version
+.venv/
+__pycache__/
