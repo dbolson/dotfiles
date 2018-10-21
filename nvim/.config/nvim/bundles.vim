@@ -9,6 +9,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'ervandew/supertab'
 Plug 'janko-m/vim-test'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'machakann/vim-highlightedyank'
 Plug 'neomake/neomake'
 Plug 'neovimhaskell/neovim-ghcmod' " haskell
 Plug 'pangloss/vim-javascript'
