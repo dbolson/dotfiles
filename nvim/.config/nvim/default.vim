@@ -35,8 +35,10 @@ nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 vnoremap <C-C> "*y
 
 " Paste last contents of what was yanked regardless of what was deleted after
-nnoremap <leader>p "0p
-nnoremap <leader>P "0P
+"nnoremap <leader>p "0p
+"nnoremap <leader>P "0P
+map <leader>y "*y
+map <leader>p "*p
 
 " split and move to new window
 nnoremap <leader>v <C-W>v<C-W>l
