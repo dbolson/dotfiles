@@ -53,7 +53,7 @@ map <C-T> :Tags<CR>
 map <C-B> :Buffers<CR>
 nnoremap <leader>ag :Ag<space>
 
-nnoremap <silent> <leader>bd :Kwbd<CR>
+nnoremap <silent> <leader>q :BD<CR>
 
 imap jj <Esc>
 

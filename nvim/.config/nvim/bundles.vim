@@ -14,7 +14,6 @@ Plug 'neomake/neomake'
 Plug 'neovimhaskell/neovim-ghcmod' " haskell
 Plug 'pangloss/vim-javascript'
 Plug 'qpkorr/vim-bufkill'
-Plug 'rgarver/Kwbd.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
