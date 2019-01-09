@@ -1,6 +1,6 @@
 [user]
   name = Danny Olson
-  email = dbolson@gmail.com
+  email = danny.olson@jyve.com
 [core]
   excludesfile = ~/.gitignore
 	editor = nvim
