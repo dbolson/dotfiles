@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " => neovim-ghcmod
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
@@ -9,7 +10,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'janko-m/vim-test'
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags' " too slow
 Plug 'machakann/vim-highlightedyank'
 Plug 'neomake/neomake'
 Plug 'neovimhaskell/neovim-ghcmod' " haskell
