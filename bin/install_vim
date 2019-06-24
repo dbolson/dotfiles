@@ -3,20 +3,16 @@
 set -e
 
 command -v nvim >/dev/null 2>&1 || {
-  brew tap neovim/neovim
   brew install neovim
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-  git clone https://github.com/dbolson/dotvim.git ~/.config/nvim
-  ~/.config/nvim./bin/install
 
   vim +PlugInstall +qall
 }
 
 command -v ctags >/dev/null 2>&1 || {
-  brew tap universal-ctags/universal-ctags
   brew install --HEAD universal-ctags
+  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 }
 
 command -v fzf >/dev/null 2>&1 || { brew install fzf; }
