@@ -11,7 +11,6 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'janko-m/vim-test'
-"Plug 'ludovicchabant/vim-gutentags' " too slow
 Plug 'machakann/vim-highlightedyank'
 Plug 'neomake/neomake'
 Plug 'neovimhaskell/neovim-ghcmod' " haskell
