@@ -16,3 +16,7 @@ command -v ctags >/dev/null 2>&1 || {
 }
 
 command -v fzf >/dev/null 2>&1 || { brew install fzf; }
+
+# for markdown plugin with mermaid
+command -v yarn >/dev/null 2>&1 || { brew install yarn; }
+command -v yarn global add mermaid

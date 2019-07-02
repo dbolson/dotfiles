@@ -1,5 +1,5 @@
 bash/.bash_work
 
 nvim/.config/configstore/update-notifier-npm.json
-nvim/.config/pgcli/history
-nvim/.config/pgcli/log
+nvim/.config/pgcli
+nvim/.config/yarn
