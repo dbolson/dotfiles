@@ -4,6 +4,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " => neovim-ghcmod
 Plug 'airblade/vim-gitgutter'
+Plug 'ambv/black'
 Plug 'bling/vim-bufferline'
 Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
