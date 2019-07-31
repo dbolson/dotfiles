@@ -26,7 +26,7 @@ set wildmode=list:longest,list:full
 " Highlight after 100 characters
 augroup vimrc_autocmds
   autocmd BufEnter * highlight OverLength ctermfg=red guibg=#592929
-  autocmd BufEnter * match OverLength /\%88v.*/
+  autocmd BufEnter * match OverLength /\%80v.*/
 augroup END
 autocmd! BufWritePost * Neomake
 
