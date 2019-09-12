@@ -83,8 +83,10 @@ nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-let test#python#runner = 'pytest'
 let test#strategy = "neovim"
+
+" JSON
+map <leader>fj :%!python -m json.tool<CR>
 
 " Change smart quotes
 map <leader>" :%s/[“”]/"/g<CR><BAR>:%s/’/'/g<CR>
