@@ -3,6 +3,7 @@ export TERM=xterm-256color
 export HISTCONTROL=ignoreboth:erasedups
 # respect .agignore
 export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 
 export DSASF_HOME="$HOME/workspace/dsa"
 export AWS_REGION=us-east-1
