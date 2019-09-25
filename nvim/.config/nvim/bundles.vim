@@ -6,6 +6,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " => neovim-ghcmod
 Plug 'airblade/vim-gitgutter'
 Plug 'ambv/black'
 Plug 'bling/vim-bufferline'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'ervandew/supertab'
