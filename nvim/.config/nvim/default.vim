@@ -45,7 +45,7 @@ nnoremap <leader>v <C-W>v<C-W>l
 nnoremap <leader>h :split<CR><C-W>j
 
 map <leader>nt :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+let g:NERDTreeIgnore=['^__pycache__$', '\.pyc$', '\.rbc$', '\~$']
 map <leader>o :NERDTreeFind<CR>
 
 map <C-P> :FZF<CR>
