@@ -5,6 +5,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " => neovim-ghcmod
 Plug 'airblade/vim-gitgutter'
 Plug 'ambv/black'
+Plug 'b4b4r07/vim-sqlfmt'
 Plug 'bling/vim-bufferline'
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'derekwyatt/vim-scala'

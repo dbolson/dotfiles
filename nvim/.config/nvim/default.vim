@@ -88,6 +88,10 @@ let test#strategy = "neovim"
 " JSON
 map <leader>fj :%!python -m json.tool<CR>
 
+" SQL
+let g:sqlfmt_command = "sqlformat"
+let g:sqlfmt_options = "-r -k upper"
+
 " Change smart quotes
 map <leader>" :%s/[“”]/"/g<CR><BAR>:%s/’/'/g<CR>
 
