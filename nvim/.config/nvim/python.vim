@@ -4,4 +4,8 @@ let test#python#runner = 'pytest'
 let g:black_linelength = 79
 let g:black_skip_string_normalization = 1
 
+let test#python#pytest#options = {
+  \ 'all':   '-vv',
+\}
+
 autocmd FileType python nmap <Leader>bl :Black<CR>
