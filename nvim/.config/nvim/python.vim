@@ -9,3 +9,4 @@ let test#python#pytest#options = {
 \}
 
 autocmd FileType python nmap <Leader>bl :Black<CR>
+autocmd FileType python nmap <Leader>is :Isort<CR>
