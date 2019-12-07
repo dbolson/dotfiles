@@ -5,9 +5,6 @@ export HISTCONTROL=ignoreboth:erasedups
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 
-export DSASF_HOME="$HOME/workspace/dsa"
-export AWS_REGION=us-east-1
-
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
@@ -26,17 +23,11 @@ PROMPT_COMMAND='history -a'
 BASH_IT="/Users/$(whoami)/.bash_it"
 export BASH_IT
 
-# Lock and Load a custom theme file
 # location /.bash_it/themes/
 export BASH_IT_THEME='minimal'
 
-# Load Bash It
 # shellcheck source=/dev/null
 source "$BASH_IT/bash_it.sh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 if [ -f ~/.bash_aliases ]; then
    #shellcheck source=/dev/null
