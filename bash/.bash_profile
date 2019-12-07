@@ -13,3 +13,5 @@ if [ -f ~/.bashrc ]; then
   # shellcheck source=/dev/null
   source ~/.bashrc
 fi
+
+export PATH="$HOME/.poetry/bin:$PATH"

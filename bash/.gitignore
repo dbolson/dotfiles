@@ -37,7 +37,6 @@ ensime.sbt
 .cache/
 .env
 .mypy_cache/
-.pylintrc
 .python-version
 .venv/
 __pycache__/
