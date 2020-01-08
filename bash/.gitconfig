@@ -1,6 +1,8 @@
 [user]
-  name = Danny Olson
-  email = danny.olson@jyve.com
+    name = Danny Olson
+    email = dolson@launchdarkly.com
+[url "git@github.com:"]
+    insteadOf = https://github.com/
 [core]
   excludesfile = ~/.gitignore
 	editor = nvim
