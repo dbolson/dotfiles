@@ -6,7 +6,7 @@ tags
 tags.temp
 target/
 tmp/
-vendor/assets
+vendor/
 
 # python
 venv/
