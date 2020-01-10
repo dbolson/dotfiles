@@ -15,6 +15,7 @@ autocmd FileType go nmap <Leader>d <Plug>(go-describe)
 autocmd FileType go nmap <Leader>I <Plug>(go-imports)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <Leader>r <Plug>(go-run)
+autocmd FileType go nmap <Leader>gf :GoDef<CR>
 autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 
