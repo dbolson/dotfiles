@@ -105,3 +105,7 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 set rtp+=/usr/local/opt/fzf
+
+" Greplace
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
