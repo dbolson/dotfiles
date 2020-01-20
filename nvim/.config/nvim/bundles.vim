@@ -7,6 +7,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ambv/black'
 Plug 'b4b4r07/vim-sqlfmt'
 Plug 'bling/vim-bufferline'
+Plug 'buoto/gotests-vim'
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
