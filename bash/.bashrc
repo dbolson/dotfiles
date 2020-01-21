@@ -29,6 +29,9 @@ export BASH_IT_THEME='minimal'
 # shellcheck source=/dev/null
 source "$BASH_IT/bash_it.sh"
 
+# shellcheck source=/dev/null
+source "$(brew --prefix)/etc/bash_completion"
+
 if [ -f ~/.bash_aliases ]; then
    #shellcheck source=/dev/null
   . ~/.bash_aliases
