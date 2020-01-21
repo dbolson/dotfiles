@@ -20,13 +20,14 @@ autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-"let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
+let g:go_fmt_options = "-local=gopkg.in/launchdarkly,github.com/launchdarkly"
 let g:go_highlight_function_calls = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_types = 1
-let g:go_fmt_options = "-local=gopkg.in/launchdarkly,github.com/launchdarkly"
 
 " :GoMetaLinter
 " <leader>K => view documentation

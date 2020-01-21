@@ -109,3 +109,5 @@ set rtp+=/usr/local/opt/fzf
 " Greplace
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
+
+ let g:gitgutter_signs = 0
