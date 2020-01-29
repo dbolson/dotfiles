@@ -26,6 +26,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'sebdah/vim-delve'
 Plug 'skwp/greplace.vim'
 Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'tpope/vim-classpath'
