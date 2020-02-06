@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " => neovim-ghcmod
+Plug 'Valloric/ListToggle'
 Plug 'airblade/vim-gitgutter'
 Plug 'ambv/black'
 Plug 'b4b4r07/vim-sqlfmt'

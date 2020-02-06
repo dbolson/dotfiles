@@ -83,7 +83,14 @@ nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
+let test#neovim#term_position = "vertical"
 let test#strategy = "neovim"
+" launchdarkly-specific
+let test#go#gotest#executable = 'GONFALON_MODE=test go test'
+" ctrl-o to enter normal mode in test window
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+endif
 
 " JSON
 map <leader>fj :%!python -m json.tool<CR>
@@ -111,3 +118,7 @@ set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
  let g:gitgutter_signs = 0
+
+" ListToggle plugin
+let g:lt_location_list_toggle_map = '<leader>u'
+let g:lt_quickfix_list_toggle_map = '<leader>l'
