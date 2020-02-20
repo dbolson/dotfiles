@@ -59,7 +59,7 @@ imap jj <Esc>
 
 " CTags
 set tags=./.tags-dep,.tags-dep,./.tags,.tags
-map <leader>rt :!ctags -R -f .tags . <CR>
+map <leader>rt :!ctags -R --exclude=node_modules -f .tags . <CR>
 
 " Add markdown syntax highlighting and spellcheck
 au BufRead,BufNewFile *.md set ft=markdown
