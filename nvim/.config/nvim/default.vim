@@ -83,7 +83,7 @@ nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-let test#neovim#term_position = "vertical"
+"let test#neovim#term_position = "vertical"
 let test#strategy = "neovim"
 " launchdarkly-specific
 let test#go#gotest#executable = 'GONFALON_MODE=test go test'
