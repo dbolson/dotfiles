@@ -2,5 +2,6 @@ bash/.bash_work
 
 nvim/.config/configstore/update-notifier-npm.json
 nvim/.config/exercism/
+nvim/.config/nvim/.netrwhist
 nvim/.config/pgcli
 nvim/.config/yarn
