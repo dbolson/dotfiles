@@ -121,7 +121,7 @@ set rtp+=/usr/local/opt/fzf
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
- let g:gitgutter_signs = 0
+" let g:gitgutter_signs = 0
 
 " ListToggle plugin
 let g:lt_location_list_toggle_map = '<leader>u'
@@ -170,6 +170,3 @@ function! SyncTree()
     wincmd p
   endif
 endfunction
-
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()

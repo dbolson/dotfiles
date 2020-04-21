@@ -1,8 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-"Plug 'qpkorr/vim-bufkill'
 Plug 'Valloric/ListToggle'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
 Plug 'b4b4r07/vim-sqlfmt'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -21,9 +21,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
-
-"Plug 'airblade/vim-gitgutter'
-"Plug 'bling/vim-bufferline'
-"Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
