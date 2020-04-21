@@ -2,8 +2,9 @@ let mapleader = ","
 colorscheme vividchalk
 
 set autowrite " Automatically :write before running commands
+set cmdheight=2 " Give more space for displaying messages.
 set cursorline
-set expandtab
+set expandtab " always uses spaces instead of tab characters
 set hidden
 set ignorecase
 set list listchars=tab:\ \ ,trail:·
@@ -15,11 +16,13 @@ set nowrap
 set number
 set scrolloff=10
 set shiftwidth=2
-set shortmess+=I
+set shortmess+=c " don't give |ins-completion-menu| messages.
+set signcolumn=yes " always show the signcolumn, otherwise it would shift the diagnostics.
 set smartcase
 set softtabstop=2
 set tabstop=2
 set termguicolors
+set updatetime=300
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set wildmode=list:longest,list:full
 
@@ -45,15 +48,16 @@ nnoremap <leader>v <C-W>v<C-W>l
 nnoremap <leader>h :split<CR><C-W>j
 
 map <leader>nt :NERDTreeToggle<CR>
-let g:NERDTreeIgnore=['^__pycache__$', '\.pyc$', '\.rbc$', '\~$']
+let g:NERDTreeIgnore=['^node_modules$', '^__pycache__$', '\.pyc$', '\.rbc$', '\~$']
 map <leader>o :NERDTreeFind<CR>
+let g:NERDTreeGitStatusWithFlags = 1
 
 map <C-P> :FZF<CR>
 map <C-T> :Tags<CR>
 map <C-B> :Buffers<CR>
 nnoremap <leader>ag :Ag<space>
 
-nnoremap <silent> <leader>q :BD<CR>
+nnoremap <silent> <leader>q :Bwipeout<CR>
 
 imap jj <Esc>
 
@@ -122,3 +126,50 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 " ListToggle plugin
 let g:lt_location_list_toggle_map = '<leader>u'
 let g:lt_quickfix_list_toggle_map = '<leader>l'
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" sync open file with NERDTree
+" Check if NERDTree is open or active
+function! IsNERDTreeOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
+" Highlight currently open buffer in NERDTree
+autocmd BufEnter * call SyncTree()
