@@ -5,6 +5,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'b4b4r07/vim-sqlfmt'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'hecal3/vim-leader-guide'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
