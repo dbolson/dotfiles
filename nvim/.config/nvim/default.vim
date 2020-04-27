@@ -55,7 +55,7 @@ let g:NERDTreeGitStatusWithFlags = 1
 map <C-P> :FZF<CR>
 map <C-T> :Tags<CR>
 map <C-B> :Buffers<CR>
-nnoremap <leader>ag :Ag<space>
+nnoremap <leader>ag :GrepperAg<space>
 
 nnoremap <silent> <leader>q :Bwipeout<CR>
 
