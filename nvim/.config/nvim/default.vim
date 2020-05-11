@@ -131,6 +131,14 @@ let g:lt_quickfix_list_toggle_map = '<leader>l'
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
+let g:coc_global_extensions = [
+      \'coc-go',
+      \'coc-json',
+      \'coc-prettier',
+      \'coc-tslint-plugin',
+      \'coc-tsserver',
+      \]
+
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
