@@ -89,7 +89,7 @@ nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 "let test#neovim#term_position = "vertical"
-let test#strategy = "neovim"
+let test#strategy = "basic"
 " launchdarkly-specific
 let test#go#gotest#executable = 'GONFALON_MODE=test go test'
 " ctrl-o to enter normal mode in test window
