@@ -38,8 +38,6 @@ nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 vnoremap <C-C> "*y
 
 " Paste last contents of what was yanked regardless of what was deleted after
-"nnoremap <leader>p "0p
-"nnoremap <leader>P "0P
 map <leader>y "*y
 map <leader>p "*p
 
@@ -130,6 +128,8 @@ let g:lt_quickfix_list_toggle_map = '<leader>l'
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
+
+nmap <leader>zz <Plug>(zoom-toggle)
 
 let g:coc_global_extensions = [
       \'coc-go',

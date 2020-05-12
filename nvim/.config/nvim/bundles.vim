@@ -4,6 +4,7 @@ Plug 'Valloric/ListToggle'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'b4b4r07/vim-sqlfmt'
+Plug 'dhruvasagar/vim-zoom'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hecal3/vim-leader-guide'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
