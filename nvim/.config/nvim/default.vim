@@ -26,10 +26,10 @@ set updatetime=300
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set wildmode=list:longest,list:full
 
-" Highlight after 80 characters
+" Highlight after 120 characters
 augroup vimrc_autocmds
   autocmd BufEnter * highlight OverLength ctermfg=red guibg=#592929
-  autocmd BufEnter * match OverLength /\%80v.*/
+  autocmd BufEnter * match OverLength /\%120v.*/
 augroup END
 autocmd! BufWritePost * Neomake
 
