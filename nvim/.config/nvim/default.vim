@@ -8,6 +8,7 @@ set expandtab " always uses spaces instead of tab characters
 set hidden
 set ignorecase
 set list listchars=tab:\ \ ,trail:·
+set mouse=a " can click around in terminal window
 set nobackup
 set nohlsearch
 set noswapfile
