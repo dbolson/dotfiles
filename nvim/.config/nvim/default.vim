@@ -130,6 +130,17 @@ let g:lt_quickfix_list_toggle_map = '<leader>l'
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
+" use <c-space> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <C-Space>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<C-Space>" :
+      \ coc#refresh()
+
 nmap <leader>zz <Plug>(zoom-toggle)
 
 let g:coc_global_extensions = [
