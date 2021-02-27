@@ -3,6 +3,7 @@ bash/.bash_work
 nvim/.config/coc/
 nvim/.config/configstore/update-notifier-npm.json
 nvim/.config/exercism/
+nvim/.config/iterm2/
 nvim/.config/nvim/.netrwhist
 nvim/.config/pgcli
 nvim/.config/yarn
