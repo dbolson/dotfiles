@@ -59,7 +59,6 @@ nnoremap <silent> <Leader>fg :Rg<CR>
 nnoremap <silent> <Leader>ft :Tags<CR>
 
 nnoremap <silent> <leader>q :Bwipeout<CR>
-nnoremap <silent> <Leader>f :Rg<CR>
 
 imap jj <Esc>
 
