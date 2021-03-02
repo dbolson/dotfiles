@@ -19,7 +19,6 @@ autocmd FileType go nmap <Leader>gf :GoDef<CR>
 autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
@@ -42,3 +41,8 @@ let g:go_doc_popup_window = 1
 " :A => open alternate file
 " :AV => open alternate file in vertical split
 " GoRename x
+
+" let g:go_fmt_command = "golines"
+" let g:go_fmt_options = {
+"     \ 'golines': '-m 120',
+"     \ }

@@ -51,13 +51,15 @@ let g:NERDTreeIgnore=['^node_modules$', '^__pycache__$', '\.pyc$', '\.rbc$', '\~
 map <leader>o :NERDTreeFind<CR>
 let g:NERDTreeGitStatusWithFlags = 1
 
-map <C-P> :FZF<CR>
-map <C-T> :Tags<CR>
-map <C-B> :Buffers<CR>
-nnoremap <leader>ag :Grepper -tool ag -jump<cr>
-nnoremap <leader>* :Grepper -tool ag -cword -noprompt<cr>
+nnoremap <leader>rg :Grepper -tool rg -jump<cr>
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+nnoremap <silent> <Leader>fb :Buffers<CR>
+nnoremap <silent> <Leader>ff :FZF<CR>
+nnoremap <silent> <Leader>fg :Rg<CR>
+nnoremap <silent> <Leader>ft :Tags<CR>
 
 nnoremap <silent> <leader>q :Bwipeout<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
 
 imap jj <Esc>
 
@@ -116,10 +118,9 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 set rtp+=/usr/local/opt/fzf
-
-" Greplace
-set grepprg=ag
-let g:grep_cmd_opts = '--line-numbers --noheading'
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+"set grepprg=ag
+"let g:grep_cmd_opts = '--line-numbers --noheading'
 
 " let g:gitgutter_signs = 0
 

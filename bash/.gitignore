@@ -1,13 +1,14 @@
+*.db
+*.retry
+*.swp
 .DS_Store
-tags
+.idea/
+.lvimrc
+.rgignore
+.sass-cache
 .tags
 .tags-dep
-.sass-cache
-.lvimrc
-*.db
-*.swp
-.idea/
-*.retry
+tags
 
 # clojure
 .lein-repl-history
@@ -26,11 +27,7 @@ zeus.json
 # scala
 *.class
 *.$class
-.ctags_srcs/
 scalastyle-config.xml
-.ensime
-.ensime_cache/
-ensime.sbt
 
 # python
 *.pyc
