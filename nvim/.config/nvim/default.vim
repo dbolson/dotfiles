@@ -35,58 +35,58 @@ augroup END
 autocmd! BufWritePost * Neomake
 
 " Copy current filename into system clipboard
-nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
-vnoremap <C-C> "*y
+nnoremap <silent> <leader>cf :let @* = expand("%:~")<cr>
+vnoremap <c-c> "*y
 
 " Paste last contents of what was yanked regardless of what was deleted after
 map <leader>y "*y
 map <leader>p "*p
 
 " split and move to new window
-nnoremap <leader>v <C-W>v<C-W>l
-nnoremap <leader>h :split<CR><C-W>j
+nnoremap <leader>v <c-w>v<c-w>l
+nnoremap <leader>h :split<cr><c-w>j
 
-map <leader>nt :NERDTreeToggle<CR>
+map <leader>nt :NERDTreeToggle<cr>
 let g:NERDTreeIgnore=['^node_modules$', '^__pycache__$', '\.pyc$', '\.rbc$', '\~$']
-map <leader>o :NERDTreeFind<CR>
+map <leader>o :NERDTreeFind<cr>
 let g:NERDTreeGitStatusWithFlags = 1
 
 nnoremap <leader>rg :Grepper -tool rg -jump<cr>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
-nnoremap <silent> <Leader>fb :Buffers<CR>
-nnoremap <silent> <Leader>ff :FZF<CR>
-nnoremap <silent> <Leader>fg :Rg<CR>
-nnoremap <silent> <Leader>ft :Tags<CR>
+nnoremap <silent> <leader>fb :Buffers<cr>
+nnoremap <silent> <leader>ff :FZF<cr>
+nnoremap <silent> <leader>fg :Rg<cr>
+nnoremap <silent> <leader>ft :Tags<cr>
 
-nnoremap <silent> <leader>q :Bwipeout<CR>
+nnoremap <silent> <leader>q :Bwipeout<cr>
 
-imap jj <Esc>
+imap jj <esc>
 
 " CTags
 set tags=./.tags-dep,.tags-dep,./.tags,.tags
-map <leader>rt :!ctags -R --exclude=node_modules -f .tags . <CR>
+map <leader>rt :!ctags -R --exclude=node_modules -f .tags . <cr>
 
 " Add markdown syntax highlighting and spellcheck
 au BufRead,BufNewFile *.md set ft=markdown
 au BufRead,BufNewFile *.md setlocal spell
 au BufRead,BufNewFile *.md setlocal wrap
 let g:markdown_fenced_languages = ['bash=sh', 'go', 'html', 'javascript', 'python', 'ruby', 'scala', 'vim']
-map <leader>M :set syntax=markdown<CR>:set wrap<CR>:set spell<CR>
+map <leader>M :set syntax=markdown<cr>:set wrap<cr>:set spell<cr>
 
 " Easier split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
+nnoremap <c-l> <c-w><c-l>
+nnoremap <c-h> <c-w><c-h>
 
 " split-term
 set splitright
 set splitbelow
 
 " Testing
-nmap <silent> <leader>s :TestNearest<CR>
-nmap <silent> <leader>t :TestFile<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+nmap <silent> <leader>s :TestNearest<cr>
+nmap <silent> <leader>t :TestFile<cr>
+nmap <silent> <leader>g :TestVisit<cr>
 
 "let test#neovim#term_position = "vertical"
 let test#strategy = "basic"
@@ -94,27 +94,27 @@ let test#strategy = "basic"
 let test#go#gotest#executable = 'GONFALON_MODE=test go test'
 " ctrl-o to enter normal mode in test window
 if has('nvim')
-  tmap <C-o> <C-\><C-n>
+  tmap <c-o> <c-\><c-n>
 endif
 
 " JSON
-map <leader>fj :%!python -m json.tool<CR>
+map <leader>fj :%!python -m json.tool<cr>
 
 " SQL
 let g:sqlfmt_command = "sqlformat"
 let g:sqlfmt_options = "-r -k upper"
 
 " Change smart quotes
-map <leader>" :%s/[“”]/"/g<CR><BAR>:%s/’/'/g<CR>
+map <leader>" :%s/[“”]/"/g<cr><bar>:%s/’/'/g<cr>
 
 " Remove trailing whitespace when manually saving a buffer
-fun! <SID>StripTrailingWhitespaces()
+fun! <sid>StripTrailingWhitespaces()
   let l = line(".")
   let c = col(".")
   %s/\s\+$//e
   call cursor(l, c)
 endfun
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre * :call <sid>StripTrailingWhitespaces()
 
 set rtp+=/usr/local/opt/fzf
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
@@ -136,12 +136,12 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <silent><expr> <C-Space>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<C-Space>" :
+inoremap <silent><expr> <c-Space>
+      \ pumvisible() ? "\<c-n>" :
+      \ <SID>check_back_space() ? "\<c-space>" :
       \ coc#refresh()
 
-nmap <leader>zz <Plug>(zoom-toggle)
+nmap <leader>zz <plug>(zoom-toggle)
 
 let g:coc_global_extensions = [
       \'coc-go',
@@ -151,20 +151,20 @@ let g:coc_global_extensions = [
       \'coc-tsserver',
       \]
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Use <cr> to confirm completion, `<c-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <cr> pumvisible() ? "\<c-y>" : "\<c-g>u\<cr>"
 " Or use `complete_info` if your vim support it, like:
-" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<c-y>" : "\<c-g>u\<cr>"
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gd <plug>(coc-definition)
+nmap <silent> gy <plug>(coc-type-definition)
+nmap <silent> gi <plug>(coc-implementation)
+nmap <silent> gr <plug>(coc-references)
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <sid>show_documentation()<cr>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
