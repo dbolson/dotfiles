@@ -2,7 +2,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/ListToggle'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'b4b4r07/vim-sqlfmt'
 Plug 'dhruvasagar/vim-zoom'
@@ -21,7 +20,6 @@ Plug 'moll/vim-bbye'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'

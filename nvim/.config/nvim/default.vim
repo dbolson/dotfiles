@@ -46,11 +46,6 @@ map <leader>p "*p
 nnoremap <leader>v <c-w>v<c-w>l
 nnoremap <leader>h :split<cr><c-w>j
 
-map <leader>nt :NERDTreeToggle<cr>
-let g:NERDTreeIgnore=['^node_modules$', '^__pycache__$', '\.pyc$', '\.rbc$', '\~$']
-map <leader>o :NERDTreeFind<cr>
-let g:NERDTreeGitStatusWithFlags = 1
-
 nnoremap <leader>rg :Grepper -tool rg -jump<cr>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 nnoremap <silent> <leader>fb :Buffers<cr>
@@ -61,6 +56,9 @@ nnoremap <silent> <leader>ft :Tags<cr>
 nnoremap <silent> <leader>q :Bwipeout<cr>
 
 imap jj <esc>
+
+" NerdCommenter
+let g:NERDSpaceDelims = 1
 
 " CTags
 set tags=./.tags-dep,.tags-dep,./.tags,.tags
@@ -83,12 +81,14 @@ nnoremap <c-h> <c-w><c-h>
 set splitright
 set splitbelow
 
+" coc-explorer
+nnoremap <leader>e :CocCommand explorer<cr>
+
 " Testing
 nmap <silent> <leader>s :TestNearest<cr>
 nmap <silent> <leader>t :TestFile<cr>
 nmap <silent> <leader>g :TestVisit<cr>
 
-"let test#neovim#term_position = "vertical"
 let test#strategy = "basic"
 " launchdarkly-specific
 let test#go#gotest#executable = 'GONFALON_MODE=test go test'
@@ -118,10 +118,6 @@ autocmd BufWritePre * :call <sid>StripTrailingWhitespaces()
 
 set rtp+=/usr/local/opt/fzf
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
-"set grepprg=ag
-"let g:grep_cmd_opts = '--line-numbers --noheading'
-
-" let g:gitgutter_signs = 0
 
 " ListToggle plugin
 let g:lt_location_list_toggle_map = '<leader>u'
@@ -129,6 +125,8 @@ let g:lt_quickfix_list_toggle_map = '<leader>l'
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
+
+nmap <leader>zz <plug>(zoom-toggle)
 
 " use <c-space> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -140,16 +138,6 @@ inoremap <silent><expr> <c-Space>
       \ pumvisible() ? "\<c-n>" :
       \ <SID>check_back_space() ? "\<c-space>" :
       \ coc#refresh()
-
-nmap <leader>zz <plug>(zoom-toggle)
-
-let g:coc_global_extensions = [
-      \'coc-go',
-      \'coc-json',
-      \'coc-prettier',
-      \'coc-tslint-plugin',
-      \'coc-tsserver',
-      \]
 
 " Use <cr> to confirm completion, `<c-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
@@ -176,21 +164,6 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" sync open file with NERDTree
-" Check if NERDTree is open or active
-function! IsNERDTreeOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
-function! SyncTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
 
 nnoremap <leader>tl :Vista coc<cr>
 let g:vista_default_executive='coc'
