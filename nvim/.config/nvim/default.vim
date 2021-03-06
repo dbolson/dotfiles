@@ -128,6 +128,9 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 nmap <leader>zz <plug>(zoom-toggle)
 
+" fugitive
+nnoremap <leader>gb :Git blame<cr>
+
 " use <c-space> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
