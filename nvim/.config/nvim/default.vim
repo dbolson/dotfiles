@@ -46,6 +46,10 @@ map <leader>p "*p
 nnoremap <leader>v <c-w>v<c-w>l
 nnoremap <leader>h :split<cr><c-w>j
 
+set rtp+=/usr/local/opt/fzf
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*" --glob "!node_modules/*" --glob "!vendor/*"'
+
 nnoremap <leader>rg :Grepper -tool rg -jump<cr>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 nnoremap <silent> <leader>fb :Buffers<cr>
@@ -115,9 +119,6 @@ fun! <sid>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 autocmd BufWritePre * :call <sid>StripTrailingWhitespaces()
-
-set rtp+=/usr/local/opt/fzf
-set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
 " ListToggle plugin
 let g:lt_location_list_toggle_map = '<leader>u'

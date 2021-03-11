@@ -1,9 +1,6 @@
 export EDITOR=nvim
 export TERM=xterm-256color
 export HISTCONTROL=ignoreboth:erasedups
-# respect .agignore
-export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
