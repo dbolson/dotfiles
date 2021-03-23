@@ -55,7 +55,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 nnoremap <silent> <leader>fb :Buffers<cr>
 nnoremap <silent> <leader>ff :FZF<cr>
 nnoremap <silent> <leader>fg :Rg<cr>
-nnoremap <silent> <leader>ft :Tags<cr>
+nnoremap <silent> <leader>ft :Vista finder<cr>
 
 nnoremap <silent> <leader>q :Bwipeout<cr>
 
