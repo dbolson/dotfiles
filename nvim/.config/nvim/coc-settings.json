@@ -2,6 +2,5 @@
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript"],
     "explorer.file.autoReveal": true,
-    "explorer.file.showHiddenFiles": true,
-    "explorer.width": 30
+    "explorer.file.showHiddenFiles": true
 }
