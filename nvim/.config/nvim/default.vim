@@ -52,6 +52,8 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*" --glob "!node_m
 
 nnoremap <leader>rg :Grepper -tool rg -jump<cr>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" search for word under cursor with :rg<cr>
+nnoremap <leader>* :Grepper -tool rg -cword -noprompt<cr>
 nnoremap <silent> <leader>fb :Buffers<cr>
 nnoremap <silent> <leader>ff :FZF<cr>
 nnoremap <silent> <leader>fg :Rg<cr>
