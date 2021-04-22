@@ -174,3 +174,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nnoremap <leader>tl :Vista coc<cr>
 let g:vista_default_executive='coc'
 let g:vista#renderer#enable_icon=0
+
+nnoremap <leader>+ <c-w>>
+nnoremap <leader>- <c-w><
