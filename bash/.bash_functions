@@ -1,12 +1,6 @@
 # system
-function updateHomebrew() {
-  brew update
-  brew doctor
-  brew upgrade
-  brew cleanup
-}
 
-function updateVim {
+function update-vim {
   vim +PlugClean +qall
   vim +PlugInstall +qall
   vim +PlugUpdate +qall
@@ -14,28 +8,28 @@ function updateVim {
   vim +UpdateRemotePlugins +qall
 }
 
-function removeOldDockerImages() {
+function remove-oldDocker-images() {
   docker rm -v $(docker ps -aq 2>/dev/null) 2>/dev/null
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
   docker volume rm $(docker volume ls -f dangling=true -q) 2>/dev/null
 }
 
-function downloadYoutubeMP3() {
+function download-youtube-mp3() {
   cd Downloads/ || exit
   youtube-dl --extract-audio --audio-format mp3 "$1"
   cd - || exit
 }
 
-function formatJSON {
+function format-json {
   echo "$1" | python -m json.tool
 }
 
 # git
-function checkoutAndTrack() {
+function checkout-and-track() {
   git checkout -t "origin/$1"
 }
 
-function cleanFeatureBranch() {
+function clean-feature-branch() {
   git checkout master &&
     if [ "$1" ]
     then
@@ -43,9 +37,4 @@ function cleanFeatureBranch() {
     fi
     git remote prune origin &&
       git pull --rebase
-}
-
-# aws
-function printAWSEnvVars {
-  env | grep AWS_
 }

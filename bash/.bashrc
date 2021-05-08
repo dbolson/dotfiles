@@ -15,20 +15,6 @@ HISTCONTROL=ignoreboth
 HISTIGNORE='ls:bg:fg:history'
 PROMPT_COMMAND='history -a'
 
-# https://github.com/Bash-it/bash-it
-# path to the bash it configuration
-BASH_IT="/Users/$(whoami)/.bash_it"
-export BASH_IT
-
-# location /.bash_it/themes/
-export BASH_IT_THEME='minimal'
-
-# shellcheck source=/dev/null
-source "$BASH_IT/bash_it.sh"
-
-# shellcheck source=/dev/null
-source "$(brew --prefix)/etc/bash_completion"
-
 if [ -f ~/.bash_aliases ]; then
    #shellcheck source=/dev/null
   . ~/.bash_aliases
