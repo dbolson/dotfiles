@@ -1,5 +1,4 @@
 # system
-
 function update-vim {
   vim +PlugClean +qall
   vim +PlugInstall +qall
@@ -8,7 +7,7 @@ function update-vim {
   vim +UpdateRemotePlugins +qall
 }
 
-function remove-oldDocker-images() {
+function remove-old-docker-images() {
   docker rm -v $(docker ps -aq 2>/dev/null) 2>/dev/null
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
   docker volume rm $(docker volume ls -f dangling=true -q) 2>/dev/null
