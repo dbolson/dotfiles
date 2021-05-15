@@ -38,3 +38,8 @@ if [ -f ~/.bash_work ]; then
   # shellcheck source=/dev/null
   . ~/.bash_work
 fi
+
+if [ -f ~/.bash_prompt ]; then
+  # shellcheck source=/dev/null
+  . ~/.bash_prompt
+fi
