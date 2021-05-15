@@ -1,5 +1,5 @@
 let mapleader=","
-color vividchalk
+colorscheme gruvbox
 
 set autowrite " automatically :write before running commands
 set cmdheight=2 " give more space for displaying messages.

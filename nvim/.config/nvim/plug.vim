@@ -23,11 +23,13 @@ Plug 'mhinz/vim-signify'
 Plug 'moll/vim-bbye'
 Plug 'neomake/neomake' " TODO: replace linting with LSP-specific command
 Plug 'neovim/nvim-lspconfig'
+Plug 'npxbr/gruvbox.nvim'
 Plug 'nvim-lua/plenary.nvim' " telescope.lua
 Plug 'nvim-lua/popup.nvim' " telescope.lua
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rafamadriz/friendly-snippets'
+Plug 'rktjmp/lush.nvim'
 Plug 'sbdchd/neoformat' " TODO: replace formatting with LSP-specific command
 Plug 'scrooloose/nerdcommenter'
 Plug 'simrat39/symbols-outline.nvim'
