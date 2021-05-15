@@ -17,6 +17,7 @@
 [push]
   default = simple
 [url "git@github.com:"]
-    insteadOf = https://github.com/
+  insteadOf = https://github.com/
 [user]
-    name = Danny Olson
+  email = dbolson@gmail.com
+  name = Danny Olson
