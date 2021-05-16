@@ -1,18 +1,20 @@
-lua << EOF
-vim.g.symbols_outline = {
-    auto_preview = false
-}
-EOF
-nmap <leader>S :SymbolsOutline<cr>
+" bbye
+nnoremap <silent> <leader>q :Bwipeout<cr>
 
-" zoom
-nmap <leader>zz <plug>(zoom-toggle)
+" symbols_outline.nvim
+let g:symbols_outline = {
+      \ "auto_preview": v:false
+      \ }
+nmap <leader>S :SymbolsOutline<cr>
 
 " fugitive
 nnoremap <leader>gb :Git blame<cr>
 
-" bbye
-nnoremap <silent> <leader>q :Bwipeout<cr>
+" nvim-lightbulb
+autocmd CursorHold,CursorHoldI * lua require('nvim-lightbulb').update_lightbulb()
+
+" neomake
+call neomake#configure#automake('nw', 500)
 
 " NerdCommenter
 let g:NERDSpaceDelims = 1
@@ -25,11 +27,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>* <cmd>Telescope grep_string<cr>
-
-" nvim-tree
-nnoremap <leader>e :NvimTreeToggle<cr>
-" nnoremap <leader>n :NvimTreeFindFile<cr> TODO: make this something
-
+"
 " vim-test
 nmap <silent> <leader>s :TestNearest<cr>
 nmap <silent> <leader>t :TestFile<cr>
@@ -37,12 +35,9 @@ nmap <silent> <leader>g :TestVisit<cr>
 
 let test#strategy = "basic"
 
-" vsnip
-imap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
-smap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
-
-" neomake
-call neomake#configure#automake('nw', 500)
+" nvim-tree
+nnoremap <leader>e :NvimTreeToggle<cr>
+" nnoremap <leader>n :NvimTreeFindFile<cr> TODO: make this something
 
 " lsp-trouble
 lua << EOF
@@ -51,6 +46,13 @@ lua << EOF
     {silent = true, noremap = true}
   )
 EOF
+
+" vsnip
+imap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
+smap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
+
+" zoom
+nmap <leader>zz <plug>(zoom-toggle)
 
 lua << EOF
 require('lualine').setup{ theme = 'onedark' }
