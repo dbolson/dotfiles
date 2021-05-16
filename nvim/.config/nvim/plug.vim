@@ -38,5 +38,6 @@ Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 call plug#end()
