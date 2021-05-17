@@ -73,3 +73,5 @@ map <leader>" :%s/[“”]/"/g<cr><bar>:%s/’/'/g<cr>
 
 nnoremap <leader>+ <c-w>>
 nnoremap <leader>- <c-w><
+
+nnoremap <leader>vrc :lua require('dbolson.telescope').search_dotfiles()<cr>

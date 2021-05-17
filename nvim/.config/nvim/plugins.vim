@@ -22,13 +22,13 @@ call neomake#configure#automake('nw', 500)
 let g:NERDSpaceDelims = 1
 
 " telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fF <cmd>Telescope file_browser<cr>
-nnoremap <leader>ft <cmd>Telescope tags<cr> " TODO: will this work with vista?
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>* <cmd>Telescope grep_string<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fc <cmd>Telescope git_commits<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>ft <cmd>Telescope tags<cr> " TODO: will this work with vista?
 "
 " vim-test
 nmap <silent> <leader>s :TestNearest<cr>
