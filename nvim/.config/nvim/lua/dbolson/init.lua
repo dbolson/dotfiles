@@ -2,7 +2,11 @@ require("dbolson.telescope")
 
 require('lspconfig')
 require('lspinstall').setup()
-require('lualine').setup()
+require('lualine').setup{
+  options = {
+    theme = 'neon'
+  }
+}
 
 -- lsp-trouble
 require("trouble").setup()

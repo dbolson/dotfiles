@@ -27,6 +27,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'npxbr/gruvbox.nvim'
 Plug 'nvim-lua/plenary.nvim' " telescope.lua
 Plug 'nvim-lua/popup.nvim' " telescope.lua
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rafamadriz/friendly-snippets'
@@ -38,6 +39,6 @@ Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'rafamadriz/neon'
 
 call plug#end()

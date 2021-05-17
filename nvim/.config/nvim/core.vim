@@ -1,10 +1,12 @@
 let mapleader=","
-colorscheme gruvbox
+
+let neon_style="dark"
+colorscheme neon
 
 set autowrite " automatically :write before running commands
 set cmdheight=2 " give more space for displaying messages.
 set completeopt=menuone,noselect
-set cursorline
+set cursorline " highlight current line
 set expandtab " always uses spaces instead of tab characters
 set hidden
 set ignorecase
@@ -25,7 +27,6 @@ set softtabstop=2
 set tabstop=2
 set termguicolors
 set updatetime=300
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set wildmode=list:longest,list:full
 
 inoremap jj <esc>
