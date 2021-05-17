@@ -1,5 +1,5 @@
 let mapleader = ","
-colorscheme vividchalk
+colorscheme gruvbox
 
 set autowrite " Automatically :write before running commands
 set cmdheight=2 " Give more space for displaying messages.
@@ -26,6 +26,8 @@ set termguicolors
 set updatetime=300
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set wildmode=list:longest,list:full
+
+autocmd vimenter * ++nested colorscheme gruvbox
 
 " Highlight after 120 characters
 augroup vimrc_autocmds

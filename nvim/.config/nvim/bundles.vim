@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
 
 " coc plugins
 Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
