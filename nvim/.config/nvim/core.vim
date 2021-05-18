@@ -1,7 +1,11 @@
 let mapleader=","
 
-let neon_style="dark"
-colorscheme neon
+" let neon_style="dark"
+let g:tokyonight_style = "night"
+let g:tokyonight_colors = {
+      \ "bg": "#222325"
+      \ }
+colorscheme tokyonight
 
 set autowrite " automatically :write before running commands
 set cmdheight=2 " give more space for displaying messages.

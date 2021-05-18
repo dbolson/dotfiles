@@ -4,7 +4,7 @@ require('lspconfig')
 require('lspinstall').setup()
 require('lualine').setup{
   options = {
-    theme = 'neon'
+    theme = 'auto'
   }
 }
 

@@ -17,6 +17,7 @@ autocmd CursorHold,CursorHoldI * lua require('nvim-lightbulb').update_lightbulb(
 
 " neomake
 call neomake#configure#automake('nw', 500)
+let g:neomake_go_golangci_lint_args = neomake#makers#ft#go#golangci_lint().args + ['--allow-parallel-runners']
 
 " NerdCommenter
 let g:NERDSpaceDelims = 1
