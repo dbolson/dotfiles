@@ -9,7 +9,10 @@ require('lualine').setup{
 }
 
 -- lsp-trouble
-require("trouble").setup()
+-- require("trouble").setup()
+require("trouble").setup{
+  auto_close = true
+}
 vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>LspTroubleToggle<cr>",
   {silent = true, noremap = true}
 )
