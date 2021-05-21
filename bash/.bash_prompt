@@ -1,9 +1,10 @@
-COLOR_RED="\033[0;31m"
-COLOR_YELLOW="\033[0;33m"
+COLOR_CYAN="\033[0;36m"
 COLOR_GREEN="\033[0;32m"
 COLOR_OCHRE="\033[38;5;95m"
-COLOR_WHITE="\033[0;37m"
+COLOR_RED="\033[0;31m"
 COLOR_RESET="\033[0m"
+COLOR_WHITE="\033[0;37m"
+COLOR_YELLOW="\033[0;33m"
 
 function git_color {
   local git_status
@@ -37,8 +38,8 @@ function git_branch {
   fi
 }
 
-PS1="\[$COLOR_WHITE\]\W " # basename of pwd
-PS1+="\[\$(git_color)\]" # colors git status
-PS1+="\$(git_branch)" # prints current branch
-PS1+="\[$COLOR_RESET\] $ "
+PS1="\[\$(git_color)\]" # colors git status
+PS1+="\$(git_branch) " # prints current branch
+PS1+="\[$COLOR_CYAN\]\W" # basename of pwd
+PS1+="\[$COLOR_RESET\] "
 export PS1

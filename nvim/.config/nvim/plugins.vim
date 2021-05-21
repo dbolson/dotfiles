@@ -29,8 +29,8 @@ nnoremap <leader>fc <cmd>Telescope git_commits<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>ft <cmd>Telescope tags<cr> " TODO: will this work with vista?
-"
+nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
+
 " vim-test
 nmap <silent> <leader>s :TestNearest<cr>
 nmap <silent> <leader>t :TestFile<cr>
@@ -49,6 +49,10 @@ smap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
 " zoom
 nmap <leader>zz <plug>(zoom-toggle)
 
+" which-key
+nnoremap <leader>wk :WhichKey<space>
+
+" nvim-compe
 let g:compe = {}
 let g:compe.autocomplete = v:true
 let g:compe.debug = v:false
@@ -69,5 +73,5 @@ let g:compe.source.calc = v:true
 let g:compe.source.nvim_lsp = v:true
 let g:compe.source.nvim_lua = v:true
 let g:compe.source.path = v:true
-let g:compe.source.ultisnips = v:true
+" let g:compe.source.ultisnips = v:true
 let g:compe.source.vsnip = v:true
