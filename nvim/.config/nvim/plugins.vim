@@ -41,6 +41,7 @@ let test#strategy = "basic"
 " nvim-tree
 nnoremap <leader>e :NvimTreeToggle<cr>
 nnoremap <leader>E :NvimTreeFindFile<cr>
+let g:nvim_tree_add_trailing = 1
 
 " vsnip
 imap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
