@@ -25,4 +25,11 @@ M.search_dotfiles = function()
   })
 end
 
+M.search_documents = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<documents>",
+    cwd = "$HOME/Documents",
+  })
+end
+
 return M

@@ -18,6 +18,7 @@ set list listchars=tab:\ \ ,trail:·
 set mouse=a " can click around in terminal window
 set nobackup
 set nohlsearch
+set noincsearch
 set noswapfile
 set nowb
 set nowrap
@@ -78,4 +79,5 @@ map <leader>" :%s/[“”]/"/g<cr><bar>:%s/’/'/g<cr>
 nnoremap <leader>+ <c-w>>
 nnoremap <leader>- <c-w><
 
-nnoremap <leader>vrc :lua require('dbolson.telescope').search_dotfiles()<cr>
+nnoremap <leader>fv :lua require('dbolson.telescope').search_dotfiles()<cr>
+nnoremap <leader>fd :lua require('dbolson.telescope').search_documents()<cr>
