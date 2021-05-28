@@ -41,6 +41,7 @@ Plug 'tpope/vim-surround'
 
 " colors
 Plug 'chase/focuspoint-vim'
+Plug 'eddyekofo94/gruvbox-flat.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'npxbr/gruvbox.nvim'
 Plug 'owickstrom/vim-colors-paramount'
