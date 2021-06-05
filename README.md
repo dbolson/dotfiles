@@ -1,6 +1,6 @@
-# Dotfiles
+# dotfiles
 
-## Installation
+## installation
 
 ```
 git clone git@github.com:dbolson/dotfiles.git ~/dotfiles
@@ -8,9 +8,10 @@ cd ~/dotfiles
 ./bin/install
 ```
 
-## coc.vim setup
+Run these commands in vim:
 
 ```
-:CocInstall coc-go
-:CocInstall json
+LspInstall bash
+LspInstall go
+LspInstall python
 ```

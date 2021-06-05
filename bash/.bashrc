@@ -1,6 +1,10 @@
+# if not running interactively, don't do anything
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
 export EDITOR=nvim
-export TERM=xterm-256color
-export HISTCONTROL=ignoreboth:erasedups
 
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
@@ -9,25 +13,31 @@ bind '"\e[B":history-search-forward'
 # http://blog.sanctum.geek.nz/better-bash-history/
 shopt -s histappend
 shopt -s cmdhist
-HISTFILESIZE=10000
-HISTSIZE=10000
 HISTCONTROL=ignoreboth
+HISTFILESIZE=10000
 HISTIGNORE='ls:bg:fg:history'
+HISTSIZE=10000
 PROMPT_COMMAND='history -a'
 
-# https://github.com/Bash-it/bash-it
-# path to the bash it configuration
-BASH_IT="/Users/$(whoami)/.bash_it"
-export BASH_IT
+# check the window size after each command and, if necessary
+# update the values of LINES and COLUMNS
+shopt -s checkwinsize
 
-# location /.bash_it/themes/
-export BASH_IT_THEME='minimal'
+export BASH_SILENCE_DEPRECATION_WARNING=1 # macos-specific for bash
+export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
-# shellcheck source=/dev/null
-source "$BASH_IT/bash_it.sh"
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
-# shellcheck source=/dev/null
-source "$(brew --prefix)/etc/bash_completion"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 if [ -f ~/.bash_aliases ]; then
    #shellcheck source=/dev/null
@@ -42,4 +52,9 @@ fi
 if [ -f ~/.bash_work ]; then
   # shellcheck source=/dev/null
   . ~/.bash_work
+fi
+
+if [ -f ~/.bash_prompt ]; then
+  # shellcheck source=/dev/null
+  . ~/.bash_prompt
 fi

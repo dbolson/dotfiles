@@ -3,8 +3,8 @@ alias cat=bat
 alias dc=docker-compose
 alias less='less -R'
 alias ll='exa -la --icons'
-alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias reload='source ~/.bash_profile'
+alias nvim='~/nvim.appimage' # temporary
 alias vim=nvim
 
 # git

@@ -10,24 +10,9 @@
 .tags-dep
 tags
 
-# clojure
-.lein-repl-history
-.nrepl-port
-**/target/
-
 # node
 npm-debug.log
 .eslintrc.js
-
-# ruby
-custom_plan.rb
-zeus.json
-.byebug_history
-
-# scala
-*.class
-*.$class
-scalastyle-config.xml
 
 # python
 *.pyc
