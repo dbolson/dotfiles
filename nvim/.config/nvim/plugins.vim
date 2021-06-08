@@ -42,6 +42,7 @@ let test#strategy = "basic"
 nnoremap <leader>e :NvimTreeToggle<cr>
 nnoremap <leader>E :NvimTreeFindFile<cr>
 let g:nvim_tree_add_trailing = 1
+let g:nvim_tree_ignore = ['__pycache__', 'node_modules', 'vendor']
 
 " vsnip
 imap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
@@ -74,5 +75,4 @@ let g:compe.source.calc = v:true
 let g:compe.source.nvim_lsp = v:true
 let g:compe.source.nvim_lua = v:true
 let g:compe.source.path = v:true
-" let g:compe.source.ultisnips = v:true
 let g:compe.source.vsnip = v:true
