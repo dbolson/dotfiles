@@ -31,15 +31,42 @@ function git_branch {
 
   if [[ $git_status =~ $on_branch ]]; then
     local branch=${BASH_REMATCH[1]}
-    echo "($branch)"
+    echo "$branch"
   elif [[ $git_status =~ $on_commit ]]; then
     local commit=${BASH_REMATCH[1]}
-    echo "($commit)"
+    echo "$commit"
   fi
 }
 
+function git_stash {
+  local stash_status=$(git stash list 2> /dev/null | tail -n1)
+  local regex="stash@\{([0-9]+)\}"
+
+  if [[ $stash_status =~ $regex ]]
+  then
+    local stash_length="${BASH_REMATCH[1]}"
+    echo "{$(( stash_length + 1 ))}"
+  fi
+}
+
+function git_status {
+  local branch_status=$(git_branch)
+  local stash_status=$(git_stash)
+
+  if [[ $branch_status != "" ]]
+  then
+    if [[ $stash_status == "" ]]
+    then
+      echo "($branch_status)"
+    else
+      echo "($branch_status $stash_status)"
+    fi
+  fi
+
+}
+
 PS1="\[\$(git_color)\]" # colors git status
-PS1+="\$(git_branch) " # prints current branch
+PS1+="\$(git_status) " # prints current branch
 PS1+="\[$COLOR_CYAN\]\W" # basename of pwd
 PS1+="\[$COLOR_RESET\] "
 export PS1
