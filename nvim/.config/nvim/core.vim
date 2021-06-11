@@ -1,12 +1,12 @@
 let mapleader=","
 
+let gruvbox_flat_style = "dark"
+let material_style = 'deep ocean'
 let neon_style="dark"
 let g:tokyonight_style = "night"
 let g:tokyonight_colors = {
       \ "bg": "#222325"
       \ }
-let g:gruvbox_flat_style = "dark"
-" colorscheme paramount
 colorscheme gruvbox-flat
 
 set autowrite " automatically :write before running commands
