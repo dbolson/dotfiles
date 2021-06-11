@@ -46,7 +46,6 @@ Plug 'folke/tokyonight.nvim'
 Plug 'marko-cerovac/material.nvim'
 Plug 'npxbr/gruvbox.nvim'
 Plug 'owickstrom/vim-colors-paramount'
-Plug 'rafamadriz/neon'
 Plug 'rktjmp/lush.nvim'
 Plug 'romgrk/doom-one.vim'
 
