@@ -53,6 +53,9 @@ nnoremap <c-k> <c-w><c-k>
 nnoremap <c-l> <c-w><c-l>
 nnoremap <c-h> <c-w><c-h>
 
+" easier go to last buffer
+nnoremap <leader><leader> <c-^>
+
 " split-term
 set splitright
 set splitbelow
