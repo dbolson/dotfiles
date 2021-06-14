@@ -1,4 +1,4 @@
-require("dbolson.telescope")
+require('dbolson.telescope')
 
 require('lspconfig')
 require('lspinstall').setup()
@@ -16,14 +16,17 @@ require('gitsigns').setup{
   }
 }
 
-require("trouble").setup{
+require('trouble').setup{
   auto_close = true
 }
-vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>LspTroubleToggle<cr>",
+vim.api.nvim_set_keymap('n', '<leader>xx', '<cmd>LspTroubleToggle<cr>',
   {silent = true, noremap = true}
 )
 
 local on_attach = function(_, bufnr)
+  require('lsp_signature').on_attach({
+    hint_prefix = '',
+  })
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   local opts = { noremap=true, silent=true }
