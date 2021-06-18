@@ -40,11 +40,9 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 
 " colors
-Plug 'chase/focuspoint-vim'
 Plug 'eddyekofo94/gruvbox-flat.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'marko-cerovac/material.nvim'
-Plug 'npxbr/gruvbox.nvim'
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'rktjmp/lush.nvim'
 Plug 'romgrk/doom-one.vim'
