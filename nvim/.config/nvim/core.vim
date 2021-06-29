@@ -43,7 +43,7 @@ augroup vimrc_autocmds
   autocmd BufEnter * highlight OverLength ctermfg=red guibg=#592929
   autocmd BufEnter * match OverLength /\%120v.*/
 
-  autocmd BufWritePost * silent! Neoformat
+  autocmd BufWritePre * silent! Neoformat
   autocmd BufWritePost * silent! Neomake
 augroup END
 
