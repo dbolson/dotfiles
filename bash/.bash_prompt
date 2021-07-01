@@ -57,9 +57,9 @@ function git_status {
   then
     if [[ $stash_status == "" ]]
     then
-      echo "($branch_status)"
+      echo "$branch_status"
     else
-      echo "($branch_status $stash_status)"
+      echo "$branch_status $stash_status"
     fi
   fi
 
