@@ -80,6 +80,7 @@ let g:markdown_fenced_languages = ['bash=sh', 'go', 'html', 'javascript', 'pytho
 map <leader>M :set syntax=markdown<cr>:set wrap<cr>:set spell<cr>
 
 map <leader>" :%s/[“”]/"/g<cr><bar>:%s/’/'/g<cr>
+nmap <silent> gx :!open <cWORD><cr>
 
 nnoremap <leader>+ <c-w>>
 nnoremap <leader>- <c-w><
