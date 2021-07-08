@@ -16,6 +16,7 @@ set cursorline " highlight current line
 set expandtab " always uses spaces instead of tab characters
 set hidden
 set ignorecase
+set inccommand="nosplit" " incremental live completion
 set list listchars=tab:\ \ ,trail:·
 set mouse=a " can click around in terminal window
 set nobackup
