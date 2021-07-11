@@ -23,6 +23,8 @@ vim.api.nvim_set_keymap('n', '<leader>xx', '<cmd>LspTroubleToggle<cr>',
   {silent = true, noremap = true}
 )
 
+require("which-key").setup{}
+
 local on_attach = function(_, bufnr)
   require('lsp_signature').on_attach({
     hint_prefix = '',
