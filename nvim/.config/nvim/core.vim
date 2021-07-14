@@ -80,6 +80,8 @@ au BufRead,BufNewFile *.md setlocal wrap
 let g:markdown_fenced_languages = ['bash=sh', 'go', 'html', 'javascript', 'python', 'ruby', 'scala', 'vim']
 map <leader>M :set syntax=markdown<cr>:set wrap<cr>:set spell<cr>
 
+au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
+
 map <leader>" :%s/[“”]/"/g<cr><bar>:%s/’/'/g<cr>
 nmap <silent> gx :!open <cWORD><cr>
 

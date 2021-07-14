@@ -20,7 +20,6 @@ Plug 'kosayoda/nvim-lightbulb'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'machakann/vim-highlightedyank'
 Plug 'moll/vim-bbye'
 Plug 'neomake/neomake' " TODO: replace linting with LSP-specific command
 Plug 'neovim/nvim-lspconfig'
