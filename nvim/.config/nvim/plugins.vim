@@ -36,8 +36,14 @@ nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
 nmap <silent> <leader>s :TestNearest<cr>
 nmap <silent> <leader>t :TestFile<cr>
 nmap <silent> <leader>g :TestVisit<cr>
-
 let test#strategy = "basic"
+
+" alternate
+command! -bang Alt lua require("dbolson.alternate").switch("<bang>"=="!", '')
+command! -bang AltV lua require("dbolson.alternate").switch("<bang>"=="!", 'vsplit')
+command! -bang AltS lua require("dbolson.alternate").switch("<bang>"=="!", 'split')
+
+nnoremap <leader>v :AltV<cr>
 
 " nvim-tree
 nnoremap <leader>e :NvimTreeToggle<cr>
