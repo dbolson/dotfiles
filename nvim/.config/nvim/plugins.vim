@@ -40,7 +40,7 @@ command! -bang Alt lua require("dbolson.alternate").switch("<bang>"=="!", '')
 command! -bang AltV lua require("dbolson.alternate").switch("<bang>"=="!", 'vsplit')
 command! -bang AltS lua require("dbolson.alternate").switch("<bang>"=="!", 'split')
 
-nnoremap <leader>v :AltV<cr>
+nnoremap <leader>V :AltV<cr>
 
 " nvim-tree
 nnoremap <leader>e :NvimTreeToggle<cr>
