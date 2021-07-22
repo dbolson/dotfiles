@@ -1,6 +1,12 @@
 local actions = require('telescope.actions')
 require('telescope').setup {
   defaults = {
+    file_ignore_patterns = {
+      '__pycache__',
+      "node_modules",
+      "static/",
+      "vendor/",
+    },
     qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
     mappings = {
       i = {
