@@ -4,3 +4,4 @@ source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/functions.vim
 source ~/.config/nvim/go.vim
 source ~/.config/nvim/python.vim
+source ~/.config/nvim/scheme.vim

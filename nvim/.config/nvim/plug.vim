@@ -7,6 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Olical/conjure', {'tag': 'v4.22.1'}
 Plug 'dhruvasagar/vim-zoom'
 Plug 'folke/lsp-trouble.nvim'
 Plug 'folke/which-key.nvim'
