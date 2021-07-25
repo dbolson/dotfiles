@@ -27,7 +27,7 @@ Plug 'nvim-lua/plenary.nvim' " telescope.lua
 Plug 'nvim-lua/popup.nvim' " telescope.lua
 Plug 'nvim-telescope/telescope-fzy-native.nvim' " telescope.lua
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'branch': '0.5-compat', 'do': ':TSUpdate'}
 Plug 'rafamadriz/friendly-snippets'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'sbdchd/neoformat' " TODO: replace formatting with LSP-specific command
