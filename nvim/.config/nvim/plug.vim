@@ -31,9 +31,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'branch': '0.5-compat', 'do': ':TSUpdat
 Plug 'rafamadriz/friendly-snippets'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'sbdchd/neoformat' " TODO: replace formatting with LSP-specific command
-Plug 'scrooloose/nerdcommenter'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'

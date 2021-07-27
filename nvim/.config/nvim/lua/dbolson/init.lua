@@ -2,28 +2,10 @@ require('dbolson.telescope')
 
 require('lspconfig')
 require('lspinstall').setup()
-require('lualine').setup{
-  options = {
-    theme = 'auto',
-  }
-}
-
-require('gitsigns').setup{
-  signs = {
-    add = {hl = 'GitSignsAdd', text = '+', numhl='GitSignsAddNr', linehl='GitSignsAddLn'},
-    change = {hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-    delete = {hl = 'GitSignsDelete', text = '_', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-  }
-}
-
 require('trouble').setup{
   auto_close = true
 }
-vim.api.nvim_set_keymap('n', '<leader>xx', '<cmd>LspTroubleToggle<cr>',
-  {silent = true, noremap = true}
-)
-
-require("which-key").setup{}
+vim.api.nvim_set_keymap('n', '<leader>xx', '<cmd>LspTroubleToggle<cr>', {silent = true, noremap = true})
 
 local on_attach = function(_, bufnr)
   require('lsp_signature').on_attach({
@@ -64,3 +46,22 @@ for _, server in pairs(servers) do
     on_attach = on_attach
   }
 end
+
+require('lualine').setup{
+  options = {
+    theme = 'auto',
+  }
+}
+require('nvim_comment').setup({
+  comment_empty = true,
+  line_mapping = "<leader>ci",
+  operator_mapping = "ci",
+})
+require('gitsigns').setup{
+  signs = {
+    add = {hl = 'GitSignsAdd', text = '+', numhl='GitSignsAddNr', linehl='GitSignsAddLn'},
+    change = {hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+    delete = {hl = 'GitSignsDelete', text = '_', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+  }
+}
+require("which-key").setup()
