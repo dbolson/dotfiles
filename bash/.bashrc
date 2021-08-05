@@ -29,7 +29,7 @@ export PATH="$PATH:/usr/local/sbin"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
