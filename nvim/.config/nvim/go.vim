@@ -6,3 +6,4 @@ if has('nvim')
 endif
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd BufWritePre *.go lua require('dbolson.go').goimports()
