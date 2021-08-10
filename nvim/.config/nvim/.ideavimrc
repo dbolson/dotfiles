@@ -1,0 +1,12 @@
+source ~/dotfiles/nvim/.config/nvim/core.vim
+
+" https://github.com/JetBrains/ideavim/wiki/Emulated-plugins
+"
+" https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+set NERDTree
+set commentary
+set highlightedyank
+
+nnoremap <leader>E :NERDTreeFind<cr>
+nnoremap <leader>e :NERDTreeToggle<cr>
+nnoremap <leader>fe :NERDTreeFocus<cr>
