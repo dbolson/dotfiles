@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Olical/conjure', {'tag': 'v4.22.1'}
 Plug 'dhruvasagar/vim-zoom'
+Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 Plug 'folke/lsp-trouble.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'hoob3rt/lualine.nvim'
