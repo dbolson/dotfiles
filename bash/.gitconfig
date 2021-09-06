@@ -8,7 +8,7 @@
   st = status
 [core]
   excludesfile = ~/.gitignore
-  editor = nvim
+	editor = /usr/local/bin/nvim.appimage
   pager = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
   diffFilter = diff-so-fancy --patch
