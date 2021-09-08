@@ -8,5 +8,5 @@ alias vim=nvim
 
 # git
 alias gpp='gpr && git push'
-alias gpr='git pull --rebase'
+alias gpr='git pull'
 alias gst='git status'

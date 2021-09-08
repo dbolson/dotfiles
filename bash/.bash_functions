@@ -14,7 +14,7 @@ function remove-old-docker-images() {
 }
 
 function download-youtube-mp3() {
-  cd Downloads/ || exit
+  cd ~/Downloads || exit
   youtube-dl --extract-audio --audio-format mp3 "$1"
   cd - || exit
 }
