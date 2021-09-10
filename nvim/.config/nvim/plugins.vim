@@ -13,10 +13,30 @@ nmap <leader>S :SymbolsOutline<cr>
 nnoremap <leader>gb :Git blame<cr>
 
 " neomake
-call neomake#configure#automake('nw', 500)
-let g:neomake_go_golangci_lint_args = neomake#makers#ft#go#golangci_lint().args + ['--allow-parallel-runners']
+" call neomake#configure#automake('nw', 500)
+" let g:neomake_go_golangci_lint_args = neomake#makers#ft#go#golangci_lint().args + ['--allow-parallel-runners']
+" autocmd BufWritePost * silent! Neomake
 
 " nvim-comment
+nnoremap <silent><leader>/ :CommentToggle<cr>
+vnoremap <silent><leader>/ :CommentToggle<cr>
+
+autocmd BufWritePost * silent! FormatWrite
+
+" lspsaga.nvim
+" TODO: update shortcuts
+nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
+nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
+nnoremap <silent> gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
+nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
+nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent><leader>xx :TroubleToggle<CR>
+nnoremap <silent><leader>so :SymbolsOutline<CR>
 
 " telescope
 nnoremap <leader>* <cmd>Telescope grep_string<cr>
@@ -44,38 +64,16 @@ nnoremap <leader>V :AltV<cr>
 " nvim-tree
 nnoremap <leader>e :NvimTreeToggle<cr>
 nnoremap <leader>E :NvimTreeFindFile<cr>
-let g:nvim_tree_add_trailing = 1
-let g:nvim_tree_ignore = ['__pycache__', 'node_modules', 'vendor']
 
-" vsnip
-imap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
-smap <expr> <c-j> vsnip#expandable() ? '<plug>(vsnip-expand)': '<c-j>'
+" wilder-nvim
+" call wilder#enable_cmdline_enter()
+call wilder#setup({'modes': [':', '/', '?']})
+call wilder#set_option('renderer', wilder#popupmenu_renderer({
+      \ 'highlighter': wilder#basic_highlighter(),
+      \ }))
 
 " zoom
 nmap <leader>zz <plug>(zoom-toggle)
 
 " which-key
-nnoremap <leader>wk :WhichKey<space>
-
-" nvim-compe
-let g:compe = {}
-let g:compe.autocomplete = v:true
-let g:compe.debug = v:false
-let g:compe.documentation = v:true
-let g:compe.enabled = v:true
-let g:compe.incomplete_delay = 400
-let g:compe.max_abbr_width = 100
-let g:compe.max_kind_width = 100
-let g:compe.max_menu_width = 100
-let g:compe.min_length = 1
-let g:compe.preselect = 'enable'
-let g:compe.source_timeout = 200
-let g:compe.throttle_time = 80
-
-let g:compe.source = {}
-let g:compe.source.buffer = v:true
-let g:compe.source.calc = v:true
-let g:compe.source.nvim_lsp = v:true
-let g:compe.source.nvim_lua = v:true
-let g:compe.source.path = v:true
-let g:compe.source.vsnip = v:true
+" nnoremap <leader>wk :WhichKey<space>
