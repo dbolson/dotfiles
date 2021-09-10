@@ -43,9 +43,6 @@ inoremap jj <esc>
 augroup vimrc_autocmds
   autocmd BufEnter * highlight OverLength ctermfg=red guibg=#592929
   autocmd BufEnter * match OverLength /\%120v.*/
-
-  autocmd BufWritePre * silent! Neoformat
-  autocmd BufWritePost * silent! Neomake
 augroup END
 
 " easier split navigation
