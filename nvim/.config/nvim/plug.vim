@@ -7,13 +7,13 @@ endif
 call plug#begin('~/.vim/plugged')
 
 
-" Plug 'folke/which-key.nvim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Olical/conjure', {'tag': 'v4.22.1'}
 Plug 'creativenull/diagnosticls-nvim'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 Plug 'folke/trouble.nvim'
+Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'glepnir/lspsaga.nvim'
 Plug 'hoob3rt/lualine.nvim'
