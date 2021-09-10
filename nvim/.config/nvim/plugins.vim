@@ -73,6 +73,3 @@ nmap <leader>zz <plug>(zoom-toggle)
 " nvim-lint
 au BufEnter * lua require('lint').try_lint()
 au BufWritePost * lua require('lint').try_lint()
-
-" which-key
-" nnoremap <leader>wk :WhichKey<space>
