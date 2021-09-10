@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 
 
 " Plug 'folke/which-key.nvim'
-" Plug 'neomake/neomake' " TODO: replace linting with LSP-specific command
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Olical/conjure', {'tag': 'v4.22.1'}
 Plug 'creativenull/diagnosticls-nvim'
@@ -24,6 +23,7 @@ Plug 'kabouzeid/nvim-lspinstall'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'mfussenegger/nvim-lint'
 Plug 'mhartington/formatter.nvim'
 Plug 'moll/vim-bbye'
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}

@@ -12,11 +12,6 @@ nmap <leader>S :SymbolsOutline<cr>
 " fugitive
 nnoremap <leader>gb :Git blame<cr>
 
-" neomake
-" call neomake#configure#automake('nw', 500)
-" let g:neomake_go_golangci_lint_args = neomake#makers#ft#go#golangci_lint().args + ['--allow-parallel-runners']
-" autocmd BufWritePost * silent! Neomake
-
 " nvim-comment
 nnoremap <silent><leader>/ :CommentToggle<cr>
 vnoremap <silent><leader>/ :CommentToggle<cr>
@@ -74,6 +69,10 @@ call wilder#set_option('renderer', wilder#popupmenu_renderer({
 
 " zoom
 nmap <leader>zz <plug>(zoom-toggle)
+
+" nvim-lint
+au BufEnter * lua require('lint').try_lint()
+au BufWritePost * lua require('lint').try_lint()
 
 " which-key
 " nnoremap <leader>wk :WhichKey<space>
