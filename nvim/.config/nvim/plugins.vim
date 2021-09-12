@@ -1,5 +1,3 @@
-lua require("dbolson")
-
 " bbye
 nnoremap <silent> <leader>q :Bwipeout<cr>
 
@@ -50,9 +48,9 @@ nmap <silent> <leader>g :TestVisit<cr>
 let test#strategy = "basic"
 
 " alternate
-command! -bang Alt lua require("dbolson.alternate").switch("<bang>"=="!", '')
-command! -bang AltV lua require("dbolson.alternate").switch("<bang>"=="!", 'vsplit')
-command! -bang AltS lua require("dbolson.alternate").switch("<bang>"=="!", 'split')
+command! -bang Alt lua require("alternate").switch("<bang>"=="!", '')
+command! -bang AltV lua require("alternate").switch("<bang>"=="!", 'vsplit')
+command! -bang AltS lua require("alternate").switch("<bang>"=="!", 'split')
 
 nnoremap <leader>V :AltV<cr>
 
@@ -61,7 +59,6 @@ nnoremap <leader>e :NvimTreeToggle<cr>
 nnoremap <leader>E :NvimTreeFindFile<cr>
 
 " wilder-nvim
-" call wilder#enable_cmdline_enter()
 call wilder#setup({'modes': [':', '/', '?']})
 call wilder#set_option('renderer', wilder#popupmenu_renderer({
       \ 'highlighter': wilder#basic_highlighter(),

@@ -85,5 +85,5 @@ nmap <silent> gx :!open <cWORD><cr>
 nnoremap <leader>+ <c-w>>
 nnoremap <leader>- <c-w><
 
-nnoremap <leader>fv :lua require('dbolson.telescope').search_dotfiles()<cr>
-nnoremap <leader>fd :lua require('dbolson.telescope').search_documents()<cr>
+nnoremap <leader>fv :lua require('plugins.telescope').search_dotfiles()<cr>
+nnoremap <leader>fd :lua require('plugins.telescope').search_documents()<cr>

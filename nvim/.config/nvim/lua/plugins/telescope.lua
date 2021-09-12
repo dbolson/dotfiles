@@ -7,12 +7,23 @@ require('telescope').setup {
       "static/",
       "vendor/",
     },
+    file_sorter = require("telescope.sorters").get_fuzzy_file,
+    generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
     qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
     mappings = {
       i = {
         ["<C-q>"] = actions.send_to_qflist + actions.open_qflist
       }
-    }
+    },
+    vimgrep_arguments = {
+      "rg",
+      "--color=never",
+      "--column",
+      "--line-number",
+      "--no-heading",
+      "--smart-case",
+      "--with-filename",
+    },
   },
   extensions = {
     fzy_native = {
