@@ -1,5 +1,12 @@
 # dotfiles
 
+## requirements
+
+* python for `coq_nvim`
+* [glow](https://github.com/charmbracelet/glow)
+* [font](https://www.nerdfonts.com/) (specifically [JetBrainsMono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip) )for `nvim-web-devicons`
+* [fzy](https://github.com/jhawthorn/fzy) for telescope
+
 ## installation
 
 ```
@@ -11,7 +18,9 @@ cd ~/dotfiles
 Run these commands in vim:
 
 ```
-LspInstall bash
-LspInstall go
-LspInstall python
+:PlugInstall
+:COQdeps
+:LspInstall bash
+:LspInstall go
+:LspInstall python
 ```
