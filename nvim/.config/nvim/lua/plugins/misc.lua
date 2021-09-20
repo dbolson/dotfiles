@@ -6,7 +6,7 @@ require('gitsigns').setup{
   }
 }
 require('lint').linters_by_ft = {
-  go = {'golangcilint'},
+  -- go = {'golangcilint'},
   python = {'flake8'},
   sh = {'shellcheck'},
 }
