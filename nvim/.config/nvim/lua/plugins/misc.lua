@@ -14,5 +14,7 @@ require("nvim_comment").setup({
   comment_empty = false,
   create_mappings = false,
 })
-require("trouble").setup()
+require("trouble").setup({
+  mode = "lsp_document_diagnostics",
+})
 require("which-key").setup()

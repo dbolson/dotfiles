@@ -1,6 +1,7 @@
 local g = vim.g
 
 g.nvim_tree_add_trailing = 1
+g.nvim_tree_disable_netrw = 0
 g.nvim_tree_ignore = {
   '.pytest_cache',
   '__pycache__',

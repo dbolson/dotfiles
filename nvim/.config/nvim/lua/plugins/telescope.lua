@@ -4,7 +4,6 @@ require('telescope').setup {
     file_ignore_patterns = {
       '__pycache__',
       "node_modules",
-      "static/",
       "vendor/",
     },
     file_sorter = require("telescope.sorters").get_fuzzy_file,
