@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Olical/conjure', {'tag': 'v4.22.1'}
-Plug 'akinsho/bufferline.nvim'
 Plug 'creativenull/diagnosticls-nvim'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
@@ -17,7 +16,6 @@ Plug 'folke/trouble.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'glepnir/lspsaga.nvim'
-Plug 'hoob3rt/lualine.nvim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kabouzeid/nvim-lspinstall'
@@ -28,7 +26,7 @@ Plug 'mfussenegger/nvim-lint'
 Plug 'mhartington/formatter.nvim'
 Plug 'moll/vim-bbye'
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-Plug 'ms-jpq/coq_nvim'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim' " telescope.lua
 Plug 'nvim-lua/popup.nvim' " telescope.lua
@@ -44,6 +42,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tweekmonster/startuptime.vim'
+Plug 'windwp/windline.nvim'
 
 " colors
 Plug 'eddyekofo94/gruvbox-flat.nvim'

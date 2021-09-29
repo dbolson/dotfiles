@@ -15,6 +15,7 @@ nnoremap <silent><leader>/ :CommentToggle<cr>
 vnoremap <silent><leader>/ :CommentToggle<cr>
 
 autocmd BufWritePost * silent! FormatWrite
+autocmd VimEnter * silent! WindLineFloatToggle
 
 " lspsaga.nvim
 " TODO: update shortcuts

@@ -1,4 +1,3 @@
-require("bufferline").setup()
 require('gitsigns').setup{
   signs = {
     add = {hl = 'GitSignsAdd', text = '+', numhl='GitSignsAddNr', linehl='GitSignsAddLn'},
@@ -19,3 +18,5 @@ require("trouble").setup({
   mode = "lsp_document_diagnostics",
 })
 require("which-key").setup()
+-- TODO: update colors, add lsp percentage?
+require('wlsample.airline')
