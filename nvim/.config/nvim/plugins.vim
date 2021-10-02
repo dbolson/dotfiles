@@ -18,15 +18,15 @@ autocmd BufWritePost * silent! FormatWrite
 autocmd VimEnter * silent! WindLineFloatToggle
 
 " lspsaga.nvim
-" TODO: update shortcuts
 nnoremap <silent><c-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>
 nnoremap <silent><c-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>
 nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<cr>
-nnoremap <silent>K <cmd>lua require('lspsaga.hover').render_hover_doc()<cr>
-nnoremap <silent>[e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<cr>
-nnoremap <silent>]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<cr>
-nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<cr>
+nnoremap <silent>E <cmd>lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false,border='rounded'})<cr>
+nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<cr>
+nnoremap <silent>[e <cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_prev()<cr>
+nnoremap <silent>]e <cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_next()<cr>
 nnoremap <silent>gD <cmd>lua require'lspsaga.provider'.preview_definition()<cr>
+nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<cr>
 nnoremap <silent>gh <cmd>lua require'lspsaga.provider'.lsp_finder()<cr>
 nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<cr>
 nnoremap <silent>gu <cmd>lua vim.lsp.buf.implementation()<cr>
