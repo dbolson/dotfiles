@@ -15,7 +15,6 @@ Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 Plug 'folke/trouble.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'glepnir/lspsaga.nvim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kabouzeid/nvim-lspinstall'
@@ -37,6 +36,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'tami5/lspsaga.nvim'
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
