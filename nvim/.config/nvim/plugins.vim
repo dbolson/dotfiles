@@ -15,7 +15,6 @@ nnoremap <silent><leader>/ :CommentToggle<cr>
 vnoremap <silent><leader>/ :CommentToggle<cr>
 
 autocmd BufWritePost * silent! FormatWrite
-autocmd VimEnter * silent! WindLineFloatToggle
 
 " lspsaga.nvim
 nnoremap <silent><c-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>

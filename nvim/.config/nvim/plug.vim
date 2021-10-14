@@ -6,7 +6,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Olical/conjure', {'tag': 'v4.22.1'}
 Plug 'creativenull/diagnosticls-nvim'
