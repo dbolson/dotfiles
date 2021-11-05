@@ -16,6 +16,7 @@ require('telescope').setup {
     },
     vimgrep_arguments = {
       "rg",
+      "-i",
       "--color=never",
       "--column",
       "--line-number",
