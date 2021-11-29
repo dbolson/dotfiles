@@ -16,7 +16,6 @@ Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kabouzeid/nvim-lspinstall'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
@@ -41,6 +40,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tweekmonster/startuptime.vim'
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'windwp/windline.nvim'
 
 " colors

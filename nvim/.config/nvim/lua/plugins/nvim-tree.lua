@@ -5,10 +5,14 @@ g.nvim_tree_add_trailing = 1
 
 require('nvim-tree').setup({
   disable_netrw = false,
-  nvim_tree_ignore = {
-    '.pytest_cache',
-    '__pycache__',
-    'node_modules',
-    'vendor',
+  filters = {
+    custom = {
+      nvim_tree_ignore = {
+        '.pytest_cache',
+        '__pycache__',
+        'node_modules',
+        'vendor',
+      },
+    },
   },
 })
