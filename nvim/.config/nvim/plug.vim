@@ -29,7 +29,6 @@ Plug 'nvim-lua/plenary.nvim' " telescope.lua
 Plug 'nvim-lua/popup.nvim' " telescope.lua
 Plug 'nvim-telescope/telescope-fzy-native.nvim' " telescope.lua
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'branch': '0.5-compat', 'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'simrat39/symbols-outline.nvim'
