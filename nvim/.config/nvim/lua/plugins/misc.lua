@@ -15,7 +15,7 @@ require("nvim_comment").setup({
   create_mappings = false,
 })
 require("trouble").setup({
-  mode = "lsp_document_diagnostics",
+  mode = "document_diagnostics",
 })
 require("which-key").setup()
 -- TODO: update colors, add lsp percentage?
