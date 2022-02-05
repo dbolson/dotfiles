@@ -10,12 +10,8 @@ require("nvim-lsp-installer").on_server_ready(function(server)
   server:setup(coq.lsp_ensure_capabilities(opts))
 end)
 
-local function common_on_attach()
-  require("lsp_signature").on_attach({
-    hint_prefix = "",
-    use_lspsaga = true,
-  })
-end
+require("lsp_signature").setup()
+require("lspsaga").setup()
 
 vim.fn.sign_define(
   "LspDiagnosticsSignError",

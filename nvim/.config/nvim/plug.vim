@@ -7,7 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Olical/conjure', {'tag': 'v4.28.0'}
+Plug 'Olical/conjure', {'tag': 'v4.29.1'}
 Plug 'creativenull/diagnosticls-nvim'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}

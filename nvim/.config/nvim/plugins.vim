@@ -22,11 +22,11 @@ nnoremap <silent><c-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga
 nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<cr>
 nnoremap <silent>E <cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<cr>
 nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<cr>
-nnoremap <silent>[e <cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_prev()<cr>
-nnoremap <silent>]e <cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_next()<cr>
-nnoremap <silent>gD <cmd>lua require'lspsaga.provider'.preview_definition()<cr>
+nnoremap <silent>[e <cmd>Lspsaga diagnostic_jump_next<cr>
+nnoremap <silent>]e <cmd>Lspsaga diagnostic_jump_prev<cr>
+nnoremap <silent>gD <cmd>lua require('lspsaga.provider').preview_definition()<cr>
 nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<cr>
-nnoremap <silent>gh <cmd>lua require'lspsaga.provider'.lsp_finder()<cr>
+nnoremap <silent>gh <cmd>lua require('lspsaga.provider').lsp_finder()<cr>
 nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<cr>
 nnoremap <silent>gu <cmd>lua vim.lsp.buf.implementation()<cr>
 nnoremap <silent><leader>so :SymbolsOutline<cr>
