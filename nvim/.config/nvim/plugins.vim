@@ -27,7 +27,8 @@ nnoremap <silent>]e <cmd>Lspsaga diagnostic_jump_prev<cr>
 nnoremap <silent>gD <cmd>lua require('lspsaga.provider').preview_definition()<cr>
 nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<cr>
 nnoremap <silent>gh <cmd>lua require('lspsaga.provider').lsp_finder()<cr>
-nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<cr>
+nnoremap <silent>gR <cmd>lua require('lspsaga.rename').rename()<cr>
+nnoremap <silent>gr <cmd>lua vim.lsp.buf.references()<cr>
 nnoremap <silent>gu <cmd>lua vim.lsp.buf.implementation()<cr>
 nnoremap <silent><leader>so :SymbolsOutline<cr>
 nnoremap <silent><leader>xx :TroubleToggle<cr>
