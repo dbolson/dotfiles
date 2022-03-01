@@ -1,6 +1,9 @@
+#!/usr/bin/env bash
+
 # system
 alias cat=bat
 alias dc=docker-compose
+alias dt='cd $HOME/dotfiles/nvim/.config/nvim/'
 alias less='less -R'
 alias ll='exa -la --icons'
 alias reload='source ~/.bash_profile'
