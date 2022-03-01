@@ -29,7 +29,7 @@ function checkout-and-track() {
 }
 
 function clean-feature-branch() {
-  git checkout master &&
+  git checkout main &&
     if [ "$1" ]
     then
       git branch -D $1
