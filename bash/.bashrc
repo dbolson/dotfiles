@@ -2,8 +2,8 @@
 
 # if not running interactively, don't do anything
 case $- in
-  *i*) ;;
-    *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 export EDITOR=nvim
@@ -30,24 +30,34 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 export PATH="$(go env GOPATH)/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/shims:$PATH"
+
+# chruby
+#shellcheck source=/dev/null
+source /usr/local/share/chruby/chruby.sh
+#shellcheck source=/dev/null
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.5.1
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-if which pyenv-virtualenv-init > /dev/null; then
-  eval "$(pyenv virtualenv-init -)";
+if which pyenv-virtualenv-init >/dev/null; then
+  eval "$(pyenv virtualenv-init -)"
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
 if [ -f ~/.bash_aliases ]; then
-   #shellcheck source=/dev/null
+  #shellcheck source=/dev/null
   . ~/.bash_aliases
 fi
 
