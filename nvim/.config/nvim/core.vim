@@ -44,10 +44,10 @@ augroup vimrc_autocmds
 augroup END
 
 " easier split navigation
-nnoremap <c-j> <c-w><c-j>
-nnoremap <c-k> <c-w><c-k>
-nnoremap <c-l> <c-w><c-l>
-nnoremap <c-h> <c-w><c-h>
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " easier go to last buffer
 nnoremap <leader><leader> <c-^>
