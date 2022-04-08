@@ -1,4 +1,4 @@
-\setenv PAGER pspg
+-- \setenv PAGER pspg
 \set PROMPT1 '%~%x%# '
 \set ON_ERROR_STOP on
 \set ON_ERROR_ROLLBACK interactive
