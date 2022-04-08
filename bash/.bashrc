@@ -7,7 +7,6 @@ case $- in
 esac
 
 export EDITOR=nvim
-
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
@@ -30,6 +29,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
+# shellcheck disable=SC2155
 export PATH="$(go env GOPATH)/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -51,6 +51,8 @@ fi
 if which pyenv-virtualenv-init >/dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
+
+source /usr/local/bin/virtualenvwrapper.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
