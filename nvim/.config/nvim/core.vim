@@ -35,6 +35,10 @@ set termguicolors
 set updatetime=300
 set wildmode=list:longest,list:full
 
+" use filetype.lua instead of filetype.vim
+let g:do_filetype_lua = 1
+let g:did_load_filetypes = 0
+
 inoremap jj <esc>
 
 " highlight after 120 characters
