@@ -1,15 +1,14 @@
 local vim = vim
 local coq = require("coq")
-local lsp = require("lspconfig")
+local lspconfig = require("lspconfig")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require("nvim-lsp-installer").on_server_ready(function(server)
-  local opts = {}
-  server:setup(coq.lsp_ensure_capabilities(opts))
-end)
-
+require("nvim-lsp-installer").setup()
+for _, server in ipairs { "bashls", "gopls", "pyright", "sqls", "tsserver" } do
+  lspconfig[server]:setup(coq.lsp_ensure_capabilities())
+end
 require("lsp_signature").setup()
 require("lspsaga").setup()
 
