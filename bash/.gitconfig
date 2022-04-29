@@ -19,3 +19,5 @@
 [user]
 	email = dolson@launchdarkly.com
   name = Danny Olson
+[init]
+	defaultBranch = main
