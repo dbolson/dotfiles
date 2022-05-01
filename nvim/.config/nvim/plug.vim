@@ -14,6 +14,7 @@ Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 Plug 'folke/trouble.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'j-hui/fidget.nvim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kyazdani42/nvim-tree.lua'
