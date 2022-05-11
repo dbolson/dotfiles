@@ -37,13 +37,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/shims:$PATH"
 
-# chruby
-#shellcheck source=/dev/null
-source /usr/local/share/chruby/chruby.sh
-#shellcheck source=/dev/null
-source /usr/local/share/chruby/auto.sh
-chruby ruby-2.5.1
-
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
