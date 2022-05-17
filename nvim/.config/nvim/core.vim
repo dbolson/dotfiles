@@ -90,5 +90,8 @@ nnoremap + <c-w>>
 " uses '<shift> -' for consistency with '<shift> =' to mean '+'
 nnoremap _ <c-w><
 
+" tab fills in selected autocomplete
+inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<cr>"
+
 nnoremap <leader>fv :lua require('plugins.telescope').search_dotfiles()<cr>
 nnoremap <leader>fd :lua require('plugins.telescope').search_documents()<cr>

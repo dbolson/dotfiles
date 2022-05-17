@@ -19,7 +19,7 @@ autocmd BufWritePost * silent! FormatWrite
 " lspsaga.nvim
 nnoremap <silent><c-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>
 nnoremap <silent><c-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>
-nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<cr>
+nnoremap <silent><leader>ca <cmd>Lspsaga code_action<cr>
 nnoremap <silent>E <cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<cr>
 nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<cr>
 nnoremap <silent>[e <cmd>Lspsaga diagnostic_jump_next<cr>

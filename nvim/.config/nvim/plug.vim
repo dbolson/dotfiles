@@ -7,7 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Olical/conjure', {'tag': 'v4.32.0'}
+Plug 'Olical/conjure', {'tag': 'v4.33.2'}
 Plug 'creativenull/diagnosticls-nvim'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
@@ -34,7 +34,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'stefandtw/quickfix-reflector.vim'
-Plug 'tami5/lspsaga.nvim', {'branch': 'nvim6.0'}
+Plug 'tami5/lspsaga.nvim'
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
