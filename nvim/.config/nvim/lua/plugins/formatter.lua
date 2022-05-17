@@ -1,9 +1,20 @@
+local home = os.getenv("HOME")
+
 require('formatter').setup({
   filetype = {
     go = {
       function()
         return {
           exe = 'goimports',
+          stdin = true,
+        }
+      end
+    },
+    java = {
+      function()
+        return {
+          exe = "java",
+          args = { "-jar", home .. "/.local/jars/google-java-format.jar", "-" },
           stdin = true,
         }
       end
