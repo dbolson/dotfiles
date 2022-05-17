@@ -45,7 +45,7 @@ if which pyenv-virtualenv-init >/dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-source /usr/local/bin/virtualenvwrapper.sh
+source virtualenvwrapper.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
