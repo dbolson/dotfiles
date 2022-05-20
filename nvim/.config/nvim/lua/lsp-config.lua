@@ -9,7 +9,9 @@ require("nvim-lsp-installer").setup()
 for _, server in ipairs { "bashls", "gopls", "pyright", "sqls", "tsserver" } do
   lspconfig[server]:setup(coq.lsp_ensure_capabilities())
 end
-require("lsp_signature").setup()
+require("lsp_signature").setup({
+  hint_prefix = "",
+})
 require("lspsaga").setup()
 
 vim.fn.sign_define(
