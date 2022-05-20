@@ -2,9 +2,6 @@
 nnoremap <silent> <leader>q :Bwipeout<cr>
 
 " symbols_outline.nvim
-let g:symbols_outline = {
-      \ "auto_preview": v:false
-      \ }
 nmap <leader>S :SymbolsOutline<cr>
 
 " fugitive
