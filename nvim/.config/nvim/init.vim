@@ -10,3 +10,6 @@ source ~/.config/nvim/scheme.vim
 lua require("init")
 lua require("alternate")
 lua require("plugins.telescope")
+
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
