@@ -26,5 +26,5 @@ require('wlsample.airline')
 -- symbols_outline.nvim
 vim.g.symbols_outline = {
   auto_preview = false,
-  width = 15,
+  width = 20,
 }

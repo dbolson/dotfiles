@@ -12,7 +12,9 @@ end
 require("lsp_signature").setup({
   hint_prefix = "",
 })
-require("lspsaga").setup()
+require("lspsaga").setup({
+  code_action_icon = "",
+})
 
 vim.fn.sign_define(
   "LspDiagnosticsSignError",
