@@ -2,9 +2,10 @@ local actions = require('telescope.actions')
 require('telescope').setup {
   defaults = {
     file_ignore_patterns = {
-      '__pycache__',
+      "__pycache__",
       "node_modules",
       "vendor/",
+      ".class",
     },
     file_sorter = require("telescope.sorters").get_fuzzy_file,
     generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
