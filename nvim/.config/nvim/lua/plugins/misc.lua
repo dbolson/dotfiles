@@ -1,4 +1,4 @@
-require("fidget").setup()
+require('fidget').setup()
 require('gitsigns').setup({
   signs = {
     add = {hl = 'GitSignsAdd', text = '+', numhl='GitSignsAddNr', linehl='GitSignsAddLn'},
@@ -13,14 +13,14 @@ require('lint').linters_by_ft = {
 local shellcheck = require('lint.linters.shellcheck')
 table.insert(shellcheck.args, '-x')
 
-require("nvim_comment").setup({
+require('nvim_comment').setup({
   comment_empty = false,
   create_mappings = false,
 })
-require("trouble").setup({
-  mode = "document_diagnostics",
+require('trouble').setup({
+  mode = 'document_diagnostics',
 })
-require("which-key").setup()
+require('which-key').setup()
 require('wlsample.airline')
 
 -- symbols_outline.nvim
