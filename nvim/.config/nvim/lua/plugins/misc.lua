@@ -1,3 +1,4 @@
+local navic = require('nvim-navic')
 require('fidget').setup()
 require('gitsigns').setup({
   signs = {
@@ -16,6 +17,12 @@ table.insert(shellcheck.args, '-x')
 require('lualine').setup({
   options = {
     theme = 'gruvbox_dark',
+  },
+  sections = {
+    lualine_c = {
+      { navic.get_location, cond = navic.is_available },
+    },
+    lualine_x = {'filename', 'fileformat', 'filetype'},
   }
 })
 

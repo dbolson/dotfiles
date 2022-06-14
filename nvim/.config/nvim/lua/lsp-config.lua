@@ -7,7 +7,11 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("nvim-lsp-installer").setup()
 for _, server in ipairs { "bashls", "gopls", "sumneko_lua", "pyright", "sqls", "tsserver" } do
-  lspconfig[server]:setup(coq.lsp_ensure_capabilities())
+  lspconfig[server].setup(coq.lsp_ensure_capabilities({
+    on_attach = function(client, bufnr)
+        require("nvim-navic").attach(client, bufnr)
+    end
+  }))
 end
 
 lspconfig.sumneko_lua.setup {
