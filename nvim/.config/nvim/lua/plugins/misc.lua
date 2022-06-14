@@ -13,6 +13,12 @@ require('lint').linters_by_ft = {
 local shellcheck = require('lint.linters.shellcheck')
 table.insert(shellcheck.args, '-x')
 
+require('lualine').setup({
+  options = {
+    theme = 'gruvbox_dark',
+  }
+})
+
 require('nvim_comment').setup({
   comment_empty = false,
   create_mappings = false,
@@ -21,7 +27,6 @@ require('trouble').setup({
   mode = 'document_diagnostics',
 })
 require('which-key').setup()
-require('wlsample.airline')
 
 -- symbols_outline.nvim
 vim.g.symbols_outline = {

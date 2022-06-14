@@ -28,6 +28,7 @@ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim' " telescope.lua
 Plug 'nvim-lua/popup.nvim' " telescope.lua
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim' " telescope.lua
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -41,7 +42,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tweekmonster/startuptime.vim'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'windwp/windline.nvim'
 
 " colors
 Plug 'eddyekofo94/gruvbox-flat.nvim'
