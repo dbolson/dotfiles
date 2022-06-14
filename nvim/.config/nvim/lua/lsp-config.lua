@@ -6,11 +6,22 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("nvim-lsp-installer").setup()
-for _, server in ipairs { "bashls", "gopls", "pyright", "sqls", "tsserver" } do
+for _, server in ipairs { "bashls", "gopls", "sumneko_lua", "pyright", "sqls", "tsserver" } do
   lspconfig[server]:setup(coq.lsp_ensure_capabilities())
 end
+
+lspconfig.sumneko_lua.setup {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' } -- removes "global vim is undefined" warning from line 1
+            }
+        }
+    }
+}
+
 require("lsp_signature").setup({
-  hint_prefix = "",
+  hint_prefix = "", -- no panda
 })
 require("lspsaga").setup({
   code_action_icon = "",
