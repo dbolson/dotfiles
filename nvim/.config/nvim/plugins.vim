@@ -37,6 +37,7 @@ nnoremap <leader>fc <cmd>Telescope git_commits<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fk <cmd>Telescope keymaps<cr>
 nnoremap <leader>fs <cmd>Telescope colorscheme<cr>
 nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
 
