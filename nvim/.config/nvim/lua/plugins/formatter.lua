@@ -3,6 +3,11 @@ local util = require("formatter.util")
 
 require("formatter").setup({
     filetype = {
+        c = {
+            function()
+                return {exe = "clang-format", stdin = true}
+            end,
+        },
         go = {
             function()
                 return {exe = "goimports", stdin = true}
