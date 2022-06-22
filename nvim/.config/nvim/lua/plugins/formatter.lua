@@ -61,9 +61,9 @@ require("formatter").setup({
         sql = {
             function()
                 return {
-                    exe = "sqlformat",
+                    exe = "sql-formatter",
                     args = {
-                        "--reindent", "--keywords upper",
+                        "--config ~/sql-formatter.json",
                         util.escape_path(util.get_current_buffer_file_path()),
                     },
                     stdin = true,
