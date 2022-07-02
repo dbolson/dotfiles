@@ -1,4 +1,3 @@
-local home = os.getenv("HOME")
 local util = require("formatter.util")
 
 require("formatter").setup({
@@ -8,18 +7,13 @@ require("formatter").setup({
                 return {exe = "clang-format", stdin = true}
             end,
         },
-        go = {
-            function()
-                return {exe = "goimports", stdin = true}
-            end,
-        },
+        go = {require("formatter.filetypes.go").goimports},
         java = {
             function()
                 return {
-                    exe = "java",
+                    exe = "google-java-format",
                     args = {
-                        "-jar", home .. "/.local/jars/google-java-format.jar",
-                        "-",
+                        util.escape_path(util.get_current_buffer_file_path()),
                     },
                     stdin = true,
                 }
@@ -49,9 +43,8 @@ require("formatter").setup({
             end,
         },
         python = {
-            function()
-                return {exe = "black", args = {"-q", "-"}, stdin = true}
-            end,
+            require("formatter.filetypes.python").black,
+            require("formatter.filetypes.python").isort,
         },
         sh = {
             function()
