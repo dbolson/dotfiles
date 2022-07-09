@@ -60,7 +60,6 @@ Plug 'mfussenegger/nvim-jdtls'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'simrat39/symbols-outline.nvim'
-Plug 'tami5/lspsaga.nvim'
 Plug 'williamboman/nvim-lsp-installer'
 
 " telescope

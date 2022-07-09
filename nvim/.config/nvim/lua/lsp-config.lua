@@ -29,7 +29,6 @@ require("lsp_signature").setup({
     floating_window = false,
     hint_prefix = "", -- no panda
 })
-require("lspsaga").setup({code_action_icon = ""})
 
 vim.fn.sign_define("LspDiagnosticsSignError",
                    {text = "", numhl = "LspDiagnosticsDefaultError"})

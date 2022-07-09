@@ -1,5 +1,5 @@
 local navic = require("nvim-navic")
-require("fidget").setup()
+
 require("gitsigns").setup({
     signs = {
         add = {
@@ -25,7 +25,6 @@ require("gitsigns").setup({
 require("lint").linters_by_ft = {python = {"flake8"}, sh = {"shellcheck"}}
 local shellcheck = require("lint.linters.shellcheck")
 table.insert(shellcheck.args, "-x")
-
 require("lualine").setup({
     options = {theme = "gruvbox_dark"},
     sections = {
@@ -33,9 +32,7 @@ require("lualine").setup({
         lualine_x = {{"filename", path = 1}, "fileformat", "filetype"},
     },
 })
-
 require("nvim_comment").setup({comment_empty = false, create_mappings = false})
-require("trouble").setup({mode = "document_diagnostics"})
 require("which-key").setup()
 
 -- symbols_outline.nvim

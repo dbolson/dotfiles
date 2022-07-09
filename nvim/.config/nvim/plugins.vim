@@ -1,9 +1,6 @@
 " bbye
 nnoremap <silent> <leader>q :Bwipeout<cr>
 
-" symbols_outline.nvim
-nmap <leader>S :SymbolsOutline<cr>
-
 " fugitive
 nnoremap <leader>gb :Git blame<cr>
 
@@ -12,23 +9,6 @@ nnoremap <silent><leader>/ :CommentToggle<cr>
 vnoremap <silent><leader>/ :CommentToggle<cr>
 
 autocmd BufWritePost * silent! FormatWrite
-
-" lspsaga.nvim
-nnoremap <silent><c-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>
-nnoremap <silent><c-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>
-nnoremap <silent><leader>ca <cmd>Lspsaga code_action<cr>
-nnoremap <silent>E <cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<cr>
-nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<cr>
-nnoremap <silent>[e <cmd>Lspsaga diagnostic_jump_next<cr>
-nnoremap <silent>]e <cmd>Lspsaga diagnostic_jump_prev<cr>
-nnoremap <silent>gD <cmd>lua require('lspsaga.provider').preview_definition()<cr>
-nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<cr>
-nnoremap <silent>gh <cmd>lua require('lspsaga.provider').lsp_finder()<cr>
-nnoremap <silent>gR <cmd>lua require('lspsaga.rename').rename()<cr>
-nnoremap <silent>gr <cmd>lua vim.lsp.buf.references()<cr>
-nnoremap <silent>gu <cmd>lua vim.lsp.buf.implementation()<cr>
-nnoremap <silent><leader>so :SymbolsOutline<cr>
-nnoremap <silent><leader>xx :TroubleToggle<cr>
 
 " telescope
 nnoremap <leader>* <cmd>Telescope grep_string<cr>
