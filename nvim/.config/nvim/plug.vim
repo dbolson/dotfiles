@@ -21,14 +21,26 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'mfussenegger/nvim-lint'
 Plug 'mhartington/formatter.nvim'
 Plug 'moll/vim-bbye'
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-surround'
 Plug 'tweekmonster/startuptime.vim'
+
+" completion
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'onsails/lspkind.nvim'
+Plug 'saadparwaiz1/cmp_luasnip'
+
+" snippets
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
 
 " debugging
 Plug 'leoluz/nvim-dap-go'

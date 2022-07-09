@@ -1,5 +1,4 @@
 local vim = vim
-local coq = require("coq")
 local lspconfig = require("lspconfig")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -9,11 +8,11 @@ require("nvim-lsp-installer").setup()
 for _, server in ipairs {
     "bashls", "clangd", "gopls", "sumneko_lua", "pyright", "sqls", "tsserver",
 } do
-    lspconfig[server].setup(coq.lsp_ensure_capabilities({
+    lspconfig[server].setup({
         on_attach = function(client, bufnr)
             require("nvim-navic").attach(client, bufnr)
         end,
-    }))
+    })
 end
 
 lspconfig.sumneko_lua.setup {
