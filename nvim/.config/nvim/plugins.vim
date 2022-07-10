@@ -28,9 +28,9 @@ nmap <silent> <leader>g :TestVisit<cr>
 let test#strategy = "basic"
 
 " alternate
-command! -bang Alt lua require("alternate").switch("<bang>"=="!", '')
-command! -bang AltV lua require("alternate").switch("<bang>"=="!", 'vsplit')
-command! -bang AltS lua require("alternate").switch("<bang>"=="!", 'split')
+command! -bang Alt lua require("user.alternate").switch("<bang>"=="!", '')
+command! -bang AltV lua require("user.alternate").switch("<bang>"=="!", 'vsplit')
+command! -bang AltS lua require("user.alternate").switch("<bang>"=="!", 'split')
 
 nnoremap <leader>V :AltV<cr>
 
