@@ -12,7 +12,7 @@ end
 cmp.setup({
     snippet = {
         expand = function(args)
-            require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+            require("luasnip").lsp_expand(args.body)
         end,
     },
     -- window = {
@@ -20,21 +20,18 @@ cmp.setup({
     -- documentation = cmp.config.window.bordered(),
     -- },
     mapping = cmp.mapping.preset.insert({
-        ["<C-p>"] = cmp.mapping.select_prev_item(),
-        ["<C-n>"] = cmp.mapping.select_next_item(),
-
-        ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), {"i", "c"}),
-        ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), {"i", "c"}),
-        ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
-        ["<C-y>"] = cmp.config.disable,
-        ["<C-e>"] = cmp.mapping({
+        ["<c-p>"] = cmp.mapping.select_prev_item(),
+        ["<c-n>"] = cmp.mapping.select_next_item(),
+        ["<c-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), {"i", "c"}),
+        ["<c-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), {"i", "c"}),
+        -- ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
+        -- ["<C-y>"] = cmp.config.disable,
+        ["<c-e>"] = cmp.mapping({
             i = cmp.mapping.abort(),
             c = cmp.mapping.close(),
         }),
-        -- Accept currently selected item. Set `select` to `false` to only confirm explicitly
-        -- selected items.
-        ["<CR>"] = cmp.mapping.confirm({select = true}),
-        ["<Tab>"] = cmp.mapping(function(fallback)
+        ["<cr>"] = cmp.mapping.confirm({select = true}),
+        ["<tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
             elseif luasnip.expandable() then
@@ -47,7 +44,7 @@ cmp.setup({
                 fallback()
             end
         end, {"i", "s"}),
-        ["<S-Tab>"] = cmp.mapping(function(fallback)
+        ["<s-tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
             elseif luasnip.jumpable(-1) then
@@ -69,19 +66,6 @@ cmp.setup({
             }),
         }),
     },
-    -- formatting = {
-    -- fields = {"kind", "abbr", "menu"},
-    -- format = function(entry, vim_item)
-    -- Kind icons
-    -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-    --     vim_item.menu = ({
-    --         luasnip = "[Snippet]",
-    --         buffer = "[Buffer]",
-    --         path = "[Path]",
-    --     })[entry.source.name]
-    --     return vim_item
-    -- end,
-    -- },
     sources = {
         {name = "nvim_lsp"}, {name = "nvim_lua"}, {name = "luasnip"},
         {name = "buffer"}, {name = "path"},

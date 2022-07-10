@@ -73,9 +73,9 @@ local function lsp_keymaps(bufnr)
                                 "<cmd>lua vim.diagnostic.goto_prev()<cr>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "[e",
                                 "<cmd>lua vim.diagnostic.goto_next()<cr>", opts)
-    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gl",
-    --                             "<cmd>lua vim.diagnostic.open_float(0, { \"single\", scope = \"line\" })<cr>",
-    -- opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gl",
+                                "<cmd>lua vim.diagnostic.open_float(0, { \"single\", scope = \"line\" })<cr>",
+                                opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>S", ":SymbolsOutline<cr>",
                                 opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>xx", ":TroubleToggle<cr>",
