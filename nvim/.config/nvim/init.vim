@@ -7,7 +7,7 @@ source ~/.config/nvim/java.vim
 source ~/.config/nvim/python.vim
 source ~/.config/nvim/scheme.vim
 
-lua require("init")
+lua require("user.init")
 
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0

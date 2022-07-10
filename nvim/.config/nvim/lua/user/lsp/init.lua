@@ -1,5 +1,5 @@
-require("lsp.lsp-installer")
-require("lsp.handlers").setup()
+require("user.lsp.lsp-installer")
+require("user.lsp.handlers").setup()
 
 require("fidget").setup()
 require("lsp_signature").setup({
