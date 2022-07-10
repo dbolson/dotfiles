@@ -12,9 +12,7 @@ require("formatter").setup({
             function()
                 return {
                     exe = "google-java-format",
-                    args = {
-                        util.escape_path(util.get_current_buffer_file_path()),
-                    },
+                    args = {util.escape_path(util.get_current_buffer_file_path())},
                     stdin = true,
                 }
             end,
@@ -33,6 +31,8 @@ require("formatter").setup({
                 return {
                     exe = "lua-format",
                     args = {
+                        "--column-limit=100",
+                        "--chop-down-table",
                         "--extra-sep-at-table-end",
                         "--no-keep-simple-control-block-one-line",
                         "--no-keep-simple-function-one-line",

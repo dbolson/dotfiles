@@ -20,8 +20,7 @@ function M.switch(bang, cmd)
     else
         print("not a go file")
     end
-    if not vim.fn.filereadable(alt_file) and not vim.fn.bufexists(alt_file) and
-        not bang then
+    if not vim.fn.filereadable(alt_file) and not vim.fn.bufexists(alt_file) and not bang then
         print("couldn't find " .. alt_file)
         return
     elseif #cmd <= 1 then
