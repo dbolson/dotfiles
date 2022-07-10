@@ -15,17 +15,15 @@ cmp.setup({
             require("luasnip").lsp_expand(args.body)
         end,
     },
-    -- window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
-    -- },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
     mapping = cmp.mapping.preset.insert({
         ["<c-p>"] = cmp.mapping.select_prev_item(),
         ["<c-n>"] = cmp.mapping.select_next_item(),
         ["<c-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), {"i", "c"}),
         ["<c-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), {"i", "c"}),
-        -- ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
-        -- ["<C-y>"] = cmp.config.disable,
         ["<c-e>"] = cmp.mapping({
             i = cmp.mapping.abort(),
             c = cmp.mapping.close(),
@@ -71,8 +69,5 @@ cmp.setup({
         {name = "buffer"}, {name = "path"},
     },
     confirm_opts = {behavior = cmp.ConfirmBehavior.Replace, select = false},
-    -- documentation = {
-    --     border = {"╭", "─", "╮", "│", "╯", "─", "╰", "│"},
-    -- },
     experimental = {ghost_text = false, native_menu = false},
 })
