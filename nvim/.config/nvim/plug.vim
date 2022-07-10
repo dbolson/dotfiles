@@ -7,12 +7,11 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'SmiteshP/nvim-navic'
+Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 Plug 'dhruvasagar/vim-zoom'
 Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'j-hui/fidget.nvim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -55,7 +54,9 @@ Plug 'tpope/vim-rhubarb'
 
 " lsp
 Plug 'Olical/conjure', {'tag': 'v4.35.1'}
+Plug 'SmiteshP/nvim-navic'
 Plug 'folke/trouble.nvim'
+Plug 'j-hui/fidget.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ray-x/lsp_signature.nvim'
