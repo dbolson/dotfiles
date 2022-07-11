@@ -30,6 +30,11 @@ require("formatter").setup({
                 }
             end,
         },
+        json = {
+            function()
+                return {exe = "jq", args = {"."}, stdin = true}
+            end,
+        },
         lua = {
             function()
                 return {
