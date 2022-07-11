@@ -20,9 +20,13 @@ require("formatter").setup({
         javascript = {
             function()
                 return {
-                    exe = "prettier",
-                    args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0)},
+                    exe = "./node_modules/prettier/bin-prettier.js",
+                    args = {
+                        "--stdin-filepath",
+                        util.escape_path(util.get_current_buffer_file_path()),
+                    },
                     stdin = true,
+                    try_node_modules = true,
                 }
             end,
         },

@@ -2,7 +2,7 @@ local toggleterm = require("toggleterm")
 
 toggleterm.setup({
     close_on_exit = true,
-    direction = "vertical",
+    direction = "horizontal",
     hide_numbers = true,
     insert_mappings = true,
     open_mapping = [[<c-\>]],
