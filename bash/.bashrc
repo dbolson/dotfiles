@@ -45,11 +45,17 @@ if which pyenv-virtualenv-init >/dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# shellcheck disable=SC1091
 source virtualenvwrapper.sh
 
 export NVM_DIR="$HOME/.nvm"
+# shellcheck disable=SC1091
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
+# shellcheck disable=SC1091
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
+# bash completion
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 if [ -f ~/.bash_aliases ]; then
   #shellcheck source=/dev/null
