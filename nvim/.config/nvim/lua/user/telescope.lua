@@ -19,8 +19,9 @@ telescope.setup {
     },
     extensions = {fzy_native = {override_file_sorter = true, override_generic_sorter = false}},
 }
-telescope.load_extension("fzy_native")
 telescope.load_extension("dap")
+telescope.load_extension("fzy_native")
+telescope.load_extension("luasnip")
 
 local M = {}
 M.search_dotfiles = function()

@@ -39,6 +39,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 
 " snippets
 Plug 'L3MON4D3/LuaSnip'
+Plug 'benfowler/telescope-luasnip.nvim'
 Plug 'rafamadriz/friendly-snippets'
 
 " debugging
