@@ -4,15 +4,22 @@ require("formatter").setup({
     filetype = {
         c = {
             function()
-                return {exe = "clang-format", stdin = true}
+                return {
+                    exe = "clang-format",
+                    stdin = true,
+                }
             end,
         },
-        go = {require("formatter.filetypes.go").goimports},
+        go = {
+            require("formatter.filetypes.go").goimports,
+        },
         java = {
             function()
                 return {
                     exe = "google-java-format",
-                    args = {util.escape_path(util.get_current_buffer_file_path())},
+                    args = {
+                        util.escape_path(util.get_current_buffer_file_path()),
+                    },
                     stdin = true,
                 }
             end,
@@ -32,7 +39,13 @@ require("formatter").setup({
         },
         json = {
             function()
-                return {exe = "jq", args = {"."}, stdin = true}
+                return {
+                    exe = "jq",
+                    args = {
+                        ".",
+                    },
+                    stdin = true,
+                }
             end,
         },
         lua = {
@@ -40,9 +53,10 @@ require("formatter").setup({
                 return {
                     exe = "lua-format",
                     args = {
-                        "--column-limit=100",
-                        "--chop-down-table",
+                        -- "--column-limit=100",
+                        "--column-table-limit=10",
                         "--extra-sep-at-table-end",
+                        "--no-chop-down-kv-table",
                         "--no-keep-simple-control-block-one-line",
                         "--no-keep-simple-function-one-line",
                         "--single-quote-to-double-quote",
@@ -57,7 +71,14 @@ require("formatter").setup({
         },
         sh = {
             function()
-                return {exe = "shfmt", args = {"-i", 2}, stdin = true}
+                return {
+                    exe = "shfmt",
+                    args = {
+                        "-i",
+                        2,
+                    },
+                    stdin = true,
+                }
             end,
         },
         sql = {
