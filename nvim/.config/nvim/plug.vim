@@ -43,7 +43,6 @@ Plug 'benfowler/telescope-luasnip.nvim'
 Plug 'rafamadriz/friendly-snippets'
 
 " debugging
-Plug 'andrewferrier/debugprint.nvim'
 Plug 'leoluz/nvim-dap-go'
 Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-telescope/telescope-dap.nvim'
