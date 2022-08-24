@@ -54,7 +54,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
 " lsp
-Plug 'Olical/conjure', {'tag': 'v4.35.1'}
+Plug 'Olical/conjure', {'tag': 'v4.38.0'}
 Plug 'SmiteshP/nvim-navic'
 Plug 'folke/trouble.nvim'
 Plug 'j-hui/fidget.nvim'
