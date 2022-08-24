@@ -12,7 +12,7 @@ local s = ls.snippet
 local t = ls.text_node
 ls.add_snippets("go", {
     s({
-        trig = "sp",
+        trig = "dump",
         name = "spew.Dump()",
         dscr = "Snippet for spew.Dump()",
     }, {
