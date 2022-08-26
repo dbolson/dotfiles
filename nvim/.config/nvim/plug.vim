@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 Plug 'dhruvasagar/vim-zoom'
-Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
+Plug 'ellisonleao/glow.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'janko-m/vim-test'
