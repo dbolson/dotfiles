@@ -49,8 +49,6 @@ require("nvim_comment").setup({
 })
 require("which-key").setup()
 
--- symbols_outline.nvim
-vim.g.symbols_outline = {
-    auto_preview = false,
+require("symbols-outline").setup({
     width = 20,
-}
+})
