@@ -32,4 +32,61 @@ ls.add_snippets("go", {
         i(2),
         t("})"),
     }),
+    s({
+        trig = "tt",
+        name = "table test",
+        dscr = "Snippet for table test",
+        docstring = "Snippet for table test",
+    }, {
+        t("func Test"),
+        i(1),
+        t("(t *testing.T) {"),
+        t({
+            "",
+            "\ttests := map[string]struct {",
+        }),
+        t({
+            "",
+            "\t}{",
+        }),
+        t({
+            "",
+            "\t\t\"",
+        }),
+        i(2),
+        t("\": {"),
+        t({
+            "",
+            "\t\t},",
+        }),
+        t({
+            "",
+            "\t}",
+        }),
+        t({
+            "",
+            "\tfor name, tt := range tests {",
+        }),
+        t({
+            "",
+            "\t\tt.Run(name, func(t *testing.T) {",
+        }),
+        t({
+            "",
+            "\t\t\t",
+        }),
+        i(0),
+        t({
+            "",
+            "\t\t})",
+        }),
+        t({
+            "",
+            "\t}",
+        }),
+        t({
+            "",
+            "}",
+        }),
+    }),
 })
