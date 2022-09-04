@@ -25,7 +25,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-surround'
-Plug 'tweekmonster/startuptime.vim'
 
 " completion
 Plug 'hrsh7th/cmp-buffer'
