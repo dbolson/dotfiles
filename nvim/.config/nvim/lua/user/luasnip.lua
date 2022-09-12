@@ -12,6 +12,21 @@ local s = ls.snippet
 local t = ls.text_node
 ls.add_snippets("go", {
     s({
+        trig = ">>",
+        name = "debug",
+        dscr = "Snippet for debugging",
+    }, {
+        t("fmt.Println(\">>> "),
+        i(1, ""),
+        t("\")"),
+        t({
+            "",
+            "spew.Dump(",
+        }),
+        i(2, ""),
+        t(")"),
+    }),
+    s({
         trig = "dump",
         name = "spew.Dump()",
         dscr = "Snippet for spew.Dump()",
