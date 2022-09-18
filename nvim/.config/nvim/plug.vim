@@ -20,7 +20,6 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'mfussenegger/nvim-lint'
 Plug 'mhartington/formatter.nvim'
 Plug 'moll/vim-bbye'
-Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'terrortylor/nvim-comment'
@@ -41,6 +40,11 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'benfowler/telescope-luasnip.nvim'
 Plug 'rafamadriz/friendly-snippets'
 
+" statusline
+Plug 'SmiteshP/nvim-navic'
+Plug 'j-hui/fidget.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+
 " debugging
 Plug 'leoluz/nvim-dap-go'
 Plug 'mfussenegger/nvim-dap'
@@ -54,9 +58,7 @@ Plug 'tpope/vim-rhubarb'
 
 " lsp
 Plug 'Olical/conjure', {'tag': 'v4.38.0'}
-Plug 'SmiteshP/nvim-navic'
 Plug 'folke/trouble.nvim'
-Plug 'j-hui/fidget.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ray-x/lsp_signature.nvim'
@@ -70,6 +72,7 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " themes
+Plug 'cranberry-clockworks/coal.nvim'
 Plug 'eddyekofo94/gruvbox-flat.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'marko-cerovac/material.nvim'

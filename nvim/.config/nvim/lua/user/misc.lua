@@ -23,9 +23,6 @@ require("gitsigns").setup({
     },
 })
 require("lualine").setup({
-    options = {
-        theme = "gruvbox_dark",
-    },
     sections = {
         lualine_c = {
             {
