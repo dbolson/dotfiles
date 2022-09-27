@@ -33,6 +33,7 @@ telescope.setup {
         },
         ["telescope-alternate"] = {
             mappings = {
+                -- go
                 {
                     "(.*).go",
                     {
@@ -48,7 +49,18 @@ telescope.setup {
                     {
                         {
                             "[1].go",
-                            "Other",
+                            "Alternate",
+                            true,
+                        },
+                    },
+                },
+                -- python
+                {
+                    "(.*).py",
+                    {
+                        {
+                            "test_[1].py",
+                            "Test",
                             true,
                         },
                     },
