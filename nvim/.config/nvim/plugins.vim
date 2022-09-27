@@ -21,6 +21,8 @@ nnoremap <leader>fk <cmd>Telescope keymaps<cr>
 nnoremap <leader>fl <cmd>Telescope luasnip<cr>
 nnoremap <leader>fs <cmd>Telescope colorscheme<cr>
 nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
+nnoremap <leader>A <cmd>Telescope telescope-alternate alternate_file<cr>
+" open alternate file in vertical split
 nnoremap <leader>V <c-w>v<c-w>l \| <cmd>Telescope telescope-alternate alternate_file<cr>
 
 " vim-test
