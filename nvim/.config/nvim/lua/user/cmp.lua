@@ -20,10 +20,21 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ["<c-p>"] = cmp.mapping.select_prev_item(),
         ["<c-n>"] = cmp.mapping.select_next_item(),
-        ["<c-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), {"i", "c"}),
-        ["<c-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), {"i", "c"}),
-        ["<c-e>"] = cmp.mapping({i = cmp.mapping.abort(), c = cmp.mapping.close()}),
-        ["<cr>"] = cmp.mapping.confirm({select = true}),
+        ["<c-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), {
+            "i",
+            "c",
+        }),
+        ["<c-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), {
+            "i",
+            "c",
+        }),
+        ["<c-e>"] = cmp.mapping({
+            i = cmp.mapping.abort(),
+            c = cmp.mapping.close(),
+        }),
+        ["<cr>"] = cmp.mapping.confirm({
+            select = true,
+        }),
         ["<tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
@@ -36,7 +47,10 @@ cmp.setup({
             else
                 fallback()
             end
-        end, {"i", "s"}),
+        end, {
+            "i",
+            "s",
+        }),
         ["<s-tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
@@ -45,7 +59,10 @@ cmp.setup({
             else
                 fallback()
             end
-        end, {"i", "s"}),
+        end, {
+            "i",
+            "s",
+        }),
     }),
     formatting = {
         format = lspkind.cmp_format({
@@ -60,12 +77,28 @@ cmp.setup({
         }),
     },
     sources = {
-        {name = "nvim_lsp"},
-        {name = "nvim_lua"},
-        {name = "luasnip"},
-        {name = "buffer"},
-        {name = "path"},
+        {
+            name = "nvim_lsp",
+        },
+        {
+            name = "nvim_lua",
+        },
+        {
+            name = "luasnip",
+        },
+        {
+            name = "buffer",
+        },
+        {
+            name = "path",
+        },
     },
-    confirm_opts = {behavior = cmp.ConfirmBehavior.Replace, select = false},
-    experimental = {ghost_text = false, native_menu = false},
+    confirm_opts = {
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = false,
+    },
+    experimental = {
+        ghost_text = false,
+        native_menu = false,
+    },
 })
