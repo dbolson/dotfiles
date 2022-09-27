@@ -21,19 +21,13 @@ nnoremap <leader>fk <cmd>Telescope keymaps<cr>
 nnoremap <leader>fl <cmd>Telescope luasnip<cr>
 nnoremap <leader>fs <cmd>Telescope colorscheme<cr>
 nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
+nnoremap <leader>V <c-w>v<c-w>l \| <cmd>Telescope telescope-alternate alternate_file<cr>
 
 " vim-test
 nmap <silent> <leader>s :TestNearest<cr>
 nmap <silent> <leader>t :TestFile<cr>
 nmap <silent> <leader>g :TestVisit<cr>
 let test#strategy = "basic"
-
-" alternate
-command! -bang Alt lua require("user.alternate").switch("<bang>"=="!", '')
-command! -bang AltV lua require("user.alternate").switch("<bang>"=="!", 'vsplit')
-command! -bang AltS lua require("user.alternate").switch("<bang>"=="!", 'split')
-
-nnoremap <leader>V :AltV<cr>
 
 " nvim-tree
 nnoremap <leader>e :NvimTreeToggle<cr>

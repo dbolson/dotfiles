@@ -6,8 +6,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'otavioschwanck/telescope-alternate.nvim'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'dhruvasagar/vim-zoom'
 Plug 'ellisonleao/glow.nvim'
 Plug 'folke/which-key.nvim'
@@ -57,7 +58,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
 " lsp
-Plug 'Olical/conjure', {'tag': 'v4.38.0'}
+Plug 'Olical/conjure', {'tag': 'v4.40.0'}
 Plug 'folke/trouble.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'neovim/nvim-lspconfig'
