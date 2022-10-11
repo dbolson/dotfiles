@@ -3,14 +3,30 @@ local M = {}
 -- TODO: backfill this to template
 M.setup = function()
     local signs = {
-        {name = "DiagnosticSignError", text = ""},
-        {name = "DiagnosticSignWarn", text = ""},
-        {name = "DiagnosticSignHint", text = ""},
-        {name = "DiagnosticSignInfo", text = ""},
+        {
+            name = "DiagnosticSignError",
+            text = "",
+        },
+        {
+            name = "DiagnosticSignWarn",
+            text = "",
+        },
+        {
+            name = "DiagnosticSignHint",
+            text = "",
+        },
+        {
+            name = "DiagnosticSignInfo",
+            text = "",
+        },
     }
 
     for _, sign in ipairs(signs) do
-        vim.fn.sign_define(sign.name, {texthl = sign.name, text = sign.text, numhl = ""})
+        vim.fn.sign_define(sign.name, {
+            texthl = sign.name,
+            text = sign.text,
+            numhl = "",
+        })
     end
 
     local config = {
@@ -23,7 +39,9 @@ M.setup = function()
             style = "minimal",
         },
         severity_sort = true,
-        signs = {active = signs},
+        signs = {
+            active = signs,
+        },
         underline = true,
         update_in_insert = true,
         virtual_text = false,
@@ -31,8 +49,13 @@ M.setup = function()
 
     vim.diagnostic.config(config)
 
-    local pop_opts = {border = "rounded", max_width = 80}
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, pop_opts)
+    local pop_opts = {
+        border = "rounded",
+        max_width = 80,
+    }
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+                                                 vim.lsp.handlers.hover,
+                                                 pop_opts)
 
     vim.lsp.handlers["textDocument/signatureHelp"] =
         vim.lsp.with(vim.lsp.handlers.signature_help, pop_opts)
@@ -40,7 +63,7 @@ end
 
 local function lsp_highlight_document(client)
     -- Set autocommands conditional on server_capabilities
-    if client.resolved_capabilities.document_highlight then
+    if client.server_capabilities.document_highlight then
         vim.api.nvim_exec([[
       augroup lsp_document_highlight
         autocmd! * <buffer>
@@ -52,31 +75,41 @@ local function lsp_highlight_document(client)
 end
 
 local function lsp_keymaps(bufnr)
-    local opts = {noremap = true, silent = true}
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<cr>",
-                                opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+    local opts = {
+        noremap = true,
+        silent = true,
+    }
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gd",
+                                "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "K",
+                                "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gi",
-                                "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gR", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<cr>",
+                                "<cmd>lua vim.lsp.buf.implementation()<cr>",
                                 opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>",
-                                opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "]e", "<cmd>lua vim.diagnostic.goto_prev()<cr>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "[e", "<cmd>lua vim.diagnostic.goto_next()<cr>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gR",
+                                "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gr",
+                                "<cmd>lua vim.lsp.buf.references()<cr>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca",
+                                "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "]e",
+                                "<cmd>lua vim.diagnostic.goto_prev()<cr>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "[e",
+                                "<cmd>lua vim.diagnostic.goto_next()<cr>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gl",
                                 "<cmd>lua vim.diagnostic.open_float(0, { \"single\", scope = \"line\" })<cr>",
                                 opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>S", ":SymbolsOutline<cr>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>xx", ":TroubleToggle<cr>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>S", ":SymbolsOutline<cr>",
+                                opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>xx", ":TroubleToggle<cr>",
+                                opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>XX",
                                 ":TroubleToggle workspace_diagnostics<cr>", opts)
 end
 
 M.on_attach = function(client, bufnr)
     if client.name == "tsserver" then
-        client.resolved_capabilities.document_formatting = false
+        client.server_capabilities.document_formatting = false
     end
     lsp_keymaps(bufnr)
     lsp_highlight_document(client)
