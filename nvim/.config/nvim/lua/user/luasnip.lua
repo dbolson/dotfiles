@@ -10,11 +10,29 @@ require("luasnip.loaders.from_vscode").lazy_load({
 local i = ls.insert_node
 local s = ls.snippet
 local t = ls.text_node
+ls.add_snippets("markdown", {
+    s({
+        trig = "fence",
+        name = "code fencing",
+        docstring = "Snippet for code fencing",
+    }, {
+        t("```"),
+        t({
+            "",
+            "",
+        }),
+        i(1, ""),
+        t({
+            "",
+            "```",
+        }),
+    }),
+})
 ls.add_snippets("go", {
     s({
         trig = ">>",
         name = "debug",
-        dscr = "Snippet for debugging",
+        docstring = "Snippet for debugging",
     }, {
         t("fmt.Println(\">>> "),
         i(1, ""),
@@ -29,7 +47,7 @@ ls.add_snippets("go", {
     s({
         trig = "dump",
         name = "spew.Dump()",
-        dscr = "Snippet for spew.Dump()",
+        docstring = "Snippet for spew.Dump()",
     }, {
         t("spew.Dump("),
         i(1, ""),
@@ -38,7 +56,6 @@ ls.add_snippets("go", {
     s({
         trig = "trun",
         name = "t.Run()",
-        dscr = "Snippet for t.Run()",
         docstring = "Snippet for t.Run()",
     }, {
         t("t.Run(\""),
@@ -50,7 +67,6 @@ ls.add_snippets("go", {
     s({
         trig = "tt",
         name = "table test",
-        dscr = "Snippet for table test",
         docstring = "Snippet for table test",
     }, {
         t("func Test"),
