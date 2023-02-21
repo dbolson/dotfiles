@@ -6,7 +6,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'otavioschwanck/telescope-alternate.nvim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'dhruvasagar/vim-zoom'
@@ -58,19 +57,21 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
 " lsp
-Plug 'Olical/conjure', {'tag': 'v4.40.0'}
+Plug 'Olical/conjure', {'tag': 'v4.42.0'}
 Plug 'folke/trouble.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'wlangstroth/vim-racket'
 
 " telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'otavioschwanck/telescope-alternate.nvim'
 
 " themes
 Plug 'cranberry-clockworks/coal.nvim'
@@ -82,3 +83,5 @@ Plug 'rktjmp/lush.nvim'
 Plug 'romgrk/doom-one.vim'
 
 call plug#end()
+
+set runtimepath+=/opt/homebrew/Cellar/lilypond/2.22.2_1/share/lilypond/2.22.2/vim/
