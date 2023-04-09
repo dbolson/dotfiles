@@ -7,7 +7,7 @@ require("mason-lspconfig").setup({
         "jsonls",
         "lua_ls",
         "pyright",
-        "sqls",
+        "sqlls",
         "tsserver",
         -- "clangd",
         -- "jdtls",
