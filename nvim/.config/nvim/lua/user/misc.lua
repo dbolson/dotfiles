@@ -1,5 +1,7 @@
 local navic = require("nvim-navic")
 
+require("glow").setup()
+
 require("gitsigns").setup({
     signs = {
         add = {
