@@ -30,7 +30,6 @@ export PATH="$PATH:/usr/local/sbin"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 # shellcheck disable=SC2155
-export PATH="$(go env GOPATH)/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # pyenv
@@ -76,3 +75,9 @@ if [ -f ~/.bash_prompt ]; then
   # shellcheck source=/dev/null
   . ~/.bash_prompt
 fi
+
+#shellcheck source=/dev/null
+source ~/.launchdarklyrc
+
+#shellcheck source=/dev/null
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
