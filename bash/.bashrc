@@ -29,12 +29,14 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
-# shellcheck disable=SC2155
-export PATH="$HOME/.local/bin:$PATH"
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/shims:$PATH"
+
+eval "$(goenv init -)"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
