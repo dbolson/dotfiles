@@ -3,6 +3,7 @@ nnoremap <silent> <leader>q :Bwipeout<cr>
 
 " fugitive
 nnoremap <leader>gb :Git blame<cr>
+nnoremap <leader>gB :GBrowse<cr>
 
 " nvim-comment
 nnoremap <silent><leader>/ :CommentToggle<cr>

@@ -59,6 +59,7 @@ M.setup = function()
 
     vim.lsp.handlers["textDocument/signatureHelp"] =
         vim.lsp.with(vim.lsp.handlers.signature_help, pop_opts)
+    vim.lsp.set_log_level("off")
 end
 
 local function lsp_highlight_document(client)

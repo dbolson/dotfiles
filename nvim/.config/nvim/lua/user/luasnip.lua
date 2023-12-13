@@ -31,6 +31,15 @@ ls.add_snippets("markdown", {
 ls.add_snippets("go", {
     s({
         trig = ">>",
+        name = "println",
+        docstring = "Snippet for debugging",
+    }, {
+        t("fmt.Println(\">>> "),
+        i(1, ""),
+        t("\")"),
+    }),
+    s({
+        trig = ">>>",
         name = "debug",
         docstring = "Snippet for debugging",
     }, {
