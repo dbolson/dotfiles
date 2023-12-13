@@ -11,6 +11,9 @@ function remove-old-docker-images() {
   docker rm -v $(docker ps -aq 2>/dev/null) 2>/dev/null
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
   docker volume rm $(docker volume ls -f dangling=true -q) 2>/dev/null
+
+  docker system prune --all
+  docker volume prune
 }
 
 function download-youtube-mp3() {

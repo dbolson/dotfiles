@@ -5,7 +5,7 @@ alias cat=bat
 alias dc=docker-compose
 alias dt='cd $HOME/dotfiles/nvim/.config/nvim/'
 alias less='less -R'
-alias ll='exa -la --icons'
+alias ll='eza -la --icons'
 alias reload='source ~/.bash_profile'
 alias vim=nvim
 
