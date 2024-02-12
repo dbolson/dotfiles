@@ -36,6 +36,8 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/shims:$PATH"
 
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 eval "$(goenv init -)"
 
 if command -v pyenv 1>/dev/null 2>&1; then
