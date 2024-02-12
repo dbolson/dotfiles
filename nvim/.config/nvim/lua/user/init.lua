@@ -1,7 +1,8 @@
+require("user.globals")
+
 require("user.cmp")
 require("user.dap")
 require("user.formatter")
-require("user.globals")
 require("user.lint")
 require("user.lsp.init")
 require("user.luasnip")
