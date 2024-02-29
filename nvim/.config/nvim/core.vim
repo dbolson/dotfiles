@@ -92,7 +92,3 @@ nnoremap _ <c-w><
 
 " tab fills in selected autocomplete
 inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<cr>"
-
-nnoremap <leader>fG :lua require('user.telescope').search_go_files()<cr>
-nnoremap <leader>fd :lua require('user.telescope').search_documents()<cr>
-nnoremap <leader>fv :lua require('user.telescope').search_dotfiles()<cr>

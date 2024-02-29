@@ -16,7 +16,7 @@ nnoremap <leader>* <cmd>Telescope grep_string<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fc <cmd>Telescope git_commits<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+" nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fk <cmd>Telescope keymaps<cr>
 nnoremap <leader>fl <cmd>Telescope luasnip<cr>
@@ -25,6 +25,12 @@ nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
 nnoremap <leader>A <cmd>Telescope telescope-alternate alternate_file<cr>
 " open alternate file in vertical split
 nnoremap <leader>V <c-w>v<c-w>l \| <cmd>Telescope telescope-alternate alternate_file<cr>
+
+nnoremap <leader>fG :lua require('user.telescope').search_go_files()<cr>
+nnoremap <leader>fd :lua require('user.telescope').search_documents()<cr>
+nnoremap <leader>fg :lua require("telescope").extensions.live_grep_args.live_grep_args()<cr>
+nnoremap <leader>fv :lua require('user.telescope').search_dotfiles()<cr>
+nnoremap <leader>fw :lua require("telescope-live-grep-args.shortcuts").grep_word_under_cursor()<cr>
 
 " vim-test
 nmap <silent> <leader>s :TestNearest<cr>

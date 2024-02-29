@@ -71,6 +71,7 @@ telescope.setup {
 }
 telescope.load_extension("dap")
 telescope.load_extension("fzy_native")
+telescope.load_extension("live_grep_args")
 telescope.load_extension("luasnip")
 telescope.load_extension("telescope-alternate")
 

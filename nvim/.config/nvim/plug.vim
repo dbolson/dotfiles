@@ -71,6 +71,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'otavioschwanck/telescope-alternate.nvim'
 
