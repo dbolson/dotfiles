@@ -46,6 +46,7 @@ Plug 'j-hui/fidget.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 
 " debugging
+Plug 'https://github.com/nvim-neotest/nvim-nio'
 Plug 'leoluz/nvim-dap-go'
 Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-telescope/telescope-dap.nvim'
