@@ -8,18 +8,19 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'andymass/vim-matchup'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'ellisonleao/glow.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
-Plug 'nvim-tree/nvim-tree.lua'
-Plug 'nvim-tree/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mfussenegger/nvim-lint'
 Plug 'mhartington/formatter.nvim'
 Plug 'moll/vim-bbye'
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'terrortylor/nvim-comment'

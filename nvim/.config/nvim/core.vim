@@ -84,8 +84,6 @@ au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, o
 map <leader>" :%s/[“”]/"/g<cr><bar>:%s/’/'/g<cr>
 nmap <silent> gx :!open <cWORD><cr>
 
-" nnoremap <leader>+ <c-w>>
-" nnoremap <leader>- <c-w><
 nnoremap + <c-w>>
 " uses '<shift> -' for consistency with '<shift> =' to mean '+'
 nnoremap _ <c-w><
