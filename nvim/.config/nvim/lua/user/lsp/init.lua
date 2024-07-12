@@ -5,6 +5,4 @@ require("lsp_signature").setup({
     floating_window = false,
     hint_prefix = "", -- no panda
 })
-require("trouble").setup({
-    mode = "document_diagnostics",
-})
+require("trouble").setup({})
