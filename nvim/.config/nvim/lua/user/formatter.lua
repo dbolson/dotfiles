@@ -69,6 +69,9 @@ require("formatter").setup({
             require("formatter.filetypes.python").black,
             require("formatter.filetypes.python").isort,
         },
+        terraform = {
+            require("formatter.filetypes.terraform").terraformfmt,
+        },
         sh = {
             function()
                 return {
