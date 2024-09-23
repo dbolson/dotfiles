@@ -7,7 +7,7 @@ let g:tokyonight_style = "night"
 let g:tokyonight_colors = {
       \ "bg": "#222325"
       \ }
-colorscheme gruvbox-flat
+colorscheme paramount
 
 set autowrite " automatically :write before running commands
 set cmdheight=2 " give more space for displaying messages.
