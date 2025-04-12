@@ -7,6 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'GustavEikaas/code-playground.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'andymass/vim-matchup'
 Plug 'dhruvasagar/vim-zoom'
@@ -59,12 +60,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
 " lsp
+Plug 'hedyhli/outline.nvim'
 Plug 'Olical/conjure'
 Plug 'folke/trouble.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ray-x/lsp_signature.nvim'
-Plug 'simrat39/symbols-outline.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'wlangstroth/vim-racket'
@@ -78,6 +79,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'otavioschwanck/telescope-alternate.nvim'
 
 " themes
+Plug 'aliqyan-21/darkvoid.nvim'
 Plug 'cranberry-clockworks/coal.nvim'
 Plug 'eddyekofo94/gruvbox-flat.nvim'
 Plug 'folke/tokyonight.nvim'
