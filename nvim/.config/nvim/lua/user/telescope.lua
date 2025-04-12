@@ -33,6 +33,27 @@ telescope.setup {
         },
         ["telescope-alternate"] = {
             mappings = {
+                -- c
+                -- {
+                --     "(.*).c",
+                --     {
+                --         {
+                --             "[1].h",
+                --             "Header",
+                --             true,
+                --         },
+                --     },
+                -- },
+                -- {
+                --     "(.*).h",
+                --     {
+                --         {
+                --             "[1].c",
+                --             "Alternate",
+                --             true,
+                --         },
+                --     },
+                -- },
                 -- go
                 {
                     "(.*).go",
