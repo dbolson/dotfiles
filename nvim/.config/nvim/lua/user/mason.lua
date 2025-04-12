@@ -2,14 +2,14 @@ require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {
         "bashls",
+        "clangd",
         "eslint",
         "gopls",
         "jsonls",
         "lua_ls",
         "pyright",
         "sqlls",
-        "tsserver",
-        -- "clangd",
+        "ts_ls",
         -- "jdtls",
     },
 })
