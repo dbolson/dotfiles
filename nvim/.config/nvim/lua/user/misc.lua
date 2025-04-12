@@ -15,6 +15,18 @@ require("gitsigns").setup({
         },
     },
 })
+
+local command = "goenv version | awk '{printf \"%s\", $1}'"
+local handle = io.popen(command)
+local read = handle:read("*a")
+local function goVersion()
+    if vim.bo.filetype == "go" then
+        return read
+    else
+        return ""
+    end
+end
+
 require("lualine").setup({
     sections = {
         lualine_c = {
@@ -28,17 +40,20 @@ require("lualine").setup({
                 "filename",
                 path = 1,
             },
-            "fileformat",
             "filetype",
+            goVersion,
         },
     },
+    theme = "auto",
 })
+
 require("nvim_comment").setup({
     comment_empty = false,
     create_mappings = false,
 })
+
 require("which-key").setup()
 
-require("symbols-outline").setup({
-    width = 20,
-})
+require("code-playground").setup()
+
+require("outline").setup({})
