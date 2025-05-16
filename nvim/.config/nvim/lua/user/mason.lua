@@ -19,7 +19,7 @@ local opts = {
     on_attach = require("user.lsp.handlers").on_attach,
 }
 
-require("mason-lspconfig").setup_handlers({
+require("mason-lspconfig").setup({
     function(server_name)
         if server_name == "jsonls" then
             local custom_opts = require("user.lsp.settings.lang-json")
