@@ -9,15 +9,15 @@
 [core]
   excludesfile = ~/.gitignore
   editor = nvim
-  pager = diff-so-fancy | less --tabs=4 -RFX
-[interactive]
-  diffFilter = diff-so-fancy --patch
+  ; pager = diff-so-fancy | less --tabs=4 -RFX
+; [interactive]
+;   diffFilter = diff-so-fancy --patch
 [push]
   default = simple
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [user]
-	email = dolson@launchdarkly.com
+	email = dbolson@gmail.com
   name = Danny Olson
 [init]
 	defaultBranch = main

@@ -6,17 +6,16 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Plug 'janko-m/vim-test'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'GustavEikaas/code-playground.nvim'
-Plug 'akinsho/toggleterm.nvim'
 Plug 'andymass/vim-matchup'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'ellisonleao/glow.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'lewis6991/spaceless.nvim'
 Plug 'mfussenegger/nvim-lint'
 Plug 'mhartington/formatter.nvim'
 Plug 'moll/vim-bbye'
@@ -26,6 +25,13 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-surround'
+
+" Plug 'klen/nvim-test'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'nvim-neotest/neotest'
+Plug 'nvim-neotest/neotest-python'
+Plug 'fredrikaverpil/neotest-golang'
+Plug 'antoinemadec/FixCursorHold.nvim'
 
 " completion
 Plug 'hrsh7th/cmp-buffer'
@@ -48,7 +54,6 @@ Plug 'j-hui/fidget.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 
 " debugging
-Plug 'https://github.com/nvim-neotest/nvim-nio'
 Plug 'leoluz/nvim-dap-go'
 Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-telescope/telescope-dap.nvim'
@@ -61,14 +66,10 @@ Plug 'tpope/vim-rhubarb'
 
 " lsp
 Plug 'hedyhli/outline.nvim'
-Plug 'Olical/conjure'
-Plug 'folke/trouble.nvim'
-Plug 'mfussenegger/nvim-jdtls'
-Plug 'neovim/nvim-lspconfig'
+" Plug 'Olical/conjure'
+" Plug 'mfussenegger/nvim-jdtls'
 Plug 'ray-x/lsp_signature.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'williamboman/mason.nvim'
-Plug 'wlangstroth/vim-racket'
+" Plug 'wlangstroth/vim-racket'
 
 " telescope
 Plug 'nvim-lua/plenary.nvim'

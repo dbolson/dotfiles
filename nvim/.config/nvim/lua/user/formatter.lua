@@ -24,19 +24,6 @@ require("formatter").setup({
                 }
             end,
         },
-        typescript = {
-            function()
-                return {
-                    exe = "./node_modules/prettier/bin/prettier.cjs",
-                    args = {
-                        "--stdin-filepath",
-                        util.escape_path(util.get_current_buffer_file_path()),
-                    },
-                    stdin = true,
-                    try_node_modules = true,
-                }
-            end,
-        },
         javascript = {
             function()
                 return {
@@ -61,29 +48,26 @@ require("formatter").setup({
                 }
             end,
         },
-        lua = {
-            function()
-                return {
-                    exe = "lua-format",
-                    args = {
-                        -- "--column-limit=100",
-                        "--column-table-limit=10",
-                        "--extra-sep-at-table-end",
-                        "--no-chop-down-kv-table",
-                        "--no-keep-simple-control-block-one-line",
-                        "--no-keep-simple-function-one-line",
-                        "--single-quote-to-double-quote",
-                    },
-                    stdin = true,
-                }
-            end,
-        },
+        -- lua = {
+        --     function()
+        --         return {
+        --             exe = "lua-format",
+        --             args = {
+        --                 -- "--column-limit=100",
+        --                 "--column-table-limit=10",
+        --                 "--extra-sep-at-table-end",
+        --                 "--no-chop-down-kv-table",
+        --                 "--no-keep-simple-control-block-one-line",
+        --                 "--no-keep-simple-function-one-line",
+        --                 "--single-quote-to-double-quote",
+        --             },
+        --             stdin = true,
+        --         }
+        --     end,
+        -- },
         python = {
             require("formatter.filetypes.python").black,
             require("formatter.filetypes.python").isort,
-        },
-        terraform = {
-            require("formatter.filetypes.terraform").terraformfmt,
         },
         sh = {
             function()
@@ -94,6 +78,22 @@ require("formatter").setup({
                         2,
                     },
                     stdin = true,
+                }
+            end,
+        },
+        terraform = {
+            require("formatter.filetypes.terraform").terraformfmt,
+        },
+        typescript = {
+            function()
+                return {
+                    exe = "./node_modules/prettier/bin/prettier.cjs",
+                    args = {
+                        "--stdin-filepath",
+                        util.escape_path(util.get_current_buffer_file_path()),
+                    },
+                    stdin = true,
+                    try_node_modules = true,
                 }
             end,
         },

@@ -25,12 +25,14 @@ PROMPT_COMMAND='history -a'
 shopt -s checkwinsize
 
 export BASH_SILENCE_DEPRECATION_WARNING=1 # macos-specific for bash
+export PATH="$PATH:$HOME/.local/bin" # lsp binaries
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -53,9 +55,14 @@ source virtualenvwrapper.sh
 
 export NVM_DIR="$HOME/.nvm"
 # shellcheck disable=SC1091
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # shellcheck disable=SC1091
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# shellcheck disable=SC1091
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
+# shellcheck disable=SC1091
+# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
@@ -81,7 +88,5 @@ if [ -f ~/.bash_prompt ]; then
 fi
 
 #shellcheck source=/dev/null
-source ~/.launchdarklyrc
-
-#shellcheck source=/dev/null
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

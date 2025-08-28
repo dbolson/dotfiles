@@ -1,3 +1,5 @@
+require("nvim-web-devicons").setup()
+
 local navic = require("nvim-navic")
 
 require("glow").setup()
@@ -53,7 +55,5 @@ require("nvim_comment").setup({
 })
 
 require("which-key").setup()
-
-require("code-playground").setup()
 
 require("outline").setup({})

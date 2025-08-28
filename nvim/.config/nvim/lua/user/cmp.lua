@@ -1,6 +1,6 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
-local luasnip = require("luasnip")
+local ls = require("luasnip")
 
 local check_backspace = function()
     local col = vim.fn.col "." - 1
@@ -10,7 +10,7 @@ end
 cmp.setup({
     snippet = {
         expand = function(args)
-            require("luasnip").lsp_expand(args.body)
+            ls.lsp_expand(args.body)
         end,
     },
     window = {
@@ -38,10 +38,10 @@ cmp.setup({
         ["<tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            elseif luasnip.expandable() then
-                luasnip.expand()
-            elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
+            elseif ls.expandable() then
+                ls.expand()
+            elseif ls.expand_or_jumpable() then
+                ls.expand_or_jump()
             elseif check_backspace() then
                 fallback()
             else
@@ -54,8 +54,8 @@ cmp.setup({
         ["<s-tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
-            elseif luasnip.jumpable(-1) then
-                luasnip.jump(-1)
+            elseif ls.jumpable(-1) then
+                ls.jump(-1)
             else
                 fallback()
             end
