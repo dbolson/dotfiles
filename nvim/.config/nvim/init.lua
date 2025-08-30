@@ -1,5 +1,3 @@
--- let g:loaded_perl_provider = 0
--- let g:loaded_ruby_provider = 0
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -20,5 +18,12 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
-require("lazy").setup("plugins")
+require("lazy").setup({
+  checker = {
+    enabled = true,
+  },
+  spec = {
+    import = "plugins",
+  },
+})
 require("user.init")

@@ -1,15 +1,6 @@
--- au TextYankPost * lua vim.hl.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
     vim.highlight.on_yank()
-  end,
-  pattern = { "*" },
-})
-
--- nvim-lint
-vim.api.nvim_create_autocmd("BufWritePost", {
-  callback = function()
-    vim.cmd("silent! FormatWrite")
   end,
   pattern = { "*" },
 })
