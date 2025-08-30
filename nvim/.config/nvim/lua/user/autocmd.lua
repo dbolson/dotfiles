@@ -5,29 +5,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = { "*" },
 })
 
--- go
+-- go formatting
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufReadPost"}, {
   callback = function()
     vim.cmd("setlocal noexpandtab tabstop=4 shiftwidth=4")
   end,
   pattern = { "*.go" },
-})
-
--- lsp
-local lsp_document_highlight = vim.api.nvim_create_augroup("lsp_document_highlight", {})
-vim.api.nvim_create_autocmd('CursorHold', {
-  callback = function()
-    vim.lsp.buf.document_highlight()
-  end,
-  group = lsp_document_highlight,
-  pattern = { "*" },
-})
-vim.api.nvim_create_autocmd('CursorMoved', {
-  callback = function()
-    vim.lsp.buf.clear_references()
-  end,
-  group = lsp_document_highlight,
-  pattern = { "*" },
 })
 
 -- highlight after 120 characters
