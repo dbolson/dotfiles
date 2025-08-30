@@ -1,8 +1,3 @@
--- require("user.lazy")
-
--- vim.cmd("source ~/.config/nvim/plug.vim")
--- vim.cmd("source ~/.config/nvim/core.vim")
-
 -- let g:loaded_perl_provider = 0
 -- let g:loaded_ruby_provider = 0
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -26,5 +21,4 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
 require("lazy").setup("plugins")
-
 require("user.init")

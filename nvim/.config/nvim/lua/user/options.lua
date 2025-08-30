@@ -1,7 +1,6 @@
 -- disable netrw for nvim-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
--- vim.g.have_nerd_font = true
 vim.g.markdown_fenced_languages = {
   "bash=sh",
   "go",
@@ -12,13 +11,11 @@ vim.g.markdown_fenced_languages = {
   "ruby",
   "vim",
 }
-
--- vim.cmd.colorscheme("paramount")
+-- vim.g.have_nerd_font = true
 
 vim.opt.autowrite = true
 vim.opt.backup = false
 vim.opt.cmdheight = 2
--- vim.opt.completeopt = "menuone,noselect"
 vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.hlsearch = false
@@ -41,7 +38,4 @@ vim.opt.wb = false
 vim.opt.wildmode = "list:longest,list:full"
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
-
 -- vim.opt.shortmess = vim.opt.shortmess + "c" -- don't give |ins-completion-menu| messages.
--- let g:do_filetype_lua = 1
--- let g:did_load_filetypes = 0
