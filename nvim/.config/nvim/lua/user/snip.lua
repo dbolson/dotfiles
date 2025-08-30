@@ -3,7 +3,7 @@ local ls = require("luasnip")
 require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_vscode").lazy_load({
     paths = {
-        "./lua/user/snippets",
+        "./lua/user/snip",
     },
 })
 
@@ -30,7 +30,7 @@ ls.add_snippets("markdown", {
 })
 ls.add_snippets("go", {
     s({
-        trig = ">>",
+        trig = "prn",
         name = "println",
         docstring = "Snippet for debugging",
     }, {
@@ -39,7 +39,7 @@ ls.add_snippets("go", {
         t("\")"),
     }),
     s({
-        trig = ">>>",
+        trig = "prndb",
         name = "debug",
         docstring = "Snippet for debugging",
     }, {

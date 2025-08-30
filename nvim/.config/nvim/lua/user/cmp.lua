@@ -18,23 +18,14 @@ cmp.setup({
         documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
+        ["<c-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<c-f>"] = cmp.mapping.scroll_docs(4),
+        ["<c-space>"] = cmp.mapping.complete(),
+        ["<c-e>"] = cmp.mapping.abort(),
+        ["<cr>"] = cmp.mapping.confirm({ select = true }),
+
         ["<c-p>"] = cmp.mapping.select_prev_item(),
         ["<c-n>"] = cmp.mapping.select_next_item(),
-        ["<c-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), {
-            "i",
-            "c",
-        }),
-        ["<c-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), {
-            "i",
-            "c",
-        }),
-        ["<c-e>"] = cmp.mapping({
-            i = cmp.mapping.abort(),
-            c = cmp.mapping.close(),
-        }),
-        ["<cr>"] = cmp.mapping.confirm({
-            select = true,
-        }),
         ["<tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
@@ -64,34 +55,53 @@ cmp.setup({
             "s",
         }),
     }),
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'luasnip' },
+      -- { name = "path" },
+    }, {
+      { name = 'buffer' },
+    }),
+
+    -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+    cmp.setup.cmdline({ '/', '?' }, {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' }
+      },
+    }),
+    -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = 'path' }
+      }, {
+        { name = 'cmdline' }
+      }),
+      matching = { disallow_symbol_nonprefix_matching = false }
+    }),
+
+    -- formatting = {
+    --     format = lspkind.cmp_format({
+    --         mode = "symbol_text",
+    --     }),
+    -- },
     formatting = {
-        format = lspkind.cmp_format({
-            mode = "symbol_text",
-        }),
+      format = lspkind.cmp_format({
+        maxwidth = {
+          abbr = 50, -- actual suggestion item
+          menu = 50, -- leading text (labelDetails)
+      },
+        mode = 'symbol',
+      }),
     },
-    sources = {
-        {
-            name = "nvim_lsp",
-        },
-        {
-            name = "nvim_lua",
-        },
-        {
-            name = "luasnip",
-        },
-        {
-            name = "buffer",
-        },
-        {
-            name = "path",
-        },
-    },
-    confirm_opts = {
-        behavior = cmp.ConfirmBehavior.Replace,
-        select = false,
-    },
-    experimental = {
-        ghost_text = false,
-        native_menu = false,
-    },
+
+    -- confirm_opts = {
+    --     behavior = cmp.ConfirmBehavior.Replace,
+    --     select = false,
+    -- },
+    -- experimental = {
+    --     ghost_text = false,
+    --     native_menu = false,
+    -- },
 })
