@@ -25,14 +25,14 @@ call plug#begin('~/.vim/plugged')
 "Plug 'stefandtw/quickfix-reflector.vim'
 "Plug 'tpope/vim-surround'
 
-Plug 'nvim-neotest/nvim-nio'
-Plug 'nvim-neotest/neotest'
-Plug 'nvim-neotest/neotest-python'
-Plug 'fredrikaverpil/neotest-golang'
+"Plug 'nvim-neotest/nvim-nio'
+"Plug 'nvim-neotest/neotest'
+"Plug 'nvim-neotest/neotest-python'
+"Plug 'fredrikaverpil/neotest-golang'
 "Plug 'antoinemadec/FixCursorHold.nvim'
 
 " completion
-Plug 'saghen/blink.cmp'
+"Plug 'saghen/blink.cmp'
 " Plug 'hrsh7th/cmp-buffer'
 " Plug 'hrsh7th/cmp-cmdline'
 " Plug 'hrsh7th/cmp-nvim-lsp'
@@ -53,11 +53,11 @@ Plug 'saghen/blink.cmp'
 "Plug 'nvim-lualine/lualine.nvim'
 
 " debugging
-Plug 'leoluz/nvim-dap-go'
-Plug 'mfussenegger/nvim-dap'
+"Plug 'leoluz/nvim-dap-go'
+"Plug 'mfussenegger/nvim-dap'
 "Plug 'nvim-telescope/telescope-dap.nvim'
-Plug 'rcarriga/nvim-dap-ui'
-Plug 'theHamsta/nvim-dap-virtual-text'
+"Plug 'rcarriga/nvim-dap-ui'
+"Plug 'theHamsta/nvim-dap-virtual-text'
 
 " git
 "Plug 'tpope/vim-fugitive'

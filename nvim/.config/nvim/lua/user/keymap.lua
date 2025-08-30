@@ -27,17 +27,26 @@ vim.keymap.set("n", "_", "<c-w><", { noremap = true })
 
 -- bbye
 vim.keymap.set("n", "<leader>q", ":Bwipeout<cr>", {
-    desc = "Bwipeout",
-    noremap = true,
+  desc = "Bwipeout",
+  noremap = true,
 })
 
+-- dap
+vim.keymap.set("n", "<leader>dB", ":lua require('dap').set_breakpoint(vim.fn.input(\"Breakpoint condition: \"))<cr>")
+vim.keymap.set("n", "<leader>db", ":lua require('dap').toggle_breakpoint()<cr>")
+vim.keymap.set("n", "<leader>dc", ":lua require('dap').continue()<cr>")
+vim.keymap.set("n", "<leader>dl", ":lua require('dap').run_last()<cr>")
+vim.keymap.set("n", "<leader>dn", ":lua require('dap').step_over()<cr>")
+vim.keymap.set("n", "<leader>dr", ":lua require('dap').repl.open()<cr>")
+vim.keymap.set("n", "<leader>dsi", ":lua require('dap').step_into()<cr>")
+vim.keymap.set("n", "<leader>dso", ":lua require('dap').step_out()<cr>")
+vim.keymap.set("n", "<leader>dtg", ":lua require('dap-go').debug_test()<cr>")
+vim.keymap.set("n", "<leader>dtp", ":lua require('dap-python').test_method()<cr>")
+vim.keymap.set("n", "<leader>du", ":lua require('dapui').toggle()<cr>")
+
 -- fugitive
-vim.keymap.set("n", "<leader>gb", ":Git blame<cr>", {
-    noremap = true,
-})
-vim.keymap.set("n", "<leader>gB", ":GBrowse<cr>", {
-    noremap = true,
-})
+vim.keymap.set("n", "<leader>gb", ":Git blame<cr>", { noremap = true })
+vim.keymap.set("n", "<leader>gB", ":GBrowse<cr>", { noremap = true })
 
 -- lsp
 vim.keymap.set("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
