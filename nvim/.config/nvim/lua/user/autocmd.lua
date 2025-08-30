@@ -35,7 +35,7 @@ vim.api.nvim_create_autocmd('CursorMoved', {
   callback = function()
     vim.lsp.buf.clear_references()
   end,
-  group = g,
+  group = lsp_document_highlight,
   pattern = { "*" },
 })
 

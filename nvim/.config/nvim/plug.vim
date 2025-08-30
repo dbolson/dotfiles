@@ -16,8 +16,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'jiangmiao/auto-pairs'
 "Plug 'lewis6991/gitsigns.nvim'
 "Plug 'lewis6991/spaceless.nvim'
-Plug 'mfussenegger/nvim-lint'
-Plug 'mhartington/formatter.nvim'
+"Plug 'mfussenegger/nvim-lint'
+"Plug 'mhartington/formatter.nvim'
 "Plug 'moll/vim-bbye'
 "Plug 'nvim-tree/nvim-tree.lua'
 "Plug 'nvim-tree/nvim-web-devicons'
@@ -39,7 +39,7 @@ Plug 'saghen/blink.cmp'
 " Plug 'hrsh7th/cmp-nvim-lua'
 " Plug 'hrsh7th/cmp-path'
 " Plug 'hrsh7th/nvim-cmp'
-Plug 'onsails/lspkind.nvim'
+"Plug 'onsails/lspkind.nvim'
 " Plug 'saadparwaiz1/cmp_luasnip'
 
 " snippets
@@ -48,7 +48,7 @@ Plug 'onsails/lspkind.nvim'
 "Plug 'rafamadriz/friendly-snippets'
 
 " statusline
-Plug 'SmiteshP/nvim-navic'
+"Plug 'SmiteshP/nvim-navic'
 "Plug 'j-hui/fidget.nvim'
 "Plug 'nvim-lualine/lualine.nvim'
 

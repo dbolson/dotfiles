@@ -1,5 +1,41 @@
 return {
   {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "fredrikaverpil/neotest-golang",
+      "nvim-neotest/neotest-python",
+      "nvim-neotest/nvim-nio",
+      "nvim-treesitter/nvim-treesitter"
+      -- "antoinemadec/FixCursorHold.nvim",
+    },
+  },
+  {
+    'stevearc/conform.nvim',
+    opts = {
+      format_on_save = {
+        lsp_format = "fallback",
+      },
+      formatters_by_ft = {
+        go = {
+          "gopls",
+          "golangci-lint",
+          "goimports",
+        },
+        -- lua = {
+        --   "luacheck",
+        -- },
+        python = {
+          "ruff_fix",
+          "ruff_format",
+          "ruff_organize_imports",
+        },
+      },
+      notify_no_formatters = true,
+      notify_on_error = true,
+    },
+  },
+  {
     'saghen/blink.cmp',
     opts = {
       completion = {
@@ -10,15 +46,15 @@ return {
         menu = {
           draw = {
             columns = {
-              { "label", "label_description", gap = 1 },
-              { "kind_icon", "kind", gap = 1 },
+              { "label",     "label_description", gap = 1 },
+              { "kind_icon", "kind",              gap = 1 },
             },
           },
         },
       },
       keymap = {
         preset = 'default',
-        ['<cr>'] = { 'select_and_accept' },
+        -- ['<cr>'] = { 'select_and_accept' },
       },
       signature = {
         enabled = true,
@@ -37,12 +73,12 @@ return {
     opts_extend = { "sources.default" },
     version = '1.*',
   },
-	{
-		"nvim-tree/nvim-tree.lua",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		lazy = false,
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    lazy = false,
     opts = {
       diagnostics = {
         enable = true,
@@ -61,15 +97,15 @@ return {
         add_trailing = true,
       },
     },
-		version = "*",
-	},
-	{
+    version = "*",
+  },
+  {
     'owickstrom/vim-colors-paramount',
     config = function()
       vim.cmd([[colorscheme paramount]])
     end,
-	},
-  {'eddyekofo94/gruvbox-flat.nvim' },
+  },
+  { 'eddyekofo94/gruvbox-flat.nvim' },
   {
     'folke/tokyonight.nvim',
     opts = {
@@ -114,6 +150,17 @@ return {
     branch = 'master',
     build = ':TSUpdate',
     lazy = false,
+    opts = {
+      ensure_installed = {
+        "c",
+        "go",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "query",
+        "typescript",
+      },
+    },
   },
   {
     'gelguy/wilder.nvim',
@@ -129,8 +176,6 @@ return {
       'nvim-tree/nvim-web-devicons',
       'nvim-treesitter/nvim-treesitter',
     },
-    ---@module 'render-markdown'
-    ---@type render.md.UserConfig
   },
   { 'j-hui/fidget.nvim' },
   { 'moll/vim-bbye' },
