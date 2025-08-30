@@ -73,9 +73,6 @@ vim.keymap.set("n", "<leader>to", "<cmd>lua require('neotest').output.open()<cr>
 vim.keymap.set("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<cr>")
 vim.keymap.set("n", "<leader>tt", "<cmd>lua require('neotest').run.run()<cr>")
 
--- comment
--- vim.keymap.set({ "n", }, "<leader>x", "gcc")
-
 -- telescope
 vim.keymap.set("n", "<leader>*", "<cmd>Telescope grep_string<cr>")
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")

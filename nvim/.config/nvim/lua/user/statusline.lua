@@ -1,4 +1,4 @@
-local function goVersion()
+local function showGoVersion()
   local command = "goenv version | awk '{printf \"%s\", $1}'"
   local handle = io.popen(command)
   if not handle then
@@ -21,7 +21,7 @@ require("lualine").setup({
         path = 1,
       },
       "filetype",
-      goVersion,
+      showGoVersion,
     },
   },
   theme = "auto",

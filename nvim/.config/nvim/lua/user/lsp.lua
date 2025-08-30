@@ -1,15 +1,12 @@
--- TODO: get these working
--- vim.lsp.enable("bashls")
--- vim.lsp.enable("clangd")
--- vim.lsp.enable("eslint")
--- vim.lsp.enable("jsonls")
--- vim.lsp.enable("sqlls")
--- vim.lsp.enable("ts_ls")
-
 vim.lsp.enable({
+  -- "bashls",
+  -- "clangd",
+  -- "eslint",
   "gopls",
   "lua_ls",
   "pyright",
+  -- "sqlls",
+  -- "ts_ls",
 })
 
 vim.diagnostic.config({

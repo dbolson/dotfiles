@@ -18,8 +18,8 @@ local hl_long_lines = vim.api.nvim_create_augroup("hl_long_lines", {})
 vim.api.nvim_create_autocmd('BufEnter', {
   callback = function()
     vim.cmd([[
-      highlight OverLength ctermfg=red guibg=#592929
-      match OverLength /\%120v.*/
+    highlight OverLength ctermfg=red guibg=#592929
+    match OverLength /\%120v.*/
     ]])
   end,
   group = hl_long_lines,

@@ -1,11 +1,11 @@
 local wilder = require("wilder")
 wilder.setup({
-    modes = {
-        ":",
-        "/",
-        "?",
-    },
+  modes = {
+    ":",
+    "/",
+    "?",
+  },
 })
 wilder.set_option("renderer", wilder.popupmenu_renderer({
-    highlighter = wilder.basic_highlighter(),
+  highlighter = wilder.basic_highlighter(),
 }))
