@@ -10,6 +10,9 @@ return {
           "goimports",
           "golangci-lint",
         },
+        json = {
+          "jq",
+        },
         -- lua = {
         --   "luacheck",
         -- },
