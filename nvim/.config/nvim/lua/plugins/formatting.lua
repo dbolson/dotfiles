@@ -3,12 +3,12 @@ return {
     'stevearc/conform.nvim',
     opts = {
       format_on_save = {
-        -- lsp_format = "fallback",
+        lsp_format = "fallback",
       },
       formatters_by_ft = {
         go = {
-          "golangci-lint",
           "goimports",
+          "golangci-lint",
         },
         -- lua = {
         --   "luacheck",
@@ -17,6 +17,13 @@ return {
           "ruff_fix",
           "ruff_format",
           "ruff_organize_imports",
+        },
+        typescript = {
+          "prettier",
+        },
+        ["*"] = {
+          "trim_newlines",
+          "trim_whitespace",
         },
       },
       notify_no_formatters = true,
