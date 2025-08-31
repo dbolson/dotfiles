@@ -12,6 +12,7 @@
   "material.nvim": { "branch": "main", "commit": "2929c6fae4886bd7c33371937601409705049a18" },
   "neotest": { "branch": "master", "commit": "35a59c1f59dbb954d92b74ab64a966a668cea495" },
   "neotest-golang": { "branch": "main", "commit": "54a82ecf9413473a366b364e4e73da7cab35cef2" },
+  "neotest-jest": { "branch": "main", "commit": "a98c787b37c5d115ae6600b14c2a140f2b88713f" },
   "neotest-python": { "branch": "master", "commit": "ed9b4d794b89044cc32e5476e637936331473c6e" },
   "nvim-dap": { "branch": "master", "commit": "7891b01beedc37cef4eaf2e92563bd0a5b6e9c58" },
   "nvim-dap-go": { "branch": "main", "commit": "b4421153ead5d726603b02743ea40cf26a51ed5f" },
