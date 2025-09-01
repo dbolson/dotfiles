@@ -30,7 +30,7 @@ return {
         },
       },
       notify_no_formatters = true,
-      notify_on_error = true,
+      notify_on_error = false,
     },
   },
 }
