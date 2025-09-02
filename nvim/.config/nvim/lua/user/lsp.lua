@@ -1,7 +1,5 @@
 vim.lsp.enable({
   "bashls",
-  -- "clangd",
-  -- "eslint",
   "gopls",
   "lua_ls",
   "pyright",

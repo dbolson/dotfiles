@@ -33,93 +33,72 @@ telescope.setup {
     },
     ["telescope-alternate"] = {
       mappings = {
-        -- c
-        -- {
-          --     "(.*).c",
-          --     {
-            --         {
-              --             "[1].h",
-              --             "Header",
-              --             true,
-              --         },
-              --     },
-              -- },
-              -- {
-                --     "(.*).h",
-                --     {
-                  --         {
-                    --             "[1].c",
-                    --             "Alternate",
-                    --             true,
-                    --         },
-                    --     },
-                    -- },
-                    -- go
-                    {
-                      "(.*).go",
-                      {
-                        {
-                          "[1]_test.go",
-                          "Test",
-                          true,
-                        },
-                      },
-                    },
-                    {
-                      "(.*)_test.go",
-                      {
-                        {
-                          "[1].go",
-                          "Alternate",
-                          true,
-                        },
-                      },
-                    },
-                    -- python
-                    {
-                      "(.*).py",
-                      {
-                        {
-                          "test_[1].py",
-                          "Test",
-                          true,
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            }
-            telescope.load_extension("dap")
-            telescope.load_extension("fzy_native")
-            telescope.load_extension("live_grep_args")
-            telescope.load_extension("luasnip")
-            telescope.load_extension("telescope-alternate")
+        -- go
+        {
+          "(.*).go",
+          {
+            {
+              "[1]_test.go",
+              "Test",
+              true,
+            },
+          },
+        },
+        {
+          "(.*)_test.go",
+          {
+            {
+              "[1].go",
+              "Alternate",
+              true,
+            },
+          },
+        },
+        -- python
+        {
+          "(.*).py",
+          {
+            {
+              "test_[1].py",
+              "Test",
+              true,
+            },
+          },
+        },
+      },
+    },
+  },
+}
+telescope.load_extension("dap")
+telescope.load_extension("fzy_native")
+telescope.load_extension("live_grep_args")
+telescope.load_extension("luasnip")
+telescope.load_extension("telescope-alternate")
 
-            local M = {}
-            M.search_dotfiles = function()
-              require("telescope.builtin").find_files({
-                prompt_title = "<vimrc>",
-                cwd = "$HOME/dotfiles/nvim/.config/nvim",
-              })
-            end
+local M = {}
+M.search_dotfiles = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<vimrc>",
+    cwd = "$HOME/dotfiles/nvim/.config/nvim",
+  })
+end
 
-            M.search_documents = function()
-              require("telescope.builtin").find_files({
-                prompt_title = "<documents>",
-                cwd = "$HOME/Documents",
-              })
-            end
+M.search_documents = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "<documents>",
+    cwd = "$HOME/Documents",
+  })
+end
 
-            M.search_go_files = function()
-              require("telescope.builtin").live_grep {
-                additional_args = function()
-                  return {
-                    "-g*.go",
-                  }
-                end,
-                prompt_title = "Live Grep (*.go)",
-              }
-            end
+M.search_go_files = function()
+  require("telescope.builtin").live_grep {
+    additional_args = function()
+      return {
+        "-g*.go",
+      }
+    end,
+    prompt_title = "Live Grep (*.go)",
+  }
+end
 
-            return M
+return M
