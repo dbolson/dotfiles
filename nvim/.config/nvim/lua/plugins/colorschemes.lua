@@ -1,9 +1,12 @@
 return {
   {
-    'owickstrom/vim-colors-paramount',
+    'darianmorat/gruvdark.nvim',
     config = function()
-      vim.cmd([[colorscheme paramount]])
+      vim.cmd([[colorscheme gruvdark]])
     end,
+  },
+  {
+    'owickstrom/vim-colors-paramount',
   },
   { 'eddyekofo94/gruvbox-flat.nvim' },
   {

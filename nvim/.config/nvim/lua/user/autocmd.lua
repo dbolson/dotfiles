@@ -36,3 +36,6 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
   group = markdown,
   pattern = { "*.md" },
 })
+
+-- can we make this the same as the other part of the floating window?
+-- vim.api.nvim_set_hl(0, 'RenderMarkdownCode', { bg='#000000' })
