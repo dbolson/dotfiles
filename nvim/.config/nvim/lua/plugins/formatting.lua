@@ -21,6 +21,9 @@ return {
           "ruff_format",
           "ruff_organize_imports",
         },
+        sql = {
+          "sqlfmt",
+        },
         typescript = {
           "prettier",
         },
