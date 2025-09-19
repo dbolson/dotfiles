@@ -5,10 +5,20 @@ return {
       format_on_save = {
         lsp_format = "fallback",
       },
+      formatters = {
+        kulala = {
+          command = "kulala-fmt",
+          args = { "format", "$FILENAME" },
+          stdin = false,
+        },
+      },
       formatters_by_ft = {
         go = {
           "goimports",
           "golangci-lint",
+        },
+        http = {
+          "kulala",
         },
         json = {
           "jq",
