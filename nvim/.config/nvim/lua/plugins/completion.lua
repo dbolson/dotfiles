@@ -10,8 +10,8 @@ return {
         menu = {
           draw = {
             columns = {
-              { "label",     "label_description", gap = 1 },
-              { "kind_icon", "kind",              gap = 1 },
+              { 'label',     'label_description', gap = 1 },
+              { 'kind_icon', 'kind',              gap = 1 },
             },
           },
         },
@@ -32,17 +32,17 @@ return {
       sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' },
       },
-      fuzzy = { implementation = "lua" },
+      fuzzy = { implementation = 'lua' },
     },
-    opts_extend = { "sources.default" },
+    opts_extend = { 'sources.default' },
     version = '1.*',
   },
   {
     'L3MON4D3/LuaSnip',
-    build = "make install_jsregexp",
+    build = 'make install_jsregexp',
     dependencies = {
       'rafamadriz/friendly-snippets',
     },
-    version = "v2.*",
+    version = 'v2.*',
   },
 }
