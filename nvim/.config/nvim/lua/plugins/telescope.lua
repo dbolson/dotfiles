@@ -11,6 +11,5 @@ return {
       'nvim-telescope/telescope.nvim',
       'otavioschwanck/telescope-alternate.nvim',
     },
-    tag = '0.1.8',
   },
 }
