@@ -7,6 +7,8 @@ case $- in
 esac
 
 export EDITOR=nvim
+export MANPAGER='nvim +Man!'
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 # search with up/down arrow keys
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
@@ -59,6 +61,9 @@ export NVM_DIR="$HOME/.nvm"
 # shellcheck disable=SC1091
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+#shellcheck source=/dev/null
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # shellcheck disable=SC1091
 # [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
 # shellcheck disable=SC1091
@@ -86,7 +91,3 @@ if [ -f ~/.bash_prompt ]; then
   # shellcheck source=/dev/null
   . ~/.bash_prompt
 fi
-
-#shellcheck source=/dev/null
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
