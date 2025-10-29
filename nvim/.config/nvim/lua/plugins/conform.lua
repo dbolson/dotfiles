@@ -13,6 +13,9 @@ return {
         },
       },
       formatters_by_ft = {
+        elixir = {
+          "mix",
+        },
         go = {
           "goimports",
           "golangci-lint",

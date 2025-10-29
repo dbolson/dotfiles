@@ -1,12 +1,16 @@
 return {
   {
-    "mfussenegger/nvim-dap",
+    'rcarriga/nvim-dap-ui',
+    config = true,
     dependencies = {
-      "leoluz/nvim-dap-go",
-      "mfussenegger/nvim-dap-python",
-      "rcarriga/nvim-dap-ui",
-      "theHamsta/nvim-dap-virtual-text",
+      'leoluz/nvim-dap-go',
+      'mfussenegger/nvim-dap',
+      'theHamsta/nvim-dap-virtual-text',
+      -- 'mfussenegger/nvim-dap-python',
     },
     lazy = true,
   },
+  {
+    'nvim-telescope/telescope-dap.nvim',
+  }
 }

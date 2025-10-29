@@ -25,6 +25,9 @@ vim.keymap.set("n", "+", "<c-w>>", { noremap = true })
 -- uses '<shift> -' for consistency with '<shift> =' to mean '+'
 vim.keymap.set("n", "_", "<c-w><", { noremap = true })
 
+-- auto-save
+vim.keymap.set("n", "<leader>st", ":ASToggle<cr>", { noremap = true })
+
 -- bbye
 vim.keymap.set("n", "<leader>q", ":Bwipeout<cr>", {
   desc = "Bwipeout",
@@ -73,24 +76,17 @@ vim.keymap.set("n", "<leader>to", "<cmd>lua require('neotest').output.open()<cr>
 vim.keymap.set("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<cr>")
 vim.keymap.set("n", "<leader>tt", "<cmd>lua require('neotest').run.run()<cr>")
 
--- telescope
-vim.keymap.set("n", "<leader>*", "<cmd>Telescope grep_string<cr>")
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-vim.keymap.set("n", "<leader>fc", "<cmd>Telescope git_commits<cr>")
-vim.keymap.set("n", "<leader>fd", "<cmd>lua require('user.finder').search_documents()<cr>")
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-vim.keymap.set("n", "<leader>fG", "<cmd>lua require('user.finder').search_go_files()<cr>")
-vim.keymap.set("n", "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>")
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
-vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>")
-vim.keymap.set("n", "<leader>fl", "<cmd>Telescope luasnip<cr>")
-vim.keymap.set("n", "<leader>fs", "<cmd>Telescope colorscheme<cr>")
-vim.keymap.set("n", "<leader>ft", "<cmd>Telescope lsp_document_symbols<cr>")
-vim.keymap.set("n", "<leader>fv", "<cmd>lua require('user.finder').search_dotfiles()<cr>")
-vim.keymap.set("n", "<leader>fw", "<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<cr>")
-vim.keymap.set("n", "<leader>A", "<cmd>Telescope telescope-alternate alternate_file<cr>")
+-- picker
+vim.keymap.set("n", "<leader>fb", "<cmd>Pick buffers<cr>")
+vim.keymap.set("n", "<leader>fc", "<cmd>Pick git_commits<cr>")
+vim.keymap.set("n", "<leader>ff", "<cmd>Pick files<cr>")
+vim.keymap.set("n", "<leader>fg", "<cmd>Pick grep_live<cr>")
+-- vim.keymap.set("n", "<leader>fl", "<cmd>Telescope luasnip<cr>")
+vim.keymap.set("n", "<leader>fs", "<cmd>Pick colorschemes<cr>")
+-- vim.keymap.set("n", "<leader>fv", "<cmd>lua require('user.finder').search_dotfiles()<cr>")
+-- vim.keymap.set("n", "<leader>A", "<cmd>Telescope telescope-alternate alternate_file<cr>")
 -- " open alternate file in vertical split
-vim.keymap.set("n", "<leader>V", "<c-w>v<c-w>l | <cmd>Telescope telescope-alternate alternate_file<cr>")
+-- vim.keymap.set("n", "<leader>V", "<c-w>v<c-w>l | <cmd>Telescope telescope-alternate alternate_file<cr>")
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")

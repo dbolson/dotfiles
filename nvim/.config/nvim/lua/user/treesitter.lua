@@ -1,4 +1,7 @@
 require('nvim-treesitter').install({
+  'eex',
+  'elixir',
+  'erlang',
   'go',
   'html',
   'javascript',
