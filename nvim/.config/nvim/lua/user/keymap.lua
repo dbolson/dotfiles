@@ -25,9 +25,6 @@ vim.keymap.set("n", "+", "<c-w>>", { noremap = true })
 -- uses '<shift> -' for consistency with '<shift> =' to mean '+'
 vim.keymap.set("n", "_", "<c-w><", { noremap = true })
 
--- auto-save
-vim.keymap.set("n", "<leader>st", ":ASToggle<cr>", { noremap = true })
-
 -- bbye
 vim.keymap.set("n", "<leader>q", ":Bwipeout<cr>", {
   desc = "Bwipeout",
