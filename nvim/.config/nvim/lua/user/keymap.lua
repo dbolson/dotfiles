@@ -59,6 +59,9 @@ vim.keymap.set("n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<cr>")
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>")
 vim.keymap.set("n", "<leader>gl", "<cmd>lua vim.diagnostic.open_float(0, { \"single\", scope = \"line\" })<cr>")
 vim.keymap.set("n", "<leader>S", ":Outline<cr>")
+vim.keymap.set("n", "<leader>h", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
 
 -- markdown
 vim.keymap.set("n", "<leader>M", function()

@@ -1,9 +1,9 @@
 vim.lsp.enable({
+  'basedpyright',
   'bashls',
   'expert',
   'gopls',
   'lua_ls',
-  'pyright',
   -- 'sqlls',
   'ts_ls',
 })
