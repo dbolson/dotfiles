@@ -37,4 +37,5 @@ vim.opt.updatetime = 300
 vim.opt.wb = false
 vim.opt.wildmode = "list:longest,list:full"
 vim.opt.winborder = "rounded"
+vim.opt.wrap = false
 -- vim.opt.shortmess = vim.opt.shortmess + "c" -- don't give |ins-completion-menu| messages.

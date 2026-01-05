@@ -30,7 +30,7 @@ local markdown = vim.api.nvim_create_augroup('markdown', {})
 vim.api.nvim_create_autocmd({'BufRead', 'BufNewFile'}, {
   callback = function()
     vim.opt.ft = 'markdown'
-    -- vim.opt_local = "spell"
+    vim.opt_local = "spell"
     vim.opt_local = 'wrap'
   end,
   group = markdown,

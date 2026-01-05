@@ -3,6 +3,7 @@ vim.lsp.enable({
   'bashls',
   'expert',
   'gopls',
+  "jqls",
   'lua_ls',
   -- 'sqlls',
   'ts_ls',
