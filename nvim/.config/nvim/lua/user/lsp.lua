@@ -6,7 +6,8 @@ vim.lsp.enable({
   "jqls",
   'lua_ls',
   -- 'sqlls',
-  'ts_ls',
+  -- 'ts_ls',
+  'vtsls',
 })
 
 vim.diagnostic.config({
