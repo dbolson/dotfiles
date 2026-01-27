@@ -21,14 +21,14 @@ return {
           "golangci-lint",
         },
         http = {
-          "kulala",
+          "kulala-fmt",
         },
         json = {
           "jq",
         },
-        -- lua = {
-        --   "luacheck",
-        -- },
+        lua = {
+          "luacheck",
+        },
         python = {
           "ruff_fix",
           "ruff_format",
@@ -38,7 +38,7 @@ return {
           "sqlfmt",
         },
         typescript = {
-          "prettier",
+          "biome", "biome-organize-imports", "prettier"
         },
         ["*"] = {
           "trim_newlines",
