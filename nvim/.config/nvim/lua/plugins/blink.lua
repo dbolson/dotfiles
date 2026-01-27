@@ -32,17 +32,8 @@ return {
       sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' },
       },
-      fuzzy = { implementation = 'lua' },
     },
     opts_extend = { 'sources.default' },
     version = '1.*',
-  },
-  {
-    'L3MON4D3/LuaSnip',
-    build = 'make install_jsregexp',
-    dependencies = {
-      'rafamadriz/friendly-snippets',
-    },
-    version = 'v2.*',
   },
 }
