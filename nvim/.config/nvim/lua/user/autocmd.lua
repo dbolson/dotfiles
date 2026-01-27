@@ -37,13 +37,8 @@ vim.api.nvim_create_autocmd({'BufRead', 'BufNewFile'}, {
   pattern = { '*.md' },
 })
 
--- vim.api.nvim_create_autocmd({"ColorScheme", "VimEnter"}, {
---     callback = function ()
---         vim.api.nvim_set_hl(0, "MarkviewPalette0Fg", {fg = "#808080"})
---     end,
---     group = vim.api.nvim_create_augroup('Color', {}),
---     pattern = { "*.md" },
--- })
-
--- can we make this the same as the other part of the floating window?
--- vim.api.nvim_set_hl(0, 'RenderMarkdownCode', { bg='#000000' })
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function()
+    require("lint").try_lint()
+  end,
+})
