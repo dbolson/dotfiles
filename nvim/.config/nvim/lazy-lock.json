@@ -10,7 +10,7 @@
   "gruvbox-flat.nvim": { "branch": "master", "commit": "1dc35c81da30d297f82d438ff362cf1b01d36782" },
   "gruvdark.nvim": { "branch": "main", "commit": "acc0114855c0851e49430a8ce59bc71315312340" },
   "kulala.nvim": { "branch": "main", "commit": "cd3eaa83b8d60533837202dede73238334d71832" },
-  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
   "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
   "material.nvim": { "branch": "main", "commit": "52c121551ffbf7b8f25bed3ef5878e5d6896c786" },
   "mini.extra": { "branch": "main", "commit": "673633b97b64292c82d473ea2bd31b767dbe3907" },

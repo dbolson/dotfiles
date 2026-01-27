@@ -6,6 +6,8 @@ case $- in
 *) return ;;
 esac
 
+ulimit -n 10240
+
 export EDITOR=nvim
 export MANPAGER='nvim +Man!'
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
@@ -31,45 +33,31 @@ export PATH="$PATH:$HOME/.local/bin" # lsp binaries
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH="$PATH:/usr/local/go/bin"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
+# linux
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/shims:$PATH"
-
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
-eval "$(goenv init -)"
+if command -v goenv 1>/dev/null 2>&1; then
+  eval "$(goenv init -)"
+fi
 
 if command -v pyenv 1>/dev/null 2>&1; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/shims:$PATH"
   eval "$(pyenv init -)"
 fi
 
 if which pyenv-virtualenv-init >/dev/null; then
   eval "$(pyenv virtualenv-init -)"
+  # shellcheck disable=SC1091
+  source virtualenvwrapper.sh
 fi
 
-# shellcheck disable=SC1091
-source virtualenvwrapper.sh
-
-export NVM_DIR="$HOME/.nvm"
-# shellcheck disable=SC1091
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# shellcheck disable=SC1091
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(fnm env --use-on-cd --shell bash)"
 
 #shellcheck source=/dev/null
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# shellcheck disable=SC1091
-# [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
-# shellcheck disable=SC1091
-# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
