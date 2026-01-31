@@ -1,0 +1,27 @@
+{
+  "Log to the console": {
+    "prefix": "log",
+    "body": [
+      "console.log('>>> $1');"
+    ],
+    "description": "Log to the console"
+  },
+  "describe": {
+    "prefix": "desc",
+    "body": [
+      "describe('$1', () => {",
+      "\t$2",
+      "})"
+    ],
+    "description": "describe block"
+  },
+  "it": {
+    "prefix": "it",
+    "body": [
+      "it('$1', () => {",
+      "\t$2",
+      "})"
+    ],
+    "description": "it block"
+  }
+}

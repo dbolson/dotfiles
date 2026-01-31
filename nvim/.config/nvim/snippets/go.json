@@ -1,0 +1,49 @@
+{
+  "println": {
+    "prefix": "prn",
+    "body": [
+      "fmt.Println(\">>> $1\")"
+    ],
+    "description": "println"
+  },
+  "println dump": {
+    "prefix": "prndb",
+    "body": [
+      "fmt.Println(\">>> $1\")",
+      "spew.Dump($2)"
+    ],
+    "description": "print debugging"
+  },
+  "dump": {
+    "prefix": "dump",
+    "body": [
+      "spew.Dump($1)"
+    ],
+    "description": "spew.Dump()"
+  },
+  "t.Run()": {
+    "prefix": "trun",
+    "body": [
+      "t.Run(\"$1\", func(t *testing.T) {",
+      "\t$2",
+      "})"
+    ],
+    "description": "t.Run()"
+  },
+  "table test": {
+    "prefix": "tt",
+    "body": [
+      "func Test${1}(t *testing.T) {",
+      "\ttests := map[string]struct {",
+      "\t\t$2",
+      "\t} {",
+      "\t}",
+      "\tfor name, tt := range tests {",
+      "\t\tt.Run(name, func(t *testing.T) {",
+      "\t\t})",
+      "\t}",
+      "}"
+    ],
+    "description": "table test"
+  }
+}
