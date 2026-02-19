@@ -63,6 +63,10 @@ vim.keymap.set("n", "<leader>h", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end)
 
+vim.keymap.set("n", "<leader>ll", function()
+  vim.cmd('tabnew ' .. vim.lsp.log.get_filename())
+end)
+
 -- markdown
 vim.keymap.set("n", "<leader>M", function()
   vim.opt.spell = true
