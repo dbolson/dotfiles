@@ -1,0 +1,9 @@
+{
+  "zero uuid": {
+    "prefix": "uuid0",
+    "body": [
+      "'00000000-0000-0000-0000-000000000000'"
+    ],
+    "description": "A zero-value UUID"
+  }
+}

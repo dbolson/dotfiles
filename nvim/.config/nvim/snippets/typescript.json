@@ -18,10 +18,10 @@
   "it": {
     "prefix": "it",
     "body": [
-      "it('$1', () => {",
+      "test('$1', () => {",
       "\t$2",
       "})"
     ],
-    "description": "it block"
+    "description": "test block"
   }
 }
