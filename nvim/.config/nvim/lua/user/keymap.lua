@@ -98,3 +98,9 @@ vim.keymap.set("n", "<leader>E", "<cmd>NvimTreeFindFile<cr>")
 
 -- zoom
 vim.keymap.set("n", "<leader>zz", "<plug>(zoom-toggle)<cr>")
+
+vim.keymap.set("n", "<leader>ih", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end,
+{desc = 'toggle inlay hints'}
+)
