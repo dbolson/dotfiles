@@ -36,5 +36,12 @@ return {
         },
       })
     end,
+    opts = {
+      adapters = {
+        ['neotest-jest'] = {
+          jestCommand = 'npm test -- --detectOpenHandles',
+        }
+      }
+    }
 	},
 }
