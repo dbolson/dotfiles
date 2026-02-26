@@ -1,8 +1,5 @@
 return {
-  cmd = { 'vtsls', '--stdio' },
-  init_options = {
-    hostInfo = 'neovim',
-  },
+  cmd = { 'tsgo', '--lsp', '--stdio' },
   filetypes = {
     'javascript',
     'javascriptreact',

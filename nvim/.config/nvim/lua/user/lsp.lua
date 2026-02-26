@@ -3,11 +3,12 @@ vim.lsp.enable({
   'bashls',
   'expert',
   'gopls',
-  "jqls",
+  'jqls',
   'lua_ls',
   -- 'sqlls',
   -- 'ts_ls',
-  'vtsls',
+  -- 'vtsls',
+  'tsgo',
 })
 
 vim.diagnostic.config({

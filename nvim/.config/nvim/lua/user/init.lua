@@ -1,6 +1,7 @@
 require("user.autocmd")
 require("user.debugger")
 require("user.finder")
+require("user.format")
 require("user.keymap")
 require("user.lsp")
 require("user.options")

@@ -7,5 +7,24 @@ return {
     { "<leader>lp", ":lua require('vtsls').commands.goto_project_config(bufnr, on_resolve, on_reject)<cr>", desc = "open tsconfig.json" },
     { "<leader>lr", ":lua require('vtsls').commands.restart_tsserver(bufnr, on_resolve, on_reject)<cr>", desc = "LSP restart" },
     { "<leader>ls", ":lua require('vtsls').commands.source_actions(bufnr, on_resolve, on_reject)<cr>", desc = "Pick source action" },
+  },
+  settings = {
+    typescript = {
+      tsserver = {
+        maxTsServerMemory = 16184
+      }
+    }
   }
+  -- settings = {
+  --   typescript = {
+  --     inlayHints = {
+  --       parameterNames = { enabled = 'literals' },
+  --       parameterTypes = { enabled = true },
+  --       variableTypes = { enabled = true },
+  --       propertyDeclarationTypes = { enabled = true },
+  --       functionLikeReturnTypes = { enabled = true },
+  --       enumMemberValues = { enabled = true },
+  --     }
+  --   },
+  -- }
 }
