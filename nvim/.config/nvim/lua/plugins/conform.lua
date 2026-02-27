@@ -45,5 +45,15 @@ return {
       notify_no_formatters = true,
       notify_on_error = false,
     },
+    keys = {
+      {
+        "<leader>F",
+        function()
+          require("conform").format({ async = true })
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
   },
 }
