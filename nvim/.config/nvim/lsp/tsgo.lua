@@ -24,6 +24,9 @@ return {
         functionLikeReturnTypes = { enabled = true },
         enumMemberValues = { enabled = true },
       },
+      tsserver = {
+        maxTsServerMemory = 8192
+      },
     },
   },
 }
