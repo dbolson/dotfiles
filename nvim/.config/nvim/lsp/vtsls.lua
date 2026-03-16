@@ -20,7 +20,7 @@ return {
   settings = {
     typescript = {
       inlayHints = {
-        parameterNames = { enabled = "literals" },
+        parameterNames = { enabled = 'literals' },
         parameterTypes = { enabled = true },
         variableTypes = { enabled = true },
         propertyDeclarationTypes = { enabled = true },

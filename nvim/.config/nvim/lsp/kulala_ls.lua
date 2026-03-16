@@ -1,8 +1,8 @@
 return {
-  cmd = { "kulala_ls" },
+  cmd = { 'kulala_ls' },
   filetypes = {
-    "http",
-    "rest",
+    'http',
+    'rest',
   },
   root_markers = { '.git' },
 }
