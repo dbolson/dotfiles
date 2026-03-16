@@ -11,7 +11,7 @@ vim.keymap.set("n", "<leader>h", "<cmd>split<cr><c-w>j", { noremap = true })
 -- easier go to last buffer
 vim.keymap.set("n", "<leader><leader>", "<c-^>", { noremap = true })
 -- copy current filename into system clipboard
-vim.keymap.set("n", "<leader>cf", "<cmd>let @* = expand(\"%:~\")<cr>", { noremap = true })
+vim.keymap.set("n", "<leader>cf", ":call setreg('+', expand('%'))<cr>", { noremap = true })
 vim.keymap.set("v", "<c-c>", "\"*y", { noremap = true })
 -- paste last contents of what was yanked regardless of what was deleted after
 vim.keymap.set("", "<leader>y", "\"*y")

@@ -36,7 +36,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 # linux
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+# export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 if command -v goenv 1>/dev/null 2>&1; then
   eval "$(goenv init -)"
