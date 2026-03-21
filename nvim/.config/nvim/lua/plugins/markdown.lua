@@ -8,4 +8,5 @@ return {
       debounce_ms = 300,
     })
   end,
+  lazy = true,
 }
