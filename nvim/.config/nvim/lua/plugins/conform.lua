@@ -24,7 +24,10 @@ return {
           "jq",
         },
         lua = {
-          "luacheck",
+          "stylua",
+        },
+        purescript = {
+          "purs-tidy",
         },
         python = {
           "ruff_fix",
