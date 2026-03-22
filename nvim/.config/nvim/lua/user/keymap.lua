@@ -88,9 +88,6 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Pick grep_live<cr>")
 -- vim.keymap.set("n", "<leader>fl", "<cmd>Telescope luasnip<cr>")
 vim.keymap.set("n", "<leader>fs", "<cmd>Pick colorschemes<cr>")
 -- vim.keymap.set("n", "<leader>fv", "<cmd>lua require('user.finder').search_dotfiles()<cr>")
--- vim.keymap.set("n", "<leader>A", "<cmd>Telescope telescope-alternate alternate_file<cr>")
--- " open alternate file in vertical split
--- vim.keymap.set("n", "<leader>V", "<c-w>v<c-w>l | <cmd>Telescope telescope-alternate alternate_file<cr>")
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")

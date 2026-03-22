@@ -33,6 +33,7 @@ return {
     })
   end,
   keys = {
-    { '<leader>A', '<cmd>:OtherVSplit<cr>', desc = 'open alt file in split' },
+    { '<leader>A', '<cmd>:OtherVSplit<cr>', desc = 'open alternate file in split' },
+    { '<leader>a', '<cmd>:Other<cr>', desc = 'open alternate file in the same buffer' },
   }
 }
