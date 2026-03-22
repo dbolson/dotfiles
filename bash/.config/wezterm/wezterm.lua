@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 local config = wezterm.config_builder()
+local act = wezterm.action
 
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = mux.spawn_window(cmd or {})
@@ -22,12 +23,12 @@ config.keys = {
 	{
 		key = "m",
 		mods = "CMD",
-		action = wezterm.action.DisableDefaultAssignment,
+		action = act.DisableDefaultAssignment,
 	},
 	{
 		key = "p",
-		mods = "CTRL",
-		action = wezterm.action.SplitPane({
+		mods = "CTRL|SHIFT",
+		action = act.SplitPane({
 			direction = "Right",
 			size = { Percent = 30 },
 		}),
@@ -35,7 +36,17 @@ config.keys = {
 	{
 		key = "k",
 		mods = "CMD",
-		action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+		action = act.ClearScrollback("ScrollbackAndViewport"),
+	},
+	{
+		key = "LeftArrow",
+		mods = "CMD",
+		action = act.ActivatePaneDirection("Prev"),
+	},
+	{
+		key = "RightArrow",
+		mods = "CMD",
+		action = act.ActivatePaneDirection("Next"),
 	},
 }
 
