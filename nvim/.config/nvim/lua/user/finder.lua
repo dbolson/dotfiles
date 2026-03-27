@@ -10,6 +10,7 @@ end
 
 require('mini.pick').setup({
   mappings = {
+    choose_marked = "<M-c>",
     toggle_preview = '<C-k>',
   },
   window = {
