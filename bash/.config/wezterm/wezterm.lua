@@ -8,8 +8,12 @@ wezterm.on("gui-startup", function(cmd)
 	window:gui_window():maximize()
 end)
 
+config.adjust_window_size_when_changing_font_size = false
+config.animation_fps = 90
 config.enable_scroll_bar = true
 config.font = wezterm.font("JetBrains Mono", { weight = "Bold" })
+config.front_end = "WebGpu"
+config.max_fps = 90
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.window_padding = {
@@ -47,6 +51,16 @@ config.keys = {
 		key = "RightArrow",
 		mods = "CMD",
 		action = act.ActivatePaneDirection("Next"),
+	},
+	{
+		key = "LeftArrow",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.MoveTabRelative(-1),
+	},
+	{
+		key = "RightArrow",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.MoveTabRelative(1),
 	},
 }
 
