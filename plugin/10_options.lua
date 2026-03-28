@@ -20,14 +20,11 @@
 -- reading. Consider preserving this or remove `-- stylua` lines to autoformat.
 
 -- General ====================================================================
-vim.g.mapleader = ' ' -- Use `<Space>` as <Leader> key
+vim.g.mapleader = ',' -- Use `<Space>` as <Leader> key
 
 vim.o.mouse       = 'a'            -- Enable mouse
-vim.o.mousescroll = 'ver:25,hor:6' -- Customize mouse scroll
 vim.o.switchbuf   = 'usetab'       -- Use already opened buffers when switching
 vim.o.undofile    = true           -- Enable persistent undo
-
-vim.o.shada = "'100,<50,s10,:1000,/100,@100,h" -- Limit ShaDa file (for startup)
 
 -- Enable all filetype plugins and syntax (if not enabled, for better startup)
 vim.cmd('filetype plugin indent on')
@@ -38,6 +35,7 @@ vim.o.breakindent    = true       -- Indent wrapped lines to match line start
 vim.o.breakindentopt = 'list:-1'  -- Add padding for lists (if 'wrap' is set)
 vim.o.colorcolumn    = '+1'       -- Draw column on the right of maximum width
 vim.o.cursorline     = true       -- Enable current line highlighting
+vim.o.hlsearch       = false      -- Don't show permament search highlight
 vim.o.linebreak      = true       -- Wrap lines at 'breakat' (if 'wrap' is set)
 vim.o.list           = true       -- Show helpful text indicators
 vim.o.number         = true       -- Show line numbers
@@ -57,8 +55,8 @@ vim.o.wrap           = false      -- Don't visually wrap lines (toggle with \w)
 vim.o.cursorlineopt  = 'screenline,number' -- Show cursor line per screen line
 
 -- Special UI symbols. More is set via 'mini.basics' later.
-vim.o.fillchars = 'eob: ,fold:╌'
-vim.o.listchars = 'extends:…,nbsp:␣,precedes:…,tab:> '
+-- vim.o.fillchars = 'eob: ,fold:╌'
+-- vim.o.listchars = 'extends:…,nbsp:␣,precedes:…,tab:> '
 
 -- Folds (see `:h fold-commands`, `:h zM`, `:h zR`, `:h zA`, `:h zj`)
 vim.o.foldlevel   = 10       -- Fold nothing by default; set to 0 or 1 to fold
@@ -71,7 +69,7 @@ vim.o.autoindent    = true    -- Use auto indent
 vim.o.expandtab     = true    -- Convert tabs to spaces
 vim.o.formatoptions = 'rqnl1j'-- Improve comment editing
 vim.o.ignorecase    = true    -- Ignore case during search
-vim.o.incsearch     = true    -- Show search matches while typing
+-- vim.o.incsearch     = true    -- Show search matches while typing
 vim.o.infercase     = true    -- Infer case in built-in completion
 vim.o.shiftwidth    = 2       -- Use this number of spaces for indentation
 vim.o.smartcase     = true    -- Respect case if search pattern has upper case
@@ -108,17 +106,27 @@ Config.new_autocmd('FileType', nil, f, "Proper 'formatoptions'")
 -- See `:h vim.diagnostic` and `:h vim.diagnostic.config()`.
 local diagnostic_opts = {
   -- Show signs on top of any other sign, but only for warnings and errors
-  signs = { priority = 9999, severity = { min = 'WARN', max = 'ERROR' } },
+  signs = {
+    priority = 9999,
+    severity = { min = 'WARN', max = 'ERROR' },
+    text = {
+      [vim.diagnostic.severity.ERROR] = ' ',
+      [vim.diagnostic.severity.WARN] = ' ',
+      [vim.diagnostic.severity.INFO] = ' ',
+      [vim.diagnostic.severity.HINT] = ' ',
+    },
+  },
 
   -- Show all diagnostics as underline (for their messages type `<Leader>ld`)
   underline = { severity = { min = 'HINT', max = 'ERROR' } },
 
   -- Show more details immediately for errors on the current line
   virtual_lines = false,
-  virtual_text = {
-    current_line = true,
-    severity = { min = 'ERROR', max = 'ERROR' },
-  },
+	virtual_text = false,
+  -- virtual_text = {
+  --   current_line = true,
+  --   severity = { min = 'ERROR', max = 'ERROR' },
+  -- },
 
   -- Don't update diagnostics when typing
   update_in_insert = false,

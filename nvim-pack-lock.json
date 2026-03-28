@@ -8,6 +8,10 @@
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
+    "gruvdark.nvim": {
+      "rev": "94afaee342e8dd0fae054a15402568ec0235c720",
+      "src": "https://github.com/darianmorat/gruvdark.nvim"
+    },
     "mini.nvim": {
       "rev": "59f09943573c5348ca6c88393fa09ce3b66a7818",
       "src": "https://github.com/nvim-mini/mini.nvim"
@@ -23,6 +27,10 @@
     "nvim-treesitter-textobjects": {
       "rev": "93d60a475f0b08a8eceb99255863977d3a25f310",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+    },
+    "other.nvim": {
+      "rev": "1d48e090f6d1d53dda9fb5094af3f2006ebbb858",
+      "src": "https://github.com/rgroli/other.nvim"
     }
   }
 }
