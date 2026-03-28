@@ -87,9 +87,9 @@ end)
 -- - `<Leader>sn` - start new session
 -- - `<Leader>sr` - read previously started session
 -- - `<Leader>sd` - delete previously started session
-now(function()
-	require("mini.sessions").setup()
-end)
+-- now(function()
+-- 	require("mini.sessions").setup()
+-- end)
 
 -- Statusline. Sets `:h 'statusline'` to show more info in a line below window.
 -- Example usage:

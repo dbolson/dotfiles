@@ -55,7 +55,7 @@ Config.leader_group_clues = {
   { mode = 'n', keys = '<Leader>l', desc = '+Language' },
   { mode = 'n', keys = '<Leader>m', desc = '+Map' },
   { mode = 'n', keys = '<Leader>o', desc = '+Other' },
-  { mode = 'n', keys = '<Leader>s', desc = '+Session' },
+  -- { mode = 'n', keys = '<Leader>s', desc = '+Session' },
   { mode = 'n', keys = '<Leader>t', desc = '+Terminal' },
   --{ mode = 'n', keys = '<Leader>v', desc = '+Visits' },
 
@@ -196,6 +196,9 @@ nmap_leader('lr', '<Cmd>lua vim.lsp.buf.rename()<CR>',          'Rename')
 nmap_leader('lR', '<Cmd>lua vim.lsp.buf.references()<CR>',      'References')
 nmap_leader('ls', '<Cmd>lua vim.lsp.buf.definition()<CR>',      'Source definition')
 nmap_leader('lt', '<Cmd>lua vim.lsp.buf.type_definition()<CR>', 'Type definition')
+
+-- LSP-specific
+nmap_leader('lo', '<Cmd>lua require("vtsls").commands.organize_imports(bufnr, on_resolve, on_reject)<CR>', 'Organize imports')
 
 -- nmap_leader('F', '<Cmd>lua require("conform").format()<CR>', 'Format')
 local notifyFormat = function()

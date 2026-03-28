@@ -95,9 +95,13 @@ now_if_args(function()
 		"kulala_ls",
 		"lua_ls",
 		"purescriptls",
-		"tsgo",
-		-- 'vtsls',
+		-- "tsgo",
+		"vtsls",
 	})
+end)
+
+later(function()
+	add({ "https://github.com/yioneko/nvim-vtsls" })
 end)
 
 -- Formatting =================================================================

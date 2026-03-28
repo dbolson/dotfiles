@@ -1,6 +1,6 @@
 {
   "Log to the console": {
-    "prefix": "log",
+    "prefix": "debug",
     "body": [
       "console.log('>>> $1');"
     ],
