@@ -255,8 +255,11 @@ nmap_leader('tt', '<Cmd>vertical term<CR>',   'Terminal (vertical)')
 -- nmap_leader('vL', '<Cmd>lua MiniVisits.remove_label()<CR>',       'Remove label')
 -- stylua: ignore end
 
-nmap_leader('A', '<Cmd>:OtherVSplit<CR>', 'open alternate file in split')
-nmap_leader('a', '<Cmd>:Other<CR>', 'open alternate file in same buffer')
+nmap_leader('A', '<Cmd>:OtherVSplit<CR>', 'Open alternate file in split')
+nmap_leader('a', '<Cmd>:Other<CR>', 'Open alternate file in same buffer')
 
--- copy current filename into system clipboard
-nmap_leader('cf', ':call setreg("+", expand("%"))<cr>')
+nmap_leader('cf', ':call setreg("+", expand("%"))<CR>', 'Copy current filename to clipboard')
+
+-- vim.pack
+nmap_leader('vu', '<Cmd>:lua vim.pack.update()<CR>', 'Update plugins')
+-- nmap_leader('vd', '<Cmd>:lua vim.pack.del()<CR>', 'Delete plugins')
