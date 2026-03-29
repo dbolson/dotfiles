@@ -146,6 +146,7 @@ nmap_leader('fg', '<Cmd>Pick grep_live<CR>',                    'Grep live')
 nmap_leader('fG', '<Cmd>Pick grep pattern="<cword>"<CR>',       'Grep current word')
 nmap_leader('fh', '<Cmd>Pick help<CR>',                         'Help tags')
 nmap_leader('fH', '<Cmd>Pick hl_groups<CR>',                    'Highlight groups')
+nmap_leader('fk', '<Cmd>Pick keymaps<CR>',                      'Keymaps')
 nmap_leader('fl', '<Cmd>Pick buf_lines scope="all"<CR>',        'Lines (all)')
 nmap_leader('fL', '<Cmd>Pick buf_lines scope="current"<CR>',    'Lines (buf)')
 nmap_leader('fm', '<Cmd>Pick git_hunks<CR>',                    'Modified hunks (all)')
@@ -256,3 +257,6 @@ nmap_leader('tt', '<Cmd>vertical term<CR>',   'Terminal (vertical)')
 
 nmap_leader('A', '<Cmd>:OtherVSplit<CR>', 'open alternate file in split')
 nmap_leader('a', '<Cmd>:Other<CR>', 'open alternate file in same buffer')
+
+-- copy current filename into system clipboard
+nmap_leader('cf', ':call setreg("+", expand("%"))<cr>')
