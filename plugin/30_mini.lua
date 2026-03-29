@@ -426,10 +426,11 @@ end)
 --
 -- It is not enabled by default because its effects are a matter of taste.
 -- Uncomment next line (use `gcc`) to enable.
-later(function()
-	require("mini.cursorword").setup()
-end)
+-- later(function()
+-- 	require("mini.cursorword").setup()
+-- end)
 
+later(function() require('mini.diff').setup() end)
 -- Git integration for more straightforward Git actions based on Neovim's state.
 -- It is not meant as a fully featured Git client, only to provide helpers that
 -- integrate better with Neovim. Example usage:
@@ -497,9 +498,9 @@ end)
 --
 -- See also:
 -- - `:h MiniIndentscope.gen_animation` - available animation rules
-later(function()
-	require("mini.indentscope").setup()
-end)
+-- later(function()
+-- 	require("mini.indentscope").setup()
+-- end)
 
 -- Jump to next/previous single character. It implements "smarter `fFtT` keys"
 -- (see `:h f`) that work across multiple lines, start "jumping mode", and
