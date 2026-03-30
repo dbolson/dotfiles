@@ -1,0 +1,24 @@
+*.db
+*.retry
+*.swp
+.DS_Store
+.idea/
+.lvimrc
+.rgignore
+.sass-cache
+.tags
+.tags-dep
+tags
+
+# node
+npm-debug.log
+.eslintrc.js
+
+# python
+*.pyc
+.cache/
+.env
+.mypy_cache/
+.python-version
+.venv/
+__pycache__/

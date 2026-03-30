@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+set -e
+
+cp bash/.stow-local-ignore ~/
+
+stow bash
+
+# shellcheck source=/dev/null
+source "$HOME/.bash_profile"
