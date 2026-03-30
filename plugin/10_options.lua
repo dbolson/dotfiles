@@ -134,3 +134,12 @@ local diagnostic_opts = {
 -- Use `later()` to avoid sourcing `vim.diagnostic` on startup
 Config.later(function() vim.diagnostic.config(diagnostic_opts) end)
 -- stylua: ignore end
+
+-- highlight after 120 characters
+local overlength = function()
+	vim.cmd([[
+  highlight OverLength ctermfg=red guibg=#592929
+  match OverLength /\%120v.*/
+  ]])
+end
+Config.new_autocmd("BufEnter", "*", overlength, "")
