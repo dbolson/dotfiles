@@ -100,6 +100,8 @@ now_if_args(function()
 	})
 end)
 
+-- :lsp restart
+
 later(function()
 	add({ "https://github.com/yioneko/nvim-vtsls" })
 end)
@@ -110,7 +112,7 @@ later(function()
 
 	require("conform").setup({
 		default_format_opts = {
-			lsp_format = "fallback",
+			lsp_format = "never",
 		},
 		formatters = {
 			kulala = {
@@ -218,3 +220,11 @@ require("other-nvim").setup({
 		border = "rounded",
 	},
 })
+
+later(function()
+  add({ "https://github.com/almo7aya/openingh.nvim"})
+end)
+
+vim.api.nvim_create_user_command('GBrowse', function()
+  vim.cmd [[OpenInGHFile]]
+end, {})

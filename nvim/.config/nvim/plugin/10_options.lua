@@ -38,6 +38,7 @@ vim.o.cursorline     = true       -- Enable current line highlighting
 vim.o.hlsearch       = false      -- Don't show permament search highlight
 vim.o.linebreak      = true       -- Wrap lines at 'breakat' (if 'wrap' is set)
 -- vim.o.list           = true       -- Show helpful text indicators
+vim.o.swapfile       = false      -- No swap files
 vim.o.number         = true       -- Show line numbers
 vim.o.pumborder      = 'single'   -- Use border in popup menu
 vim.o.pumheight      = 10         -- Make popup menu smaller

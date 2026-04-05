@@ -261,5 +261,5 @@ nmap_leader('a', '<Cmd>:Other<CR>', 'Open alternate file in same buffer')
 nmap_leader('cf', ':call setreg("+", expand("%"))<CR>', 'Copy current filename to clipboard')
 
 -- vim.pack
-nmap_leader('vu', '<Cmd>:lua vim.pack.update()<CR>', 'Update plugins')
--- nmap_leader('vd', '<Cmd>:lua vim.pack.del()<CR>', 'Delete plugins')
+nmap_leader('pu', '<Cmd>:lua vim.pack.update()<CR>', 'Update plugins')
+-- nmap_leader('pd', '<Cmd>:lua vim.pack.del()<CR>', 'Delete plugins')
