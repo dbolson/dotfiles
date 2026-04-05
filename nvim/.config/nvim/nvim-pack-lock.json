@@ -39,6 +39,10 @@
     "other.nvim": {
       "rev": "1d48e090f6d1d53dda9fb5094af3f2006ebbb858",
       "src": "https://github.com/rgroli/other.nvim"
+    },
+    "snacks.nvim": {
+      "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
+      "src": "git@github.com:folke/snacks.nvim"
     }
   }
 }
