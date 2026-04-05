@@ -14,6 +14,7 @@ config.enable_scroll_bar = true
 config.font = wezterm.font("JetBrains Mono", { weight = "Bold" })
 config.front_end = "WebGpu"
 config.max_fps = 90
+config.term = "wezterm"
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.window_padding = {
@@ -24,6 +25,11 @@ config.window_padding = {
 }
 
 config.keys = {
+	{
+		key = "f",
+		mods = "SUPER",
+		action = act.Search({ CaseInSensitiveString = "" }),
+	},
 	{
 		key = "m",
 		mods = "CMD",

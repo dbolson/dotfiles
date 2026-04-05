@@ -12,3 +12,7 @@ git clone git@github.com:dbolson/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./bin/install
 ```
+
+## nvim
+
+`~/.local/share/nvim/site/pack/core/opt` - plugin install location
