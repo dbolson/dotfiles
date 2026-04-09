@@ -222,9 +222,17 @@ require("other-nvim").setup({
 })
 
 later(function()
-  add({ "https://github.com/almo7aya/openingh.nvim"})
+	add({ "https://github.com/almo7aya/openingh.nvim" })
 end)
 
-vim.api.nvim_create_user_command('GBrowse', function()
-  vim.cmd [[OpenInGHFile]]
+vim.api.nvim_create_user_command("GBrowse", function()
+	vim.cmd([[OpenInGHFile]])
 end, {})
+
+Config.now(function()
+	add({
+		"https://github.com/MagicDuck/grug-far.nvim",
+	})
+end)
+
+vim.cmd('packadd nvim.difftool')

@@ -8,16 +8,20 @@
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
+    "grug-far.nvim": {
+      "rev": "37d0eafc6a2dcf8641aa19fc2a8db5e391b7f16b",
+      "src": "https://github.com/MagicDuck/grug-far.nvim"
+    },
     "gruvdark.nvim": {
       "rev": "94afaee342e8dd0fae054a15402568ec0235c720",
       "src": "https://github.com/darianmorat/gruvdark.nvim"
     },
     "mini.nvim": {
-      "rev": "402ee6c6ec8ea44b22330446c8fb4e615fd3953e",
+      "rev": "69b7433355664cf76898eb86a12a019f39bd86d1",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "11afebab7ae8953c1db8f4c223e7742132d035f3",
+      "rev": "c588db330592fa477a70d2fee6ba20a57194bdc3",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
@@ -25,7 +29,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-textobjects": {
-      "rev": "93d60a475f0b08a8eceb99255863977d3a25f310",
+      "rev": "851e865342e5a4cb1ae23d31caf6e991e1c99f1e",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
     },
     "nvim-vtsls": {
