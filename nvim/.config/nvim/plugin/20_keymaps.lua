@@ -263,3 +263,5 @@ nmap_leader('cf', ':call setreg("+", expand("%"))<CR>', 'Copy current filename t
 -- vim.pack
 nmap_leader('pu', '<Cmd>:lua vim.pack.update()<CR>', 'Update plugins')
 -- nmap_leader('pd', '<Cmd>:lua vim.pack.del()<CR>', 'Delete plugins')
+
+nmap_leader('S', ':e ~/Documents/todo.md<CR>', 'Open to do list')

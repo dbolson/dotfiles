@@ -137,3 +137,5 @@ local overlength = function()
   ]])
 end
 Config.new_autocmd("BufEnter", "*", overlength, "")
+
+require("vim._core.ui2").enable({})

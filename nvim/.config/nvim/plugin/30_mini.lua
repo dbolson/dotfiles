@@ -232,7 +232,7 @@ now_if_args(function()
 	-- searches up the file tree until the first root marker ('.git' or 'Makefile')
 	-- and sets their parent directory as a current directory.
 	-- This is helpful when simultaneously dealing with files from several projects.
-	MiniMisc.setup_auto_root()
+	-- MiniMisc.setup_auto_root()
 
 	-- Restore latest cursor position on file open
 	MiniMisc.setup_restore_cursor()
