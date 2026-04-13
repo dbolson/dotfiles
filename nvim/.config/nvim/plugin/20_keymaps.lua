@@ -51,15 +51,9 @@ Config.leader_group_clues = {
   { mode = 'n', keys = '<Leader>b', desc = '+Buffer' },
   { mode = 'n', keys = '<Leader>e', desc = '+Explore/Edit' },
   { mode = 'n', keys = '<Leader>f', desc = '+Find' },
---  { mode = 'n', keys = '<Leader>g', desc = '+Git' },
   { mode = 'n', keys = '<Leader>l', desc = '+Language' },
   { mode = 'n', keys = '<Leader>m', desc = '+Map' },
   { mode = 'n', keys = '<Leader>o', desc = '+Other' },
-  -- { mode = 'n', keys = '<Leader>s', desc = '+Session' },
-  { mode = 'n', keys = '<Leader>t', desc = '+Terminal' },
-  --{ mode = 'n', keys = '<Leader>v', desc = '+Visits' },
-
- -- { mode = 'x', keys = '<Leader>g', desc = '+Git' },
   { mode = 'x', keys = '<Leader>l', desc = '+Language' },
 }
 
@@ -265,3 +259,9 @@ nmap_leader('pu', '<Cmd>:lua vim.pack.update()<CR>', 'Update plugins')
 -- nmap_leader('pd', '<Cmd>:lua vim.pack.del()<CR>', 'Delete plugins')
 
 nmap_leader('S', ':e ~/Documents/todo.md<CR>', 'Open to do list')
+
+-- testing
+nmap_leader('tt', '<Cmd>Neotest run<CR>', 'Run nearest test')
+nmap_leader('tf', '<Cmd>Neotest run test<CR>', 'Run test file')
+nmap_leader('T', '<Cmd>Neotest run test<CR>', 'Run test file')
+nmap_leader('ts', '<Cmd>Neotest summary<CR>', 'Open test output')

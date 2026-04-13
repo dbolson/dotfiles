@@ -50,7 +50,6 @@ now_if_args(function()
 	})
 
 	local languages = {
-		-- These are already pre-installed with Neovim. Used as an example.
 		"go",
 		"html",
 		"javascript",
@@ -97,6 +96,7 @@ now_if_args(function()
 		"purescriptls",
 		-- "tsgo",
 		"vtsls",
+		"yamlls",
 	})
 end)
 
@@ -183,8 +183,15 @@ end)
 
 Config.now(function()
 	add({
+		"https://github.com/MagicDuck/grug-far.nvim",
 		"https://github.com/darianmorat/gruvdark.nvim",
 		"https://github.com/rgroli/other.nvim",
+		"https://github.com/almo7aya/openingh.nvim",
+		"https://github.com/rachartier/tiny-cmdline.nvim",
+		"https://github.com/nvim-neotest/nvim-nio",
+		"https://github.com/nvim-lua/plenary.nvim",
+		"https://github.com/nvim-neotest/neotest",
+		"https://github.com/marilari88/neotest-vitest",
 	})
 
 	vim.cmd("color gruvdark")
@@ -221,18 +228,16 @@ require("other-nvim").setup({
 	},
 })
 
-later(function()
-	add({ "https://github.com/almo7aya/openingh.nvim" })
-end)
+require("tiny-cmdline").setup()
 
 vim.api.nvim_create_user_command("GBrowse", function()
 	vim.cmd([[OpenInGHFile]])
 end, {})
 
-Config.now(function()
-	add({
-		"https://github.com/MagicDuck/grug-far.nvim",
-	})
-end)
+vim.cmd("packadd nvim.difftool")
 
-vim.cmd('packadd nvim.difftool')
+require("neotest").setup({
+	adapters = {
+		require("neotest-vitest"),
+	},
+})

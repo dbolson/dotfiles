@@ -9,7 +9,7 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "grug-far.nvim": {
-      "rev": "37d0eafc6a2dcf8641aa19fc2a8db5e391b7f16b",
+      "rev": "b08a9f8d0602fdf075262e8e1b6dc776b3966003",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "gruvdark.nvim": {
@@ -20,9 +20,21 @@
       "rev": "69b7433355664cf76898eb86a12a019f39bd86d1",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "neotest": {
+      "rev": "fd0b7986dd0ae04e38ec7dc0c78a432e3820839c",
+      "src": "https://github.com/nvim-neotest/neotest"
+    },
+    "neotest-vitest": {
+      "rev": "f01addc6f07b79ef1be5f4297eafbee9e0959018",
+      "src": "https://github.com/marilari88/neotest-vitest"
+    },
     "nvim-lspconfig": {
-      "rev": "c588db330592fa477a70d2fee6ba20a57194bdc3",
+      "rev": "cb5bc0b2b35a6d513e3298d285db81453e791f4f",
       "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-nio": {
+      "rev": "21f5324bfac14e22ba26553caf69ec76ae8a7662",
+      "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
@@ -44,9 +56,17 @@
       "rev": "1d48e090f6d1d53dda9fb5094af3f2006ebbb858",
       "src": "https://github.com/rgroli/other.nvim"
     },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
     "snacks.nvim": {
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
       "src": "git@github.com:folke/snacks.nvim"
+    },
+    "tiny-cmdline.nvim": {
+      "rev": "807d23bcb7cdf26da9e92c5ea5299e7f0d07383d",
+      "src": "https://github.com/rachartier/tiny-cmdline.nvim"
     }
   }
 }

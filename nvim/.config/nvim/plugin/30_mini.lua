@@ -82,6 +82,8 @@ now(function()
 	require("mini.notify").setup()
 end)
 
+-- now(function() require('mini.starter').setup() end)
+
 -- Session management. A thin wrapper around `:h mksession` that consistently
 -- manages session files. Example usage:
 -- - `<Leader>sn` - start new session
@@ -430,7 +432,9 @@ end)
 -- 	require("mini.cursorword").setup()
 -- end)
 
-later(function() require('mini.diff').setup() end)
+later(function()
+	require("mini.diff").setup()
+end)
 -- Git integration for more straightforward Git actions based on Neovim's state.
 -- It is not meant as a fully featured Git client, only to provide helpers that
 -- integrate better with Neovim. Example usage:
@@ -671,10 +675,7 @@ end)
 -- - `:h MiniSnippets.gen_loader` - list of available loaders
 later(function()
 	-- Define language patterns to work better with 'friendly-snippets'
-	local latex_patterns = { "latex/**/*.json", "**/latex.json" }
 	local lang_patterns = {
-		tex = latex_patterns,
-		plaintex = latex_patterns,
 		-- Recognize special injected language of markdown tree-sitter parser
 		markdown_inline = { "markdown.json" },
 	}
@@ -693,8 +694,22 @@ later(function()
 	-- By default snippets available at cursor are not shown as candidates in
 	-- 'mini.completion' menu. This requires a dedicated in-process LSP server
 	-- that will provide them. To have that, uncomment next line (use `gcc`).
-	-- MiniSnippets.start_lsp_server()
+	MiniSnippets.start_lsp_server()
 end)
+
+-- stop all snippet sessions on normal mode exit
+local make_stop = function()
+  local opts = { pattern = "*:n", once = true }
+  opts.callback = function()
+    while MiniSnippets.session.get() do
+      MiniSnippets.session.stop()
+    end
+  end
+  vim.api.nvim_create_autocmd("ModeChanged", opts)
+end
+local opts = { pattern = "MiniSnippetsSessionStart", callback = make_stop }
+vim.api.nvim_create_autocmd("User", opts)
+
 
 -- Split and join arguments (regions inside brackets between allowed separators).
 -- It uses Lua patterns to find arguments, which means it works in comments and
