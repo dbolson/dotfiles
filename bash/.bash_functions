@@ -1,12 +1,3 @@
-# system
-function update-vim {
-  vim +PlugClean +qall
-  vim +PlugInstall +qall
-  vim +PlugUpdate +qall
-  vim +PlugUpgrade +qall
-  vim +UpdateRemotePlugins +qall
-}
-
 function remove-old-docker-images() {
   docker rm -v $(docker ps -aq 2>/dev/null) 2>/dev/null
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
@@ -26,7 +17,6 @@ function format-json {
   echo "$1" | python -m json.tool
 }
 
-# git
 function checkout-and-track() {
   git checkout -t "origin/$1"
 }
