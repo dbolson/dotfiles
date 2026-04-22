@@ -226,8 +226,8 @@ nmap_leader('oz', '<Cmd>lua MiniMisc.zoom()<CR>',          'Zoom toggle')
 -- nmap_leader('sw', '<Cmd>lua MiniSessions.write()<CR>',          'Write current')
 
 -- t is for 'Terminal'
-nmap_leader('tT', '<Cmd>horizontal term<CR>', 'Terminal (horizontal)')
-nmap_leader('tt', '<Cmd>vertical term<CR>',   'Terminal (vertical)')
+-- nmap_leader('tT', '<Cmd>horizontal term<CR>', 'Terminal (horizontal)')
+-- nmap_leader('tt', '<Cmd>vertical term<CR>',   'Terminal (vertical)')
 
 -- v is for 'Visits'. Common usage:
 -- - `<Leader>vv` - add    "core" label to current file.
@@ -265,3 +265,7 @@ nmap_leader('tt', '<Cmd>Neotest run<CR>', 'Run nearest test')
 nmap_leader('tf', '<Cmd>Neotest run test<CR>', 'Run test file')
 nmap_leader('T', '<Cmd>Neotest run test<CR>', 'Run test file')
 nmap_leader('ts', '<Cmd>Neotest summary<CR>', 'Open test output')
+
+-- meow.yarn
+nmap_leader("lC", "<Cmd>MeowYarn call callers<CR>", "Yarn: Callers")
+nmap_leader("lc", "<Cmd>MeowYarn call callees<CR>", "Yarn: Callees")
