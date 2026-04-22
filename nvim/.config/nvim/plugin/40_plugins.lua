@@ -100,8 +100,6 @@ now_if_args(function()
 	})
 end)
 
--- :lsp restart
-
 later(function()
 	add({ "https://github.com/yioneko/nvim-vtsls" })
 end)
@@ -191,7 +189,10 @@ Config.now(function()
 		"https://github.com/nvim-neotest/nvim-nio",
 		"https://github.com/nvim-lua/plenary.nvim",
 		"https://github.com/nvim-neotest/neotest",
+		"https://github.com/nvim-neotest/neotest-jest",
 		"https://github.com/marilari88/neotest-vitest",
+		"https://github.com/MunifTanjim/nui.nvim",
+		"https://github.com/retran/meow.yarn.nvim",
 	})
 
 	vim.cmd("color gruvdark")
@@ -238,6 +239,9 @@ vim.cmd("packadd nvim.difftool")
 
 require("neotest").setup({
 	adapters = {
+		require("neotest-jest"),
 		require("neotest-vitest"),
 	},
 })
+
+require("meow.yarn").setup()
