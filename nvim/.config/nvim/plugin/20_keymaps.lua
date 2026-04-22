@@ -252,7 +252,6 @@ nmap_leader('oz', '<Cmd>lua MiniMisc.zoom()<CR>',          'Zoom toggle')
 nmap_leader('A', '<Cmd>:OtherVSplit<CR>', 'Open alternate file in split')
 nmap_leader('a', '<Cmd>:Other<CR>', 'Open alternate file in same buffer')
 
-nmap_leader('cf', ':call setreg("+", expand("%"))<CR>', 'Copy current filename to clipboard')
 
 -- vim.pack
 nmap_leader('pu', '<Cmd>:lua vim.pack.update()<CR>', 'Update plugins')

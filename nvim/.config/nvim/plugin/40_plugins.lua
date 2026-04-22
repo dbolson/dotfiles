@@ -193,6 +193,7 @@ Config.now(function()
 		"https://github.com/marilari88/neotest-vitest",
 		"https://github.com/MunifTanjim/nui.nvim",
 		"https://github.com/retran/meow.yarn.nvim",
+    "https://github.com/hong4rc/copy-path.nvim",
 	})
 
 	vim.cmd("color gruvdark")
@@ -245,3 +246,5 @@ require("neotest").setup({
 })
 
 require("meow.yarn").setup()
+
+require("copy-path").setup()
