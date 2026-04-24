@@ -94,8 +94,8 @@ now_if_args(function()
 		"kulala_ls",
 		"lua_ls",
 		"purescriptls",
-		-- "tsgo",
-		"vtsls",
+		"tsgo",
+		-- "vtsls",
 		"yamlls",
 	})
 end)
