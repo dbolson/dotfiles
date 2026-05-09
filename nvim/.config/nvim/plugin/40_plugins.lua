@@ -196,6 +196,7 @@ Config.now(function()
 		"https://github.com/hong4rc/copy-path.nvim",
 		"https://github.com/mikesmithgh/kitty-scrollback.nvim",
     "https://github.com/purescript-contrib/purescript-vim",
+    "https://github.com/error311/wayfinder.nvim",
 	})
 
 	vim.cmd("color gruvdark")
@@ -249,3 +250,4 @@ require("neotest").setup({
 require("meow.yarn").setup()
 require("copy-path").setup()
 require("kitty-scrollback").setup()
+require("wayfinder").setup()

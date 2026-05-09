@@ -21,7 +21,7 @@
       "src": "https://github.com/darianmorat/gruvdark.nvim"
     },
     "kitty-scrollback.nvim": {
-      "rev": "ecb752f53a0cab8e6aba7073f0ad338620aa564e",
+      "rev": "27a34ad53f188758fe202eb08f0063bce572dde4",
       "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim"
     },
     "meow.yarn.nvim": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/retran/meow.yarn.nvim"
     },
     "mini.nvim": {
-      "rev": "0f339bf5c93f392dc5d2417d47d7b9edc5f96fe8",
+      "rev": "60b5aaac2f0465d67699702e76b9baebf52cb42f",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "neotest": {
@@ -49,7 +49,7 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
+      "rev": "451d4ef9abd4f0f08e379ef0d55d1c391b6125a7",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -95,6 +95,10 @@
     "tiny-cmdline.nvim": {
       "rev": "ad58747b955d0743ccfd56e97da1a4c1fac89f58",
       "src": "https://github.com/rachartier/tiny-cmdline.nvim"
+    },
+    "wayfinder.nvim": {
+      "rev": "bd9520a9ba2f71375cec82590fee8b551ca4b990",
+      "src": "https://github.com/error311/wayfinder.nvim"
     }
   }
 }
