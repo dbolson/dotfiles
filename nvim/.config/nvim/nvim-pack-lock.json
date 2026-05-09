@@ -13,23 +13,27 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "grug-far.nvim": {
-      "rev": "21604255d0e8f9968322f61f2b6c09e5efe1285a",
+      "rev": "21790e59dd0109a92a70cb874dd002af186314f5",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "gruvdark.nvim": {
       "rev": "94afaee342e8dd0fae054a15402568ec0235c720",
       "src": "https://github.com/darianmorat/gruvdark.nvim"
     },
+    "kitty-scrollback.nvim": {
+      "rev": "ecb752f53a0cab8e6aba7073f0ad338620aa564e",
+      "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim"
+    },
     "meow.yarn.nvim": {
       "rev": "507250e4c452d119cc46c7ca763b9acc72b3e20f",
       "src": "https://github.com/retran/meow.yarn.nvim"
     },
     "mini.nvim": {
-      "rev": "5849ef04c32a6a8e55957b946c0a275801d87530",
+      "rev": "0f339bf5c93f392dc5d2417d47d7b9edc5f96fe8",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "neotest": {
-      "rev": "fd0b7986dd0ae04e38ec7dc0c78a432e3820839c",
+      "rev": "ad991822b7076b1d940b33a9d6d0d30416d5df81",
       "src": "https://github.com/nvim-neotest/neotest"
     },
     "neotest-jest": {
@@ -45,7 +49,7 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "81878de76c0de4ce289513734ad80c31ec7871b8",
+      "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -64,6 +68,10 @@
       "rev": "0b5f73c9e50ce95842ea07bb3f05c7d66d87d14a",
       "src": "https://github.com/yioneko/nvim-vtsls"
     },
+    "nx-paths.nvim": {
+      "rev": "e8c9a346993d222fe523dfa2f5bfc3a15a52ccae",
+      "src": "file:///Users/dannyolson/code/nx-paths.nvim"
+    },
     "openingh.nvim": {
       "rev": "7cc8c897cb6b34d8ed28e99d95baccef609ed251",
       "src": "https://github.com/almo7aya/openingh.nvim"
@@ -75,6 +83,10 @@
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "purescript-vim": {
+      "rev": "82348352e6568fcc0385bd7c99a8ead3a479feea",
+      "src": "https://github.com/purescript-contrib/purescript-vim"
     },
     "snacks.nvim": {
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
