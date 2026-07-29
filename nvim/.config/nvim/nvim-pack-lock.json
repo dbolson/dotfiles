@@ -1,7 +1,7 @@
 {
   "plugins": {
     "conform.nvim": {
-      "rev": "dca1a190aa85f9065979ef35802fb77131911106",
+      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "copy-path.nvim": {
@@ -13,7 +13,7 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "grug-far.nvim": {
-      "rev": "21790e59dd0109a92a70cb874dd002af186314f5",
+      "rev": "0f6a5d0d7a70659b11bbcd6b3673ee0fe61b6024",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "gruvdark.nvim": {
@@ -21,7 +21,7 @@
       "src": "https://github.com/darianmorat/gruvdark.nvim"
     },
     "kitty-scrollback.nvim": {
-      "rev": "27a34ad53f188758fe202eb08f0063bce572dde4",
+      "rev": "1c2ac18420078525b7a4279aade891c1602b35c2",
       "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim"
     },
     "meow.yarn.nvim": {
@@ -29,11 +29,11 @@
       "src": "https://github.com/retran/meow.yarn.nvim"
     },
     "mini.nvim": {
-      "rev": "60b5aaac2f0465d67699702e76b9baebf52cb42f",
+      "rev": "946ae64e0ee807ae3c41f382f0114b4ed4915b2c",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "neotest": {
-      "rev": "ad991822b7076b1d940b33a9d6d0d30416d5df81",
+      "rev": "1c529a1ef9c82e8131e872368415cecc2bb86ea2",
       "src": "https://github.com/nvim-neotest/neotest"
     },
     "neotest-jest": {
@@ -41,7 +41,7 @@
       "src": "https://github.com/nvim-neotest/neotest-jest"
     },
     "neotest-vitest": {
-      "rev": "f01addc6f07b79ef1be5f4297eafbee9e0959018",
+      "rev": "c3c69715da4b158069fd4262083e7219a5c14cfb",
       "src": "https://github.com/marilari88/neotest-vitest"
     },
     "nui.nvim": {
@@ -49,19 +49,19 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "451d4ef9abd4f0f08e379ef0d55d1c391b6125a7",
+      "rev": "7ab79bb1b57160a537f427ac8a6026102f12b701",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
-      "rev": "21f5324bfac14e22ba26553caf69ec76ae8a7662",
+      "rev": "edcc181a875301dd21840189aa2f2f9ad69fc172",
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "rev": "61df84986b4b4ec469ee745a182e433d49f8c27e",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-textobjects": {
-      "rev": "851e865342e5a4cb1ae23d31caf6e991e1c99f1e",
+      "rev": "898ee307df58f854d11cd7edd06472574d48014e",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
     },
     "nvim-vtsls": {
@@ -89,15 +89,15 @@
       "src": "https://github.com/purescript-contrib/purescript-vim"
     },
     "snacks.nvim": {
-      "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
+      "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "git@github.com:folke/snacks.nvim"
     },
     "tiny-cmdline.nvim": {
-      "rev": "ad58747b955d0743ccfd56e97da1a4c1fac89f58",
+      "rev": "e247d9ee4c980734f8f8bf616d31e0ab7c27485d",
       "src": "https://github.com/rachartier/tiny-cmdline.nvim"
     },
     "wayfinder.nvim": {
-      "rev": "bd9520a9ba2f71375cec82590fee8b551ca4b990",
+      "rev": "8d7e68151428554c0530032b90659f3c0008f3a9",
       "src": "https://github.com/error311/wayfinder.nvim"
     }
   }

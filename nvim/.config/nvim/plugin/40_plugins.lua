@@ -87,17 +87,17 @@ end)
 now_if_args(function()
 	add({ "https://github.com/neovim/nvim-lspconfig" })
 
-	vim.lsp.enable({
-		"bashls",
-		"gopls",
-		"jqls",
-		"kulala_ls",
-		"lua_ls",
-		"purescriptls",
-		"tsgo",
-		-- "vtsls",
-		"yamlls",
-	})
+  vim.lsp.enable({
+    "bashls",
+    "gopls",
+    "jqls",
+    "jsonls",
+    "kulala_ls",
+    "lua_ls",
+    "purescriptls",
+    "tsgo",
+    "yamlls",
+  })
 end)
 
 later(function()
@@ -195,8 +195,8 @@ Config.now(function()
 		"https://github.com/retran/meow.yarn.nvim",
 		"https://github.com/hong4rc/copy-path.nvim",
 		"https://github.com/mikesmithgh/kitty-scrollback.nvim",
-    "https://github.com/purescript-contrib/purescript-vim",
-    "https://github.com/error311/wayfinder.nvim",
+		"https://github.com/purescript-contrib/purescript-vim",
+		"https://github.com/error311/wayfinder.nvim",
 	})
 
 	vim.cmd("color gruvdark")
